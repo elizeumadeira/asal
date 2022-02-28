@@ -298,10 +298,9 @@ lvalue
 
 atribstat
 	:
-	ID    // atribuição de array   a[b] ou a[1]
-                (T_ABRECOLCHETE (ID | NUMERO ) T_FECHACOLCHETE)*
-                T_ATRIBUICAO 
-                ( expression | funccall | TEXTO )
+	lvalue   // atribuição de array   a[b] ou a[1]
+	T_ATRIBUICAO 
+	( expression | allocexpression | funccall | TEXTO )
 	;
 
 allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
@@ -310,17 +309,21 @@ allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 funccall
 	: FUNCAO 
         T_ABREPARENTESES 
-                ( (ID | NUMERO)
-                (T_VIRGULA (ID | NUMERO) )*)?
+                ( paramlistcall )?
         T_FECHAPARENTESES
 	;
 
+paramlistcall
+	:   ( lvalue | TEXTO | expression)
+        (T_VIRGULA (ID | NUMERO) )*
+	;
+
 printstat
-	: T_WRITE( ID |TEXTO | expression ) 
+	: T_WRITE ( lvalue | TEXTO | expression )
 	;
 	
 readstat
-	: T_READ( ID |TEXTO | expression ) 
+	: T_READ lvalue
 	;
 	
 returnstat

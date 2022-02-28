@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Hello.g 2022-02-28 19:27:09
+// $ANTLR 3.5.2 Hello.g 2022-02-28 19:42:45
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -659,10 +659,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TIPOS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:361:2: ( ( 'int' | 'float' | 'string' ) )
-			// Hello.g:361:4: ( 'int' | 'float' | 'string' )
+			// Hello.g:364:2: ( ( 'int' | 'float' | 'string' ) )
+			// Hello.g:364:4: ( 'int' | 'float' | 'string' )
 			{
-			// Hello.g:361:4: ( 'int' | 'float' | 'string' )
+			// Hello.g:364:4: ( 'int' | 'float' | 'string' )
 			int alt1=3;
 			switch ( input.LA(1) ) {
 			case 'i':
@@ -687,21 +687,21 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// Hello.g:361:5: 'int'
+					// Hello.g:364:5: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 2 :
-					// Hello.g:361:13: 'float'
+					// Hello.g:364:13: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 3 :
-					// Hello.g:361:23: 'string'
+					// Hello.g:364:23: 'string'
 					{
 					match("string"); 
 
@@ -726,11 +726,11 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:365:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
-			// Hello.g:365:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
+			// Hello.g:368:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
+			// Hello.g:368:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// Hello.g:365:15: ( 'A' .. 'Z' | '0' .. '9' )*
+			// Hello.g:368:15: ( 'A' .. 'Z' | '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -775,8 +775,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = FUNCAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:369:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
-			// Hello.g:369:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// Hello.g:372:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
+			// Hello.g:372:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -786,7 +786,7 @@ public class HelloLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// Hello.g:369:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// Hello.g:372:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -835,11 +835,11 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TEXTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:373:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
-			// Hello.g:373:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
+			// Hello.g:376:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
+			// Hello.g:376:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
 			{
 			match('\"'); 
-			// Hello.g:373:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
+			// Hello.g:376:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -885,10 +885,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = NUMERO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:377:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// Hello.g:377:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// Hello.g:380:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// Hello.g:380:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// Hello.g:377:4: ( '0' .. '9' )+
+			// Hello.g:380:4: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -921,7 +921,7 @@ public class HelloLexer extends Lexer {
 				cnt5++;
 			}
 
-			// Hello.g:377:18: ( '.' ( '0' .. '9' )+ )?
+			// Hello.g:380:18: ( '.' ( '0' .. '9' )+ )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -929,10 +929,10 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// Hello.g:377:20: '.' ( '0' .. '9' )+
+					// Hello.g:380:20: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// Hello.g:377:24: ( '0' .. '9' )+
+					// Hello.g:380:24: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -986,10 +986,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = ESPACO_BRANCO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:381:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// Hello.g:381:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// Hello.g:384:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// Hello.g:384:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// Hello.g:381:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// Hello.g:384:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt8=0;
 			loop8:
 			while (true) {
@@ -1039,12 +1039,12 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = COMENTARIO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:385:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// Hello.g:385:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// Hello.g:388:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// Hello.g:388:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// Hello.g:385:12: (~ ( '\\n' | '\\r' ) )*
+			// Hello.g:388:12: (~ ( '\\n' | '\\r' ) )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -1073,7 +1073,7 @@ public class HelloLexer extends Lexer {
 				}
 			}
 
-			// Hello.g:385:26: ( '\\r' )?
+			// Hello.g:388:26: ( '\\r' )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0=='\r') ) {
@@ -1081,7 +1081,7 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt10) {
 				case 1 :
-					// Hello.g:385:26: '\\r'
+					// Hello.g:388:26: '\\r'
 					{
 					match('\r'); 
 					}
