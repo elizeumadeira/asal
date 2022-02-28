@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Hello.g 2022-02-28 18:09:16
+// $ANTLR 3.5.1 C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g 2022-02-28 16:12:18
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -59,15 +59,15 @@ public class HelloLexer extends Lexer {
 	public HelloLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "Hello.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g"; }
 
 	// $ANTLR start "EOL"
 	public final void mEOL() throws RecognitionException {
 		try {
 			int _type = EOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:2:5: ( ';' )
-			// Hello.g:2:7: ';'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:2:5: ( ';' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:2:7: ';'
 			{
 			match(';'); 
 			}
@@ -86,8 +86,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ABRECHAVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:3:13: ( '{' )
-			// Hello.g:3:15: '{'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:3:13: ( '{' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:3:15: '{'
 			{
 			match('{'); 
 			}
@@ -106,8 +106,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ABRECOLCHETE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:4:16: ( '[' )
-			// Hello.g:4:18: '['
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:4:16: ( '[' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:4:18: '['
 			{
 			match('['); 
 			}
@@ -126,8 +126,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ABREPARENTESES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:5:18: ( '(' )
-			// Hello.g:5:20: '('
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:5:18: ( '(' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:5:20: '('
 			{
 			match('('); 
 			}
@@ -146,8 +146,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ATRIBUICAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:6:14: ( '=' )
-			// Hello.g:6:16: '='
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:6:14: ( '=' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:6:16: '='
 			{
 			match('='); 
 			}
@@ -166,8 +166,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_BREAK;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:7:9: ( 'break' )
-			// Hello.g:7:11: 'break'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:7:9: ( 'break' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:7:11: 'break'
 			{
 			match("break"); 
 
@@ -187,8 +187,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_COMPARACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:8:14: ( '==' )
-			// Hello.g:8:16: '=='
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:8:14: ( '==' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:8:16: '=='
 			{
 			match("=="); 
 
@@ -208,8 +208,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_DEF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:9:7: ( 'def' )
-			// Hello.g:9:9: 'def'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:9:7: ( 'def' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:9:9: 'def'
 			{
 			match("def"); 
 
@@ -229,8 +229,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_DIFERENTE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:10:13: ( '!=' )
-			// Hello.g:10:15: '!='
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:10:13: ( '!=' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:10:15: '!='
 			{
 			match("!="); 
 
@@ -250,8 +250,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_DIVISAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:11:11: ( '/' )
-			// Hello.g:11:13: '/'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:11:11: ( '/' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:11:13: '/'
 			{
 			match('/'); 
 			}
@@ -270,8 +270,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_E;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:12:5: ( '&' )
-			// Hello.g:12:7: '&'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:12:5: ( '&' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:12:7: '&'
 			{
 			match('&'); 
 			}
@@ -290,8 +290,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:13:8: ( 'else' )
-			// Hello.g:13:10: 'else'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:13:8: ( 'else' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:13:10: 'else'
 			{
 			match("else"); 
 
@@ -311,8 +311,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ELSEIF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:14:10: ( 'elseif' )
-			// Hello.g:14:12: 'elseif'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:14:10: ( 'elseif' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:14:12: 'elseif'
 			{
 			match("elseif"); 
 
@@ -332,8 +332,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_ESCREVA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:15:11: ( 'print' )
-			// Hello.g:15:13: 'print'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:15:11: ( 'print' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:15:13: 'print'
 			{
 			match("print"); 
 
@@ -353,8 +353,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHACHAVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:16:14: ( '}' )
-			// Hello.g:16:16: '}'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:16:14: ( '}' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:16:16: '}'
 			{
 			match('}'); 
 			}
@@ -373,8 +373,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHACOLCHETE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:17:17: ( ']' )
-			// Hello.g:17:19: ']'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:17:17: ( ']' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:17:19: ']'
 			{
 			match(']'); 
 			}
@@ -393,8 +393,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHAPARENTESES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:18:19: ( ')' )
-			// Hello.g:18:21: ')'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:18:19: ( ')' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:18:21: ')'
 			{
 			match(')'); 
 			}
@@ -413,8 +413,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:19:7: ( 'for' )
-			// Hello.g:19:9: 'for'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:19:7: ( 'for' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:19:9: 'for'
 			{
 			match("for"); 
 
@@ -434,8 +434,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:20:6: ( 'if' )
-			// Hello.g:20:8: 'if'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:20:6: ( 'if' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:20:8: 'if'
 			{
 			match("if"); 
 
@@ -455,8 +455,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MAIOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:21:9: ( '>' )
-			// Hello.g:21:11: '>'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:21:9: ( '>' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:21:11: '>'
 			{
 			match('>'); 
 			}
@@ -475,8 +475,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MAIOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:22:16: ( '>=' )
-			// Hello.g:22:18: '>='
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:22:16: ( '>=' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:22:18: '>='
 			{
 			match(">="); 
 
@@ -496,8 +496,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MENOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:23:9: ( '<' )
-			// Hello.g:23:11: '<'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:23:9: ( '<' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:23:11: '<'
 			{
 			match('<'); 
 			}
@@ -516,8 +516,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MENOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:24:16: ( '<=' )
-			// Hello.g:24:18: '<='
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:24:16: ( '<=' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:24:18: '<='
 			{
 			match("<="); 
 
@@ -537,8 +537,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MULTIPLICACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:25:17: ( '*' )
-			// Hello.g:25:19: '*'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:25:17: ( '*' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:25:19: '*'
 			{
 			match('*'); 
 			}
@@ -557,8 +557,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_OU;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:26:6: ( '|' )
-			// Hello.g:26:8: '|'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:26:6: ( '|' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:26:8: '|'
 			{
 			match('|'); 
 			}
@@ -577,8 +577,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_READ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:27:8: ( 'read' )
-			// Hello.g:27:10: 'read'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:27:8: ( 'read' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:27:10: 'read'
 			{
 			match("read"); 
 
@@ -598,8 +598,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:28:10: ( 'return' )
-			// Hello.g:28:12: 'return'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:28:10: ( 'return' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:28:12: 'return'
 			{
 			match("return"); 
 
@@ -619,8 +619,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_SOMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:29:8: ( '+' )
-			// Hello.g:29:10: '+'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:29:8: ( '+' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:29:10: '+'
 			{
 			match('+'); 
 			}
@@ -639,8 +639,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_SUBTRACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:30:13: ( '-' )
-			// Hello.g:30:15: '-'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:30:13: ( '-' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:30:15: '-'
 			{
 			match('-'); 
 			}
@@ -659,8 +659,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_VIRGULA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:31:11: ( ',' )
-			// Hello.g:31:13: ','
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:31:11: ( ',' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:31:13: ','
 			{
 			match(','); 
 			}
@@ -679,10 +679,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TIPOS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:357:2: ( ( 'int' | 'float' | 'string' ) )
-			// Hello.g:357:4: ( 'int' | 'float' | 'string' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:2: ( ( 'int' | 'float' | 'string' ) )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:4: ( 'int' | 'float' | 'string' )
 			{
-			// Hello.g:357:4: ( 'int' | 'float' | 'string' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:4: ( 'int' | 'float' | 'string' )
 			int alt1=3;
 			switch ( input.LA(1) ) {
 			case 'i':
@@ -707,21 +707,21 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// Hello.g:357:5: 'int'
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:5: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 2 :
-					// Hello.g:357:13: 'float'
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:13: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 3 :
-					// Hello.g:357:23: 'string'
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:23: 'string'
 					{
 					match("string"); 
 
@@ -746,11 +746,11 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:361:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
-			// Hello.g:361:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// Hello.g:361:15: ( 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:15: ( 'A' .. 'Z' | '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -761,7 +761,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
 						input.consume();
@@ -795,8 +795,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = FUNCAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:365:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
-			// Hello.g:365:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -806,7 +806,7 @@ public class HelloLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// Hello.g:365:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -818,7 +818,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -855,11 +855,11 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TEXTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:369:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
-			// Hello.g:369:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:220:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:220:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
 			{
 			match('\"'); 
-			// Hello.g:369:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:220:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -870,7 +870,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= ' ' && input.LA(1) <= '!')||input.LA(1)=='-'||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -905,10 +905,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = NUMERO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:373:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// Hello.g:373:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// Hello.g:373:4: ( '0' .. '9' )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:4: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -920,7 +920,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -941,7 +941,7 @@ public class HelloLexer extends Lexer {
 				cnt5++;
 			}
 
-			// Hello.g:373:18: ( '.' ( '0' .. '9' )+ )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:18: ( '.' ( '0' .. '9' )+ )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -949,10 +949,10 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// Hello.g:373:20: '.' ( '0' .. '9' )+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:20: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// Hello.g:373:24: ( '0' .. '9' )+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:224:24: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -964,7 +964,7 @@ public class HelloLexer extends Lexer {
 
 						switch (alt6) {
 						case 1 :
-							// Hello.g:
+							// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -1006,10 +1006,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = ESPACO_BRANCO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:377:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// Hello.g:377:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:228:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:228:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// Hello.g:377:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:228:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt8=0;
 			loop8:
 			while (true) {
@@ -1021,7 +1021,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt8) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -1059,12 +1059,12 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = COMENTARIO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:381:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// Hello.g:381:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:232:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:232:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// Hello.g:381:12: (~ ( '\\n' | '\\r' ) )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:232:12: (~ ( '\\n' | '\\r' ) )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -1075,7 +1075,7 @@ public class HelloLexer extends Lexer {
 
 				switch (alt9) {
 				case 1 :
-					// Hello.g:
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1093,7 +1093,7 @@ public class HelloLexer extends Lexer {
 				}
 			}
 
-			// Hello.g:381:26: ( '\\r' )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:232:26: ( '\\r' )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0=='\r') ) {
@@ -1101,7 +1101,7 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt10) {
 				case 1 :
-					// Hello.g:381:26: '\\r'
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:232:26: '\\r'
 					{
 					match('\r'); 
 					}
@@ -1124,264 +1124,264 @@ public class HelloLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// Hello.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ELSEIF | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO )
+		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ELSEIF | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO )
 		int alt11=37;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
 			case 1 :
-				// Hello.g:1:10: EOL
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:10: EOL
 				{
 				mEOL(); 
 
 				}
 				break;
 			case 2 :
-				// Hello.g:1:14: T_ABRECHAVE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:14: T_ABRECHAVE
 				{
 				mT_ABRECHAVE(); 
 
 				}
 				break;
 			case 3 :
-				// Hello.g:1:26: T_ABRECOLCHETE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:26: T_ABRECOLCHETE
 				{
 				mT_ABRECOLCHETE(); 
 
 				}
 				break;
 			case 4 :
-				// Hello.g:1:41: T_ABREPARENTESES
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:41: T_ABREPARENTESES
 				{
 				mT_ABREPARENTESES(); 
 
 				}
 				break;
 			case 5 :
-				// Hello.g:1:58: T_ATRIBUICAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:58: T_ATRIBUICAO
 				{
 				mT_ATRIBUICAO(); 
 
 				}
 				break;
 			case 6 :
-				// Hello.g:1:71: T_BREAK
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:71: T_BREAK
 				{
 				mT_BREAK(); 
 
 				}
 				break;
 			case 7 :
-				// Hello.g:1:79: T_COMPARACAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:79: T_COMPARACAO
 				{
 				mT_COMPARACAO(); 
 
 				}
 				break;
 			case 8 :
-				// Hello.g:1:92: T_DEF
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:92: T_DEF
 				{
 				mT_DEF(); 
 
 				}
 				break;
 			case 9 :
-				// Hello.g:1:98: T_DIFERENTE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:98: T_DIFERENTE
 				{
 				mT_DIFERENTE(); 
 
 				}
 				break;
 			case 10 :
-				// Hello.g:1:110: T_DIVISAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:110: T_DIVISAO
 				{
 				mT_DIVISAO(); 
 
 				}
 				break;
 			case 11 :
-				// Hello.g:1:120: T_E
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:120: T_E
 				{
 				mT_E(); 
 
 				}
 				break;
 			case 12 :
-				// Hello.g:1:124: T_ELSE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:124: T_ELSE
 				{
 				mT_ELSE(); 
 
 				}
 				break;
 			case 13 :
-				// Hello.g:1:131: T_ELSEIF
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:131: T_ELSEIF
 				{
 				mT_ELSEIF(); 
 
 				}
 				break;
 			case 14 :
-				// Hello.g:1:140: T_ESCREVA
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:140: T_ESCREVA
 				{
 				mT_ESCREVA(); 
 
 				}
 				break;
 			case 15 :
-				// Hello.g:1:150: T_FECHACHAVE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:150: T_FECHACHAVE
 				{
 				mT_FECHACHAVE(); 
 
 				}
 				break;
 			case 16 :
-				// Hello.g:1:163: T_FECHACOLCHETE
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:163: T_FECHACOLCHETE
 				{
 				mT_FECHACOLCHETE(); 
 
 				}
 				break;
 			case 17 :
-				// Hello.g:1:179: T_FECHAPARENTESES
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:179: T_FECHAPARENTESES
 				{
 				mT_FECHAPARENTESES(); 
 
 				}
 				break;
 			case 18 :
-				// Hello.g:1:197: T_FOR
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:197: T_FOR
 				{
 				mT_FOR(); 
 
 				}
 				break;
 			case 19 :
-				// Hello.g:1:203: T_IF
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:203: T_IF
 				{
 				mT_IF(); 
 
 				}
 				break;
 			case 20 :
-				// Hello.g:1:208: T_MAIOR
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:208: T_MAIOR
 				{
 				mT_MAIOR(); 
 
 				}
 				break;
 			case 21 :
-				// Hello.g:1:216: T_MAIOROUIGUAL
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:216: T_MAIOROUIGUAL
 				{
 				mT_MAIOROUIGUAL(); 
 
 				}
 				break;
 			case 22 :
-				// Hello.g:1:231: T_MENOR
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:231: T_MENOR
 				{
 				mT_MENOR(); 
 
 				}
 				break;
 			case 23 :
-				// Hello.g:1:239: T_MENOROUIGUAL
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:239: T_MENOROUIGUAL
 				{
 				mT_MENOROUIGUAL(); 
 
 				}
 				break;
 			case 24 :
-				// Hello.g:1:254: T_MULTIPLICACAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:254: T_MULTIPLICACAO
 				{
 				mT_MULTIPLICACAO(); 
 
 				}
 				break;
 			case 25 :
-				// Hello.g:1:270: T_OU
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:270: T_OU
 				{
 				mT_OU(); 
 
 				}
 				break;
 			case 26 :
-				// Hello.g:1:275: T_READ
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:275: T_READ
 				{
 				mT_READ(); 
 
 				}
 				break;
 			case 27 :
-				// Hello.g:1:282: T_RETURN
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:282: T_RETURN
 				{
 				mT_RETURN(); 
 
 				}
 				break;
 			case 28 :
-				// Hello.g:1:291: T_SOMA
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:291: T_SOMA
 				{
 				mT_SOMA(); 
 
 				}
 				break;
 			case 29 :
-				// Hello.g:1:298: T_SUBTRACAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:298: T_SUBTRACAO
 				{
 				mT_SUBTRACAO(); 
 
 				}
 				break;
 			case 30 :
-				// Hello.g:1:310: T_VIRGULA
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:310: T_VIRGULA
 				{
 				mT_VIRGULA(); 
 
 				}
 				break;
 			case 31 :
-				// Hello.g:1:320: TIPOS
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:320: TIPOS
 				{
 				mTIPOS(); 
 
 				}
 				break;
 			case 32 :
-				// Hello.g:1:326: ID
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:326: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 33 :
-				// Hello.g:1:329: FUNCAO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:329: FUNCAO
 				{
 				mFUNCAO(); 
 
 				}
 				break;
 			case 34 :
-				// Hello.g:1:336: TEXTO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:336: TEXTO
 				{
 				mTEXTO(); 
 
 				}
 				break;
 			case 35 :
-				// Hello.g:1:342: NUMERO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:342: NUMERO
 				{
 				mNUMERO(); 
 
 				}
 				break;
 			case 36 :
-				// Hello.g:1:349: ESPACO_BRANCO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:349: ESPACO_BRANCO
 				{
 				mESPACO_BRANCO(); 
 
 				}
 				break;
 			case 37 :
-				// Hello.g:1:363: COMENTARIO
+				// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:1:363: COMENTARIO
 				{
 				mCOMENTARIO(); 
 

@@ -101,6 +101,7 @@ tokens {
 @header {
 	import java.util.Set;
 	import java.util.HashSet;
+	import java.io.PrintWriter;
 }
 
 @members {
@@ -166,6 +167,21 @@ tokens {
                         System.out.println(entry.toString());
                 }
         }
+
+		public String getLinhaTabela(String linha, String token, String tipo, String funcao, String valor){
+			int length = 15;
+			String celula = new String(new char[length]).replace('\0', ' ');
+			String separador = " | ";
+			// String space10 = new String(new char[length]).replace('\0', ' ');
+
+			return 
+				(linha + celula).substring(0, length) + separador +
+				(token + celula).substring(0, length) + separador +
+				(tipo + celula).substring(0, length) + separador +
+				(funcao + celula).substring(0, length) + separador +
+				(valor + celula).substring(0, length) + separador
+				;
+		}
 	
     public static void main(String[] args) throws Exception {
         HelloLexer lex = new HelloLexer(new ANTLRFileStream(args[0]));
@@ -175,7 +191,58 @@ tokens {
  
         try {
             parser.program();
-            parser.escreveMapa();
+
+			System.out.println("tokens.size " + tokens.size());
+			String ultTipo = "";
+			String ultFuncao = "";
+			String linha = parser.getLinhaTabela(
+				"LINHA",
+				"TOKEN",
+				"TIPO",
+				"FUNCAO",
+				"VALOR"
+			);
+
+			// System.out.println(linha);
+			PrintWriter writer;
+			writer = new PrintWriter("Tabela de tokens " + args[0] + ".txt", "UTF-8");
+			writer.println(linha);
+			for (int i = 0; i < tokens.size(); i++) {
+				Token token = tokens.get(i);
+				if (token.getChannel() == parser.HIDDEN) {
+					continue;
+				}
+
+				if (token.getChannel() == parser.HIDDEN) {
+					continue;
+				}
+				
+				if (token.getType() == -1 ) {
+					continue;
+				}
+
+				if (parser.tokenNames[token.getType()].equals("FUNCAO")) {
+					ultFuncao = token.getText();
+				}
+
+				if (parser.tokenNames[token.getType()].equals("TIPOS")) {
+					ultTipo = token.getText();
+				}
+
+				// LinguagemToken tempToken = new LinguagemToken(ultFuncao, token.getText(), ultTipo);
+
+				linha = parser.getLinhaTabela(
+					token.getLine() + " ",
+					parser.tokenNames[token.getType()],
+					( parser.tokenNames[token.getType()].equals("ID") ?  ultTipo : "--"),
+					( parser.tokenNames[token.getType()].equals("ID") ?  ultFuncao : "--"),
+					token.getText()
+				);
+				writer.println(linha);
+				// System.out.println(linha);
+			}
+			writer.close();
+
         } catch (RecognitionException e)  {
             e.printStackTrace();
         }
