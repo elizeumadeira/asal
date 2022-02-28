@@ -1,0 +1,101 @@
+def funcao(){
+    int A;
+
+    while(A){
+
+    }
+
+    return A;
+
+    # retorno abaixo nao sera executado em uma linguagem real, no entanto o interpretador nao deve ver problemas com ele
+    return 1;
+}
+
+def funcao2(int A){
+    while(A){
+
+    }
+
+    #deve ser possivel o retorno sem nada
+    return;
+}
+
+def funcao3(int A, string B){
+    while(A){
+
+    }
+
+    #retono nao eh obrigatorio, o sistema deve permitir funcoes sem retorno
+}
+
+def main(){
+    int A;
+    string B;
+    int C;
+    int D[10];
+    
+    funcao(A);
+
+    funcao(A, B);
+
+    funcao(A, 1);
+
+    read A;
+
+    print B;
+
+    C = funcao2();
+
+    C = funcao2(1);
+
+    C = funcao2(A);
+
+    D[A] = funcao2(A);
+
+    # permite arrays multidimensionais
+    D[A][B] = 10;
+    D[A][10] = 10;
+    D[10][B] = 10;
+
+    # criei uma funcao hipotetica para verificacao do tamanho de um array
+    A = sizeof D;
+    A = sizeof D[2];
+
+    # teste varios blocos um dentro do outro
+    if(A){
+        if(A == B){
+            if(1){
+
+            }
+        }
+    }
+
+    for(A = 1; A < 6; A = A + 1){
+
+    }
+
+    foreach(int E in D){
+        int F;
+        F = funcao2(E);
+    }
+
+    # possivel fazer varredura em matriz
+    int Z;
+    foreach(int G in D){
+        Z = sizeof G;
+        foreach(int H in D[Z]){
+
+        }
+    }
+
+    # libera o usuario inserir um texto ou numero aleatorio no sistema
+    "teste";
+    10;
+
+    # declaracao de numero nao inteiro
+    float I;
+    I = 1.0;
+    I = 2;
+
+    return;
+}

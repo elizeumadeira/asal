@@ -1,0 +1,108 @@
+def funcao(){
+    int A;
+
+    while(A){
+
+    }
+
+    return A;
+
+    # retorno abaixo nao sera executado em uma linguagem real, no entanto o numeroerpretador nao deve ver problemas com ele
+    return 1;
+}
+
+def main(){
+    int A;
+    int B;
+    
+    # variacoes de laco "while"
+    while(A){
+
+    }
+
+    do{
+
+    }while(A);
+
+    # variacoes de laco "for"
+    for(A = 1; A < B; A = A + 1){
+        if(A == B){
+            #adiciona continue como um comando
+            continue;
+        }
+
+        if(A <= B){
+            break;
+        }
+    }
+
+    for(A = 1; A < 10; A = A + 1){
+
+    }
+
+    for(A = B; A < 10; A = A + 1){
+
+    }
+
+    # variacoes de condicao "if"
+    if(A){
+
+    }
+
+    if(A == B){
+
+    }
+
+    if(A != B){
+
+    }
+
+    if(A >= B){
+
+    }
+
+    if(A <= B){
+
+    }
+
+    if(A){
+
+    }else{
+        
+    }
+
+    if(A){
+
+    }elseif(B){
+        
+    }
+
+    if(A){
+
+    }elseif(B == A){
+        
+    }else{
+
+    }
+
+    switch(A){
+        case (1){
+            break;
+        }
+
+        # exemplo abaixo sem o break
+        # deve executar caso 'B' ou 'A igual a B'
+        case (B){
+            
+        }
+
+        case (A == B){
+            
+            break;
+        }
+
+        default{
+            break;
+        }
+    }
+}

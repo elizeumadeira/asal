@@ -1,0 +1,31 @@
+java -cp antlr.jar antlr.Tool -debug gramatica.g && javac -cp ./antlr.jar;. *.java && java -cp ./antlr.jar;. Compilador < programa.elizeu
+
+java -cp antlr-4.9-complete.jar -jar antlr-4.9-complete.jar
+ 
+java -cp antlr-4.9-complete.jar -jar antlr-4.9-complete.jar Hello.g4
+
+
+javac -cp ./antlr-4.9-complete.jar;. *.java
+
+
+
+java -cp ./antlr-4.9-complete.jar;. Test < programa.lcc
+
+
+
+java -cp ./antlr-4.5.1-complete.jar;. org.antlr.v4.antlr.Tool Hello.g4 && javac -cp ./antlr-4.9-complete.jar;. *.java && java -cp ./antlr-4.7.2-complete.jar;. Test < programa.lcc
+
+
+
+java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool Hello.g
+
+javac -cp ./antlr-3.5.2-complete.jar;. *.java
+
+java -cp ./antlr-3.5.2-complete.jar;. HelloParser < test.lcc
+
+
+
+# rodar estes comandos
+java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool Hello.g && javac -cp ./antlr-3.5.2-complete.jar;. *.java
+
+java -cp ./antlr-3.5.2-complete.jar;. HelloParser test.lcc
