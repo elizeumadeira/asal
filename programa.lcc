@@ -99,7 +99,9 @@ def main(){
 
     // fatoracao exemplo 1
     int F;
-    F = fatoracao(5);
+    int H;
+    H = 5;
+    F = fatoracao(H);
 
     // fatoracao exemplo 2
     F = 1;

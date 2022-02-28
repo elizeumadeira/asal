@@ -256,22 +256,22 @@ program	:
 	( statement | funclist)
 	;
 	
-funclist
-	:
-		(
-                T_DEF { adicionaFuncao(input.LT(1)); } FUNCAO 
-                        T_ABREPARENTESES 
-                                ( 
-                                        { setUltTipo(input.LT(1).getText()); } TIPOS { adicionaToken(input.LT(1));}  ID
-                                        (T_VIRGULA  { setUltTipo(input.LT(1).getText()); } TIPOS { adicionaToken(input.LT(1));}  ID  )*
-                                )?
-                        T_FECHAPARENTESES
-                        T_ABRECHAVE 
-                                (statement)+
-                        T_FECHACHAVE 
-        )*
+funcdef
+	: T_DEF { adicionaFuncao(input.LT(1)); } FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+		T_ABRECHAVE 
+				statelist
+		T_FECHACHAVE 
 	;
-	
+
+funclist : funcdef funclist | funcdef
+	;
+
+paramlist :  ( TIPOS  { adicionaToken(input.LT(1));} ID T_VIRGULA paramlist | TIPOS  { adicionaToken(input.LT(1));} ID)?
+	;
+
+statelist : statement (statelist)?
+	;
+
 statement
 	:(vardecl EOL |
 	atribstat EOL |
@@ -314,8 +314,7 @@ funccall
 	;
 
 paramlistcall
-	:   ( lvalue | TEXTO | expression)
-        (T_VIRGULA (ID | NUMERO) )*
+	:   ( ({ verificaToken(input.LT(1));} ID | TEXTO | expression) T_VIRGULA paramlistcall | ({ verificaToken(input.LT(1));} ID | TEXTO | expression) )?
 	;
 
 printstat
@@ -340,9 +339,6 @@ ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
 	        T_ABRECHAVE (statement)* T_FECHACHAVE
 	;	
-	
-statelist :	(statement)*
-	;
 	
 expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression)?
 	;
