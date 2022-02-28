@@ -1,52 +1,35 @@
-def funcao(){
-    int A;
+def func1 (int A, int B)
+{
+    int SM [2];
+    int C;
+    SM[0] = A + B;
+    SM[1] = B * C;
+    return ;
+}
 
-    while(A){
-
+def fatoracao(int N){
+    if(N == 1){
+        return N;
     }
 
-    return A;
-
-    # retorno abaixo nao sera executado em uma linguagem real, no entanto o numeroerpretador nao deve ver problemas com ele
-    return 1;
+    return N * (N - 1);
 }
 
 def main(){
     int A;
     int B;
     
-    # variacoes de laco "while"
-    while(A){
-
-    }
-
-    do{
-
-    }while(A);
-
-    # variacoes de laco "for"
+    // comentario
     for(A = 1; A < B; A = A + 1){
         if(A == B){
-            #adiciona continue como um comando
-            continue;
-        }
-
-        if(A <= B){
+            
             break;
         }
     }
 
-    for(A = 1; A < 10; A = A + 1){
-
-    }
-
-    for(A = B; A < 10; A = A + 1){
-
-    }
-
-    # variacoes de condicao "if"
+    // variacoes de condicao "if"
     if(A){
-
+        break;
     }
 
     if(A == B){
@@ -85,24 +68,40 @@ def main(){
 
     }
 
-    switch(A){
-        case (1){
-            break;
-        }
+    // teste varios blocos um dentro do outro
+    if(A){
+        if(A == B){
+            if(1){
 
-        # exemplo abaixo sem o break
-        # deve executar caso 'B' ou 'A igual a B'
-        case (B){
-            
-        }
-
-        case (A == B){
-            
-            break;
-        }
-
-        default{
-            break;
+            }
         }
     }
+
+    int AMENOSUM;
+    AMENOSUM = A - 1;
+
+    int C[A];
+    C[AMENOSUM] = funcao1(A, B);
+
+    // permite arrays multidimensionais
+    C[A][B] = 10;
+    C[A][10] = 10;
+    C[10][B] = 10;
+
+    // texto
+    string D;
+    D = "texto";
+    D = "";
+
+    // fatoracao exemplo 1
+    int F;
+    F = fatoracao(5);
+
+    // fatoracao exemplo 2
+    F = 1;
+    int G;
+    for(G = 1; G <= 5; G = G + 1){
+        F = F * G;
+    }
+
 }

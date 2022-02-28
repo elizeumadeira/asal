@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Hello.g 2022-02-28 13:08:11
+// $ANTLR 3.5.2 Hello.g 2022-02-28 14:53:38
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,41 +8,43 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class HelloLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int EOL=4;
-	public static final int FUNCAO=5;
-	public static final int ID=6;
-	public static final int NUMERO=7;
-	public static final int TEXTO=8;
-	public static final int TIPOS=9;
-	public static final int T_ABRECHAVE=10;
-	public static final int T_ABRECOLCHETE=11;
-	public static final int T_ABREPARENTESES=12;
-	public static final int T_ATRIBUICAO=13;
-	public static final int T_BREAK=14;
-	public static final int T_COMPARACAO=15;
-	public static final int T_DEF=16;
-	public static final int T_DIFERENTE=17;
-	public static final int T_DIVISAO=18;
-	public static final int T_E=19;
-	public static final int T_ELSE=20;
-	public static final int T_ESCREVA=21;
-	public static final int T_FECHACHAVE=22;
-	public static final int T_FECHACOLCHETE=23;
-	public static final int T_FECHAPARENTESES=24;
-	public static final int T_FOR=25;
-	public static final int T_IF=26;
-	public static final int T_MAIOR=27;
-	public static final int T_MAIOROUIGUAL=28;
-	public static final int T_MENOR=29;
-	public static final int T_MENOROUIGUAL=30;
-	public static final int T_MULTIPLICACAO=31;
-	public static final int T_OU=32;
-	public static final int T_READ=33;
-	public static final int T_RETURN=34;
-	public static final int T_SOMA=35;
-	public static final int T_SUBTRACAO=36;
-	public static final int T_VIRGULA=37;
-	public static final int WHITESPACE=38;
+	public static final int COMENTARIO=4;
+	public static final int EOL=5;
+	public static final int ESPACO_BRANCO=6;
+	public static final int FUNCAO=7;
+	public static final int ID=8;
+	public static final int NUMERO=9;
+	public static final int TEXTO=10;
+	public static final int TIPOS=11;
+	public static final int T_ABRECHAVE=12;
+	public static final int T_ABRECOLCHETE=13;
+	public static final int T_ABREPARENTESES=14;
+	public static final int T_ATRIBUICAO=15;
+	public static final int T_BREAK=16;
+	public static final int T_COMPARACAO=17;
+	public static final int T_DEF=18;
+	public static final int T_DIFERENTE=19;
+	public static final int T_DIVISAO=20;
+	public static final int T_E=21;
+	public static final int T_ELSE=22;
+	public static final int T_ELSEIF=23;
+	public static final int T_ESCREVA=24;
+	public static final int T_FECHACHAVE=25;
+	public static final int T_FECHACOLCHETE=26;
+	public static final int T_FECHAPARENTESES=27;
+	public static final int T_FOR=28;
+	public static final int T_IF=29;
+	public static final int T_MAIOR=30;
+	public static final int T_MAIOROUIGUAL=31;
+	public static final int T_MENOR=32;
+	public static final int T_MENOROUIGUAL=33;
+	public static final int T_MULTIPLICACAO=34;
+	public static final int T_OU=35;
+	public static final int T_READ=36;
+	public static final int T_RETURN=37;
+	public static final int T_SOMA=38;
+	public static final int T_SUBTRACAO=39;
+	public static final int T_VIRGULA=40;
 
 	// delegates
 	// delegators
@@ -304,13 +306,34 @@ public class HelloLexer extends Lexer {
 	}
 	// $ANTLR end "T_ELSE"
 
+	// $ANTLR start "T_ELSEIF"
+	public final void mT_ELSEIF() throws RecognitionException {
+		try {
+			int _type = T_ELSEIF;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Hello.g:14:10: ( 'elseif' )
+			// Hello.g:14:12: 'elseif'
+			{
+			match("elseif"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T_ELSEIF"
+
 	// $ANTLR start "T_ESCREVA"
 	public final void mT_ESCREVA() throws RecognitionException {
 		try {
 			int _type = T_ESCREVA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:14:11: ( 'print' )
-			// Hello.g:14:13: 'print'
+			// Hello.g:15:11: ( 'print' )
+			// Hello.g:15:13: 'print'
 			{
 			match("print"); 
 
@@ -330,8 +353,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHACHAVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:15:14: ( '}' )
-			// Hello.g:15:16: '}'
+			// Hello.g:16:14: ( '}' )
+			// Hello.g:16:16: '}'
 			{
 			match('}'); 
 			}
@@ -350,8 +373,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHACOLCHETE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:16:17: ( ']' )
-			// Hello.g:16:19: ']'
+			// Hello.g:17:17: ( ']' )
+			// Hello.g:17:19: ']'
 			{
 			match(']'); 
 			}
@@ -370,8 +393,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FECHAPARENTESES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:17:19: ( ')' )
-			// Hello.g:17:21: ')'
+			// Hello.g:18:19: ( ')' )
+			// Hello.g:18:21: ')'
 			{
 			match(')'); 
 			}
@@ -390,8 +413,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:18:7: ( 'for' )
-			// Hello.g:18:9: 'for'
+			// Hello.g:19:7: ( 'for' )
+			// Hello.g:19:9: 'for'
 			{
 			match("for"); 
 
@@ -411,8 +434,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:19:6: ( 'if' )
-			// Hello.g:19:8: 'if'
+			// Hello.g:20:6: ( 'if' )
+			// Hello.g:20:8: 'if'
 			{
 			match("if"); 
 
@@ -432,8 +455,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MAIOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:20:9: ( '>' )
-			// Hello.g:20:11: '>'
+			// Hello.g:21:9: ( '>' )
+			// Hello.g:21:11: '>'
 			{
 			match('>'); 
 			}
@@ -452,8 +475,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MAIOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:21:16: ( '>=' )
-			// Hello.g:21:18: '>='
+			// Hello.g:22:16: ( '>=' )
+			// Hello.g:22:18: '>='
 			{
 			match(">="); 
 
@@ -473,8 +496,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MENOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:22:9: ( '<' )
-			// Hello.g:22:11: '<'
+			// Hello.g:23:9: ( '<' )
+			// Hello.g:23:11: '<'
 			{
 			match('<'); 
 			}
@@ -493,8 +516,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MENOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:23:16: ( '<=' )
-			// Hello.g:23:18: '<='
+			// Hello.g:24:16: ( '<=' )
+			// Hello.g:24:18: '<='
 			{
 			match("<="); 
 
@@ -514,8 +537,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_MULTIPLICACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:24:17: ( '*' )
-			// Hello.g:24:19: '*'
+			// Hello.g:25:17: ( '*' )
+			// Hello.g:25:19: '*'
 			{
 			match('*'); 
 			}
@@ -534,8 +557,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_OU;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:25:6: ( '|' )
-			// Hello.g:25:8: '|'
+			// Hello.g:26:6: ( '|' )
+			// Hello.g:26:8: '|'
 			{
 			match('|'); 
 			}
@@ -554,8 +577,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_READ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:26:8: ( 'read' )
-			// Hello.g:26:10: 'read'
+			// Hello.g:27:8: ( 'read' )
+			// Hello.g:27:10: 'read'
 			{
 			match("read"); 
 
@@ -575,8 +598,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:27:10: ( 'return' )
-			// Hello.g:27:12: 'return'
+			// Hello.g:28:10: ( 'return' )
+			// Hello.g:28:12: 'return'
 			{
 			match("return"); 
 
@@ -596,8 +619,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_SOMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:28:8: ( '+' )
-			// Hello.g:28:10: '+'
+			// Hello.g:29:8: ( '+' )
+			// Hello.g:29:10: '+'
 			{
 			match('+'); 
 			}
@@ -616,8 +639,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_SUBTRACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:29:13: ( '-' )
-			// Hello.g:29:15: '-'
+			// Hello.g:30:13: ( '-' )
+			// Hello.g:30:15: '-'
 			{
 			match('-'); 
 			}
@@ -636,8 +659,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = T_VIRGULA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:30:11: ( ',' )
-			// Hello.g:30:13: ','
+			// Hello.g:31:11: ( ',' )
+			// Hello.g:31:13: ','
 			{
 			match(','); 
 			}
@@ -656,10 +679,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TIPOS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:276:2: ( ( 'int' | 'float' | 'string' ) )
-			// Hello.g:276:4: ( 'int' | 'float' | 'string' )
+			// Hello.g:290:2: ( ( 'int' | 'float' | 'string' ) )
+			// Hello.g:290:4: ( 'int' | 'float' | 'string' )
 			{
-			// Hello.g:276:4: ( 'int' | 'float' | 'string' )
+			// Hello.g:290:4: ( 'int' | 'float' | 'string' )
 			int alt1=3;
 			switch ( input.LA(1) ) {
 			case 'i':
@@ -684,21 +707,21 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// Hello.g:276:5: 'int'
+					// Hello.g:290:5: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 2 :
-					// Hello.g:276:13: 'float'
+					// Hello.g:290:13: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 3 :
-					// Hello.g:276:23: 'string'
+					// Hello.g:290:23: 'string'
 					{
 					match("string"); 
 
@@ -723,11 +746,11 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:280:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
-			// Hello.g:280:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
+			// Hello.g:294:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
+			// Hello.g:294:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// Hello.g:280:15: ( 'A' .. 'Z' | '0' .. '9' )*
+			// Hello.g:294:15: ( 'A' .. 'Z' | '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -772,8 +795,8 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = FUNCAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:284:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
-			// Hello.g:284:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// Hello.g:298:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
+			// Hello.g:298:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -783,7 +806,7 @@ public class HelloLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// Hello.g:284:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// Hello.g:298:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -832,21 +855,24 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = TEXTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:288:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' )? '\"' )
-			// Hello.g:288:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' )? '\"'
+			// Hello.g:302:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
+			// Hello.g:302:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
 			{
 			match('\"'); 
-			// Hello.g:288:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' )?
-			int alt4=2;
-			int LA4_0 = input.LA(1);
-			if ( ((LA4_0 >= ' ' && LA4_0 <= '!')||(LA4_0 >= '0' && LA4_0 <= '9')||(LA4_0 >= 'A' && LA4_0 <= 'Z')||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
-				alt4=1;
-			}
-			switch (alt4) {
+			// Hello.g:302:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
+			loop4:
+			while (true) {
+				int alt4=2;
+				int LA4_0 = input.LA(1);
+				if ( ((LA4_0 >= ' ' && LA4_0 <= '!')||LA4_0=='-'||(LA4_0 >= '0' && LA4_0 <= '9')||(LA4_0 >= 'A' && LA4_0 <= 'Z')||LA4_0=='_'||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
+					alt4=1;
+				}
+
+				switch (alt4) {
 				case 1 :
 					// Hello.g:
 					{
-					if ( (input.LA(1) >= ' ' && input.LA(1) <= '!')||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= ' ' && input.LA(1) <= '!')||input.LA(1)=='-'||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -857,6 +883,9 @@ public class HelloLexer extends Lexer {
 					}
 					break;
 
+				default :
+					break loop4;
+				}
 			}
 
 			match('\"'); 
@@ -876,10 +905,10 @@ public class HelloLexer extends Lexer {
 		try {
 			int _type = NUMERO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:292:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// Hello.g:292:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// Hello.g:306:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// Hello.g:306:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// Hello.g:292:4: ( '0' .. '9' )+
+			// Hello.g:306:4: ( '0' .. '9' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -912,7 +941,7 @@ public class HelloLexer extends Lexer {
 				cnt5++;
 			}
 
-			// Hello.g:292:18: ( '.' ( '0' .. '9' )+ )?
+			// Hello.g:306:18: ( '.' ( '0' .. '9' )+ )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -920,10 +949,10 @@ public class HelloLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// Hello.g:292:20: '.' ( '0' .. '9' )+
+					// Hello.g:306:20: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// Hello.g:292:24: ( '0' .. '9' )+
+					// Hello.g:306:24: ( '0' .. '9' )+
 					int cnt6=0;
 					loop6:
 					while (true) {
@@ -972,15 +1001,15 @@ public class HelloLexer extends Lexer {
 	}
 	// $ANTLR end "NUMERO"
 
-	// $ANTLR start "WHITESPACE"
-	public final void mWHITESPACE() throws RecognitionException {
+	// $ANTLR start "ESPACO_BRANCO"
+	public final void mESPACO_BRANCO() throws RecognitionException {
 		try {
-			int _type = WHITESPACE;
+			int _type = ESPACO_BRANCO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// Hello.g:296:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-			// Hello.g:296:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// Hello.g:310:2: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+			// Hello.g:310:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			// Hello.g:296:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+			// Hello.g:310:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
 			int cnt8=0;
 			loop8:
 			while (true) {
@@ -1023,14 +1052,82 @@ public class HelloLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "WHITESPACE"
+	// $ANTLR end "ESPACO_BRANCO"
+
+	// $ANTLR start "COMENTARIO"
+	public final void mCOMENTARIO() throws RecognitionException {
+		try {
+			int _type = COMENTARIO;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// Hello.g:314:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// Hello.g:314:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			{
+			match("//"); 
+
+			// Hello.g:314:12: (~ ( '\\n' | '\\r' ) )*
+			loop9:
+			while (true) {
+				int alt9=2;
+				int LA9_0 = input.LA(1);
+				if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\t')||(LA9_0 >= '\u000B' && LA9_0 <= '\f')||(LA9_0 >= '\u000E' && LA9_0 <= '\uFFFF')) ) {
+					alt9=1;
+				}
+
+				switch (alt9) {
+				case 1 :
+					// Hello.g:
+					{
+					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					break loop9;
+				}
+			}
+
+			// Hello.g:314:26: ( '\\r' )?
+			int alt10=2;
+			int LA10_0 = input.LA(1);
+			if ( (LA10_0=='\r') ) {
+				alt10=1;
+			}
+			switch (alt10) {
+				case 1 :
+					// Hello.g:314:26: '\\r'
+					{
+					match('\r'); 
+					}
+					break;
+
+			}
+
+			match('\n'); 
+			_channel=HIDDEN;
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "COMENTARIO"
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// Hello.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | WHITESPACE )
-		int alt9=35;
-		alt9 = dfa9.predict(input);
-		switch (alt9) {
+		// Hello.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ELSEIF | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO )
+		int alt11=37;
+		alt11 = dfa11.predict(input);
+		switch (alt11) {
 			case 1 :
 				// Hello.g:1:10: EOL
 				{
@@ -1116,163 +1213,177 @@ public class HelloLexer extends Lexer {
 				}
 				break;
 			case 13 :
-				// Hello.g:1:131: T_ESCREVA
+				// Hello.g:1:131: T_ELSEIF
+				{
+				mT_ELSEIF(); 
+
+				}
+				break;
+			case 14 :
+				// Hello.g:1:140: T_ESCREVA
 				{
 				mT_ESCREVA(); 
 
 				}
 				break;
-			case 14 :
-				// Hello.g:1:141: T_FECHACHAVE
+			case 15 :
+				// Hello.g:1:150: T_FECHACHAVE
 				{
 				mT_FECHACHAVE(); 
 
 				}
 				break;
-			case 15 :
-				// Hello.g:1:154: T_FECHACOLCHETE
+			case 16 :
+				// Hello.g:1:163: T_FECHACOLCHETE
 				{
 				mT_FECHACOLCHETE(); 
 
 				}
 				break;
-			case 16 :
-				// Hello.g:1:170: T_FECHAPARENTESES
+			case 17 :
+				// Hello.g:1:179: T_FECHAPARENTESES
 				{
 				mT_FECHAPARENTESES(); 
 
 				}
 				break;
-			case 17 :
-				// Hello.g:1:188: T_FOR
+			case 18 :
+				// Hello.g:1:197: T_FOR
 				{
 				mT_FOR(); 
 
 				}
 				break;
-			case 18 :
-				// Hello.g:1:194: T_IF
+			case 19 :
+				// Hello.g:1:203: T_IF
 				{
 				mT_IF(); 
 
 				}
 				break;
-			case 19 :
-				// Hello.g:1:199: T_MAIOR
+			case 20 :
+				// Hello.g:1:208: T_MAIOR
 				{
 				mT_MAIOR(); 
 
 				}
 				break;
-			case 20 :
-				// Hello.g:1:207: T_MAIOROUIGUAL
+			case 21 :
+				// Hello.g:1:216: T_MAIOROUIGUAL
 				{
 				mT_MAIOROUIGUAL(); 
 
 				}
 				break;
-			case 21 :
-				// Hello.g:1:222: T_MENOR
+			case 22 :
+				// Hello.g:1:231: T_MENOR
 				{
 				mT_MENOR(); 
 
 				}
 				break;
-			case 22 :
-				// Hello.g:1:230: T_MENOROUIGUAL
+			case 23 :
+				// Hello.g:1:239: T_MENOROUIGUAL
 				{
 				mT_MENOROUIGUAL(); 
 
 				}
 				break;
-			case 23 :
-				// Hello.g:1:245: T_MULTIPLICACAO
+			case 24 :
+				// Hello.g:1:254: T_MULTIPLICACAO
 				{
 				mT_MULTIPLICACAO(); 
 
 				}
 				break;
-			case 24 :
-				// Hello.g:1:261: T_OU
+			case 25 :
+				// Hello.g:1:270: T_OU
 				{
 				mT_OU(); 
 
 				}
 				break;
-			case 25 :
-				// Hello.g:1:266: T_READ
+			case 26 :
+				// Hello.g:1:275: T_READ
 				{
 				mT_READ(); 
 
 				}
 				break;
-			case 26 :
-				// Hello.g:1:273: T_RETURN
+			case 27 :
+				// Hello.g:1:282: T_RETURN
 				{
 				mT_RETURN(); 
 
 				}
 				break;
-			case 27 :
-				// Hello.g:1:282: T_SOMA
+			case 28 :
+				// Hello.g:1:291: T_SOMA
 				{
 				mT_SOMA(); 
 
 				}
 				break;
-			case 28 :
-				// Hello.g:1:289: T_SUBTRACAO
+			case 29 :
+				// Hello.g:1:298: T_SUBTRACAO
 				{
 				mT_SUBTRACAO(); 
 
 				}
 				break;
-			case 29 :
-				// Hello.g:1:301: T_VIRGULA
+			case 30 :
+				// Hello.g:1:310: T_VIRGULA
 				{
 				mT_VIRGULA(); 
 
 				}
 				break;
-			case 30 :
-				// Hello.g:1:311: TIPOS
+			case 31 :
+				// Hello.g:1:320: TIPOS
 				{
 				mTIPOS(); 
 
 				}
 				break;
-			case 31 :
-				// Hello.g:1:317: ID
+			case 32 :
+				// Hello.g:1:326: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 32 :
-				// Hello.g:1:320: FUNCAO
+			case 33 :
+				// Hello.g:1:329: FUNCAO
 				{
 				mFUNCAO(); 
 
 				}
 				break;
-			case 33 :
-				// Hello.g:1:327: TEXTO
+			case 34 :
+				// Hello.g:1:336: TEXTO
 				{
 				mTEXTO(); 
 
 				}
 				break;
-			case 34 :
-				// Hello.g:1:333: NUMERO
+			case 35 :
+				// Hello.g:1:342: NUMERO
 				{
 				mNUMERO(); 
 
 				}
 				break;
-			case 35 :
-				// Hello.g:1:340: WHITESPACE
+			case 36 :
+				// Hello.g:1:349: ESPACO_BRANCO
 				{
-				mWHITESPACE(); 
+				mESPACO_BRANCO(); 
+
+				}
+				break;
+			case 37 :
+				// Hello.g:1:363: COMENTARIO
+				{
+				mCOMENTARIO(); 
 
 				}
 				break;
@@ -1281,35 +1392,37 @@ public class HelloLexer extends Lexer {
 	}
 
 
-	protected DFA9 dfa9 = new DFA9(this);
-	static final String DFA9_eotS =
-		"\5\uffff\1\41\14\uffff\1\53\1\55\16\uffff\6\34\1\66\1\34\4\uffff\3\34"+
-		"\1\74\2\34\1\77\1\34\1\uffff\1\101\4\34\1\uffff\1\106\1\34\1\uffff\1\34"+
-		"\1\uffff\1\111\2\34\1\114\1\uffff\1\115\1\101\1\uffff\2\34\2\uffff\1\120"+
-		"\1\101\1\uffff";
-	static final String DFA9_eofS =
-		"\121\uffff";
-	static final String DFA9_minS =
-		"\1\11\4\uffff\1\75\2\60\3\uffff\2\60\3\uffff\2\60\2\75\2\uffff\1\60\3"+
-		"\uffff\1\60\7\uffff\1\145\1\146\1\163\1\151\1\162\1\157\1\60\1\164\4\uffff"+
-		"\1\141\1\162\1\141\1\60\1\145\1\156\1\60\1\141\1\uffff\1\60\1\144\1\165"+
-		"\1\151\1\153\1\uffff\1\60\1\164\1\uffff\1\164\1\uffff\1\60\1\162\1\156"+
-		"\1\60\1\uffff\2\60\1\uffff\1\156\1\147\2\uffff\2\60\1\uffff";
-	static final String DFA9_maxS =
-		"\1\175\4\uffff\1\75\2\172\3\uffff\2\172\3\uffff\2\172\2\75\2\uffff\1\172"+
-		"\3\uffff\1\172\7\uffff\1\145\1\146\1\163\1\151\1\162\1\157\1\172\1\164"+
-		"\4\uffff\1\164\1\162\1\141\1\172\1\145\1\156\1\172\1\141\1\uffff\1\172"+
-		"\1\144\1\165\1\151\1\153\1\uffff\1\172\1\164\1\uffff\1\164\1\uffff\1\172"+
-		"\1\162\1\156\1\172\1\uffff\2\172\1\uffff\1\156\1\147\2\uffff\2\172\1\uffff";
-	static final String DFA9_acceptS =
-		"\1\uffff\1\1\1\2\1\3\1\4\3\uffff\1\11\1\12\1\13\2\uffff\1\16\1\17\1\20"+
-		"\4\uffff\1\27\1\30\1\uffff\1\33\1\34\1\35\1\uffff\1\37\1\40\1\41\1\42"+
-		"\1\43\1\7\1\5\10\uffff\1\24\1\23\1\26\1\25\10\uffff\1\22\5\uffff\1\10"+
-		"\2\uffff\1\21\1\uffff\1\36\4\uffff\1\14\2\uffff\1\31\2\uffff\1\6\1\15"+
-		"\2\uffff\1\32";
-	static final String DFA9_specialS =
-		"\121\uffff}>";
-	static final String[] DFA9_transitionS = {
+	protected DFA11 dfa11 = new DFA11(this);
+	static final String DFA11_eotS =
+		"\5\uffff\1\41\3\uffff\1\45\10\uffff\1\55\1\57\16\uffff\2\34\2\uffff\4"+
+		"\34\1\70\1\34\4\uffff\3\34\1\76\2\34\1\101\1\34\1\uffff\1\103\4\34\1\uffff"+
+		"\1\111\1\34\1\uffff\1\34\1\uffff\1\114\2\34\1\117\1\34\1\uffff\1\121\1"+
+		"\103\1\uffff\2\34\1\uffff\1\124\1\uffff\1\125\1\103\2\uffff";
+	static final String DFA11_eofS =
+		"\126\uffff";
+	static final String DFA11_minS =
+		"\1\11\4\uffff\1\75\2\60\1\uffff\1\57\1\uffff\2\60\3\uffff\2\60\2\75\2"+
+		"\uffff\1\60\3\uffff\1\60\7\uffff\1\145\1\146\2\uffff\1\163\1\151\1\162"+
+		"\1\157\1\60\1\164\4\uffff\1\141\1\162\1\141\1\60\1\145\1\156\1\60\1\141"+
+		"\1\uffff\1\60\1\144\1\165\1\151\1\153\1\uffff\1\60\1\164\1\uffff\1\164"+
+		"\1\uffff\1\60\1\162\1\156\1\60\1\146\1\uffff\2\60\1\uffff\1\156\1\147"+
+		"\1\uffff\1\60\1\uffff\2\60\2\uffff";
+	static final String DFA11_maxS =
+		"\1\175\4\uffff\1\75\2\172\1\uffff\1\57\1\uffff\2\172\3\uffff\2\172\2\75"+
+		"\2\uffff\1\172\3\uffff\1\172\7\uffff\1\145\1\146\2\uffff\1\163\1\151\1"+
+		"\162\1\157\1\172\1\164\4\uffff\1\164\1\162\1\141\1\172\1\145\1\156\1\172"+
+		"\1\141\1\uffff\1\172\1\144\1\165\1\151\1\153\1\uffff\1\172\1\164\1\uffff"+
+		"\1\164\1\uffff\1\172\1\162\1\156\1\172\1\146\1\uffff\2\172\1\uffff\1\156"+
+		"\1\147\1\uffff\1\172\1\uffff\2\172\2\uffff";
+	static final String DFA11_acceptS =
+		"\1\uffff\1\1\1\2\1\3\1\4\3\uffff\1\11\1\uffff\1\13\2\uffff\1\17\1\20\1"+
+		"\21\4\uffff\1\30\1\31\1\uffff\1\34\1\35\1\36\1\uffff\1\40\1\41\1\42\1"+
+		"\43\1\44\1\7\1\5\2\uffff\1\45\1\12\6\uffff\1\25\1\24\1\27\1\26\10\uffff"+
+		"\1\23\5\uffff\1\10\2\uffff\1\22\1\uffff\1\37\5\uffff\1\14\2\uffff\1\32"+
+		"\2\uffff\1\6\1\uffff\1\16\2\uffff\1\15\1\33";
+	static final String DFA11_specialS =
+		"\126\uffff}>";
+	static final String[] DFA11_transitionS = {
 			"\2\37\1\uffff\2\37\22\uffff\1\37\1\10\1\35\3\uffff\1\12\1\uffff\1\4\1"+
 			"\17\1\24\1\27\1\31\1\30\1\uffff\1\11\12\36\1\uffff\1\1\1\23\1\5\1\22"+
 			"\2\uffff\32\33\1\3\1\uffff\1\16\3\uffff\1\34\1\6\1\34\1\7\1\13\1\20\2"+
@@ -1322,112 +1435,117 @@ public class HelloLexer extends Lexer {
 			"\12\34\45\uffff\1\34\1\uffff\21\34\1\42\10\34",
 			"\12\34\45\uffff\1\34\1\uffff\4\34\1\43\25\34",
 			"",
+			"\1\44",
+			"",
+			"\12\34\45\uffff\1\34\1\uffff\13\34\1\46\16\34",
+			"\12\34\45\uffff\1\34\1\uffff\21\34\1\47\10\34",
 			"",
 			"",
-			"\12\34\45\uffff\1\34\1\uffff\13\34\1\44\16\34",
-			"\12\34\45\uffff\1\34\1\uffff\21\34\1\45\10\34",
 			"",
-			"",
-			"",
-			"\12\34\45\uffff\1\34\1\uffff\13\34\1\47\2\34\1\46\13\34",
-			"\12\34\45\uffff\1\34\1\uffff\5\34\1\50\7\34\1\51\14\34",
-			"\1\52",
+			"\12\34\45\uffff\1\34\1\uffff\13\34\1\51\2\34\1\50\13\34",
+			"\12\34\45\uffff\1\34\1\uffff\5\34\1\52\7\34\1\53\14\34",
 			"\1\54",
+			"\1\56",
 			"",
 			"",
-			"\12\34\45\uffff\1\34\1\uffff\4\34\1\56\25\34",
-			"",
-			"",
-			"",
-			"\12\34\45\uffff\1\34\1\uffff\23\34\1\57\6\34",
+			"\12\34\45\uffff\1\34\1\uffff\4\34\1\60\25\34",
 			"",
 			"",
 			"",
+			"\12\34\45\uffff\1\34\1\uffff\23\34\1\61\6\34",
 			"",
 			"",
 			"",
 			"",
-			"\1\60",
-			"\1\61",
+			"",
+			"",
+			"",
 			"\1\62",
 			"\1\63",
+			"",
+			"",
 			"\1\64",
 			"\1\65",
-			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\1\66",
 			"\1\67",
-			"",
-			"",
-			"",
-			"",
-			"\1\70\22\uffff\1\71",
-			"\1\72",
-			"\1\73",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\1\71",
+			"",
+			"",
+			"",
+			"",
+			"\1\72\22\uffff\1\73",
+			"\1\74",
 			"\1\75",
-			"\1\76",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\1\77",
 			"\1\100",
-			"",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
 			"\1\102",
-			"\1\103",
+			"",
+			"\12\34\45\uffff\1\34\1\uffff\32\34",
 			"\1\104",
 			"\1\105",
-			"",
-			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\1\106",
 			"\1\107",
 			"",
-			"\1\110",
-			"",
-			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\12\34\45\uffff\1\34\1\uffff\10\34\1\110\21\34",
 			"\1\112",
+			"",
 			"\1\113",
-			"\12\34\45\uffff\1\34\1\uffff\32\34",
 			"",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
-			"\12\34\45\uffff\1\34\1\uffff\32\34",
-			"",
+			"\1\115",
 			"\1\116",
-			"\1\117",
-			"",
+			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\1\120",
 			"",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
 			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"",
+			"\1\122",
+			"\1\123",
+			"",
+			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"",
+			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"\12\34\45\uffff\1\34\1\uffff\32\34",
+			"",
 			""
 	};
 
-	static final short[] DFA9_eot = DFA.unpackEncodedString(DFA9_eotS);
-	static final short[] DFA9_eof = DFA.unpackEncodedString(DFA9_eofS);
-	static final char[] DFA9_min = DFA.unpackEncodedStringToUnsignedChars(DFA9_minS);
-	static final char[] DFA9_max = DFA.unpackEncodedStringToUnsignedChars(DFA9_maxS);
-	static final short[] DFA9_accept = DFA.unpackEncodedString(DFA9_acceptS);
-	static final short[] DFA9_special = DFA.unpackEncodedString(DFA9_specialS);
-	static final short[][] DFA9_transition;
+	static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+	static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+	static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+	static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+	static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+	static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+	static final short[][] DFA11_transition;
 
 	static {
-		int numStates = DFA9_transitionS.length;
-		DFA9_transition = new short[numStates][];
+		int numStates = DFA11_transitionS.length;
+		DFA11_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA9_transition[i] = DFA.unpackEncodedString(DFA9_transitionS[i]);
+			DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
 		}
 	}
 
-	protected class DFA9 extends DFA {
+	protected class DFA11 extends DFA {
 
-		public DFA9(BaseRecognizer recognizer) {
+		public DFA11(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 9;
-			this.eot = DFA9_eot;
-			this.eof = DFA9_eof;
-			this.min = DFA9_min;
-			this.max = DFA9_max;
-			this.accept = DFA9_accept;
-			this.special = DFA9_special;
-			this.transition = DFA9_transition;
+			this.decisionNumber = 11;
+			this.eot = DFA11_eot;
+			this.eof = DFA11_eof;
+			this.min = DFA11_min;
+			this.max = DFA11_max;
+			this.accept = DFA11_accept;
+			this.special = DFA11_special;
+			this.transition = DFA11_transition;
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | WHITESPACE );";
+			return "1:1: Tokens : ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_COMPARACAO | T_DEF | T_DIFERENTE | T_DIVISAO | T_E | T_ELSE | T_ELSEIF | T_ESCREVA | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_OU | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO );";
 		}
 	}
 

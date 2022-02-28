@@ -87,6 +87,9 @@ tokens {
 		
 	T_ELSE = 'else'
 		;
+
+	T_ELSEIF = 'elseif'
+		;
 		
 	T_FOR = 'for'
 		;
@@ -180,14 +183,12 @@ tokens {
 }
 
 program	:
-	(statement| funclist)
+	( statement | funclist)
 	;
 	
 funclist
 	:
 		(
-                // funções não retornam mais o tipo
-                // tipos 
                 T_DEF { adicionaFuncao(input.LT(1)); } FUNCAO 
                         T_ABREPARENTESES 
                                 ( 
@@ -216,7 +217,8 @@ statement
 
 vardecl	
 	: 
-	{ setUltTipo(input.LT(1).getText()); } TIPOS { adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( { verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
+		{ setUltTipo(input.LT(1).getText()); } TIPOS 
+		{ adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( { verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
 atribstat
@@ -224,7 +226,7 @@ atribstat
 	ID    // atribuição de array   a[b] ou a[1]
                 (T_ABRECOLCHETE (ID | NUMERO ) T_FECHACOLCHETE)*
                 T_ATRIBUICAO 
-                ( expression | funccall )
+                ( expression | funccall | TEXTO )
 	;
 
 funccall
@@ -244,38 +246,46 @@ readstat
 	;
 	
 returnstat
-	: T_RETURN ( ID | NUMERO | TEXTO)?
+	: T_RETURN ( TEXTO | expression )?
 	;
 	
-ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES statement (options {k=1; backtrack=false;}: T_ELSE statement)?
+ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES 
+			T_ABRECHAVE (statement)*
+			( T_FECHACHAVE T_ELSEIF T_ABREPARENTESES expression T_FECHAPARENTESES T_ABRECHAVE (statement)* )*
+			( T_FECHACHAVE T_ELSE T_ABRECHAVE (statement)* )?
+			T_FECHACHAVE
 	;
 	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
-	        T_ABRECHAVE (statement)+ T_FECHACHAVE
+	        T_ABRECHAVE (statement)* T_FECHACHAVE
 	;	
 	
-statelist :	
-	statement (statelist)?
+statelist :	(statement)*
 	;
 	
-expression 
-	: expr_linha
+expression : expression_linha ( ( T_E | T_OU ) expression_linha)*
+	;
+expression_linha : term (( T_SOMA | T_SUBTRACAO ) term)*
 	;
 
-expr_linha : term (( T_SOMA | T_SUBTRACAO ) term)*
+term : relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expression )*
 	;
 
-term : fator(( T_MULTIPLICACAO | T_DIVISAO)  fator)*
+relational_expression : relational_expression_2 (( T_MAIOR | T_MENOR ) relational_expression_2 )*
 	;
 
-unaryexpr
-	: ('+' | '-')?	factor
+relational_expression_2 : equal_expression (( T_MAIOROUIGUAL | T_MENOROUIGUAL ) equal_expression )*
 	;
 
-fator : { verificaToken(input.LT(1));} ID  | NUMERO | T_ABREPARENTESES expression T_FECHAPARENTESES
+equal_expression :  unaryexpr (( T_COMPARACAO | T_DIFERENTE ) unaryexpr )*
+	;
+
+unaryexpr :  factor (( T_SOMA | T_SUBTRACAO ) factor )*
+	;
+
+factor : ( { verificaToken(input.LT(1));} ID  | NUMERO | T_ABREPARENTESES expression T_FECHAPARENTESES )
 	;
 	
-
 TIPOS 
 	:	('int' | 'float' | 'string')
 	;
@@ -289,16 +299,20 @@ FUNCAO
         ;
 	        
 TEXTO 
-	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!')? '"'
+	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_' | '-')* '"'
         ;
 	
 NUMERO 
 	:	('0'..'9')+   ( '.' ('0'..'9')+  )?
         ;
 
-WHITESPACE 
+ESPACO_BRANCO 
 	: 	( '\t' | ' ' | '\r' | '\n'| '\u000C' )+    { $channel = HIDDEN; } 
 	;
+
+COMENTARIO
+    : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+    ;
 /*
 program	:
 	(statement| funclist)
