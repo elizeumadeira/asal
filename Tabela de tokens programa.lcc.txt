@@ -37,6 +37,9 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 6               | ID              | int             | func1           | C               | 
 6               | EOL             | --              | --              | ;               | 
 7               | T_RETURN        | --              | --              | return          | 
+7               | ID              | int             | func1           | A               | 
+7               | T_MENOR         | --              | --              | <               | 
+7               | ID              | int             | func1           | B               | 
 7               | EOL             | --              | --              | ;               | 
 8               | T_FECHACHAVE    | --              | --              | }               | 
 10              | T_DEF           | --              | --              | def             | 
@@ -49,7 +52,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 11              | T_IF            | --              | --              | if              | 
 11              | T_ABREPARENTESE | --              | --              | (               | 
 11              | ID              | int             | fatoracao       | N               | 
-11              | T_COMPARACAO    | --              | --              | ==              | 
+11              | T_IGUAL         | --              | --              | ==              | 
 11              | NUMERO          | --              | --              | 1               | 
 11              | T_FECHAPARENTES | --              | --              | )               | 
 11              | T_ABRECHAVE     | --              | --              | {               | 
@@ -98,7 +101,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 24              | T_IF            | --              | --              | if              | 
 24              | T_ABREPARENTESE | --              | --              | (               | 
 24              | ID              | int             | main            | A               | 
-24              | T_COMPARACAO    | --              | --              | ==              | 
+24              | T_IGUAL         | --              | --              | ==              | 
 24              | ID              | int             | main            | B               | 
 24              | T_FECHAPARENTES | --              | --              | )               | 
 24              | T_ABRECHAVE     | --              | --              | {               | 
@@ -117,7 +120,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 35              | T_IF            | --              | --              | if              | 
 35              | T_ABREPARENTESE | --              | --              | (               | 
 35              | ID              | int             | main            | A               | 
-35              | T_COMPARACAO    | --              | --              | ==              | 
+35              | T_IGUAL         | --              | --              | ==              | 
 35              | ID              | int             | main            | B               | 
 35              | T_FECHAPARENTES | --              | --              | )               | 
 35              | T_ABRECHAVE     | --              | --              | {               | 
@@ -176,7 +179,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 65              | T_ELSEIF        | --              | --              | elseif          | 
 65              | T_ABREPARENTESE | --              | --              | (               | 
 65              | ID              | int             | main            | B               | 
-65              | T_COMPARACAO    | --              | --              | ==              | 
+65              | T_IGUAL         | --              | --              | ==              | 
 65              | ID              | int             | main            | A               | 
 65              | T_FECHAPARENTES | --              | --              | )               | 
 65              | T_ABRECHAVE     | --              | --              | {               | 
@@ -192,7 +195,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 73              | T_IF            | --              | --              | if              | 
 73              | T_ABREPARENTESE | --              | --              | (               | 
 73              | ID              | int             | main            | A               | 
-73              | T_COMPARACAO    | --              | --              | ==              | 
+73              | T_IGUAL         | --              | --              | ==              | 
 73              | ID              | int             | main            | B               | 
 73              | T_FECHAPARENTES | --              | --              | )               | 
 73              | T_ABRECHAVE     | --              | --              | {               | 

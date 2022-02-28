@@ -4,7 +4,7 @@ def func1 (int A, int B)
     int C;
     SM[0] = A + B;
     SM[1] = B * C;
-    return ;
+    return A < B;
 }
 
 def fatoracao(int N){

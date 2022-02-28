@@ -37,17 +37,17 @@ tokens {
 	T_ATRIBUICAO = '='
 		        ;
 		
-	T_COMPARACAO = '=='
+	T_IGUAL = '=='
 		        ;
 		
 	T_DIFERENTE = '!='
 		        ;
 		
-	T_E = '&'
-		        ;
+	// T_E = '&'
+	// 	        ;
 		
-	T_OU = '|'
-		        ;
+	// T_OU = '|'
+	// 	        ;
 		
 	T_MAIOROUIGUAL  = '>=' 
 		        ;
@@ -73,7 +73,7 @@ tokens {
 	T_DIVISAO = '/'
 		  ;
 		  
-	T_ESCREVA = 'print'
+	T_WRITE = 'print'
 		;
 		
 	T_READ = 'read'
@@ -92,6 +92,9 @@ tokens {
 		;
 		
 	T_FOR = 'for'
+		;
+
+	T_NEW = 'new'
 		;
 	
 	T_BREAK = 'break'
@@ -288,12 +291,20 @@ vardecl
 		{ adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( { verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
+lvalue
+	: { verificaToken(input.LT(1));} ID
+		( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+	;
+
 atribstat
 	:
 	ID    // atribuição de array   a[b] ou a[1]
                 (T_ABRECOLCHETE (ID | NUMERO ) T_FECHACOLCHETE)*
                 T_ATRIBUICAO 
                 ( expression | funccall | TEXTO )
+	;
+
+allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 	;
 
 funccall
@@ -305,7 +316,7 @@ funccall
 	;
 
 printstat
-	: T_ESCREVA( ID |TEXTO | expression ) 
+	: T_WRITE( ID |TEXTO | expression ) 
 	;
 	
 readstat
@@ -330,27 +341,20 @@ forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAP
 statelist :	(statement)*
 	;
 	
-expression : expression_linha ( ( T_E | T_OU ) expression_linha)*
-	;
-expression_linha : term (( T_SOMA | T_SUBTRACAO ) term)*
+expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression)?
 	;
 
-term : relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expression )*
+numexpression : term (( T_SOMA | T_SUBTRACAO ) term)*
 	;
 
-relational_expression : relational_expression_2 (( T_MAIOR | T_MENOR ) relational_expression_2 )*
+term : // relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expression )*
+	unaryexpr ( (T_MULTIPLICACAO | T_DIVISAO ) unaryexpr)*
 	;
 
-relational_expression_2 : equal_expression (( T_MAIOROUIGUAL | T_MENOROUIGUAL ) equal_expression )*
+unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 	;
 
-equal_expression :  unaryexpr (( T_COMPARACAO | T_DIFERENTE ) unaryexpr )*
-	;
-
-unaryexpr :  factor (( T_SOMA | T_SUBTRACAO ) factor )*
-	;
-
-factor : ( { verificaToken(input.LT(1));} ID  | NUMERO | T_ABREPARENTESES expression T_FECHAPARENTESES )
+factor : ( NUMERO | lvalue | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
 	
 TIPOS 
