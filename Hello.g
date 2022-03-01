@@ -42,13 +42,7 @@ tokens {
 		
 	T_DIFERENTE = '!='
 		        ;
-		
-	// T_E = '&'
-	// 	        ;
-		
-	// T_OU = '|'
-	// 	        ;
-		
+
 	T_MAIOROUIGUAL  = '>=' 
 		        ;
 		
@@ -99,13 +93,13 @@ tokens {
 
 	T_NULL = 'null'
 		;
-}
+} 
 
 @header {
 	import java.util.Set;
 	import java.util.HashSet;
 	import java.io.PrintWriter;
-}
+} 
 
 @members {
 	java.util.HashMap<String, String> mapaVar = new java.util.HashMap<String, String>();;
@@ -123,13 +117,13 @@ tokens {
                         ultTipo = "";
                 } else{
                         throw new RuntimeException("ID '"+token.getText()+"' ja foi declarado. Erro em " + token.getLine()+":");
-                }
-        }
+                } 
+        } 
         
         public void verificaToken(Token token){
                 // if(mapaVar.get(token.getText()) == null){
                 //         throw new RuntimeException("ID '"+token.getText()+"' nao declarado em "+ token.getLine()+":"+ token.getColumn());
-                // }
+                // } 
                 LinguagemToken tempToken = new LinguagemToken(ultFuncao, token.getText(), ultTipo);
 
                 // System.out.println("TempToken: " + tempToken.toString());
@@ -137,8 +131,8 @@ tokens {
 				// System.out.println(tempToken.toString() + " " + token.getText());
                 if(mapa.get(tempToken.toString()) == null){
                         throw new RuntimeException("ID '"+token.getText()+"' nao declarado em "+ token.getLine() + " / Funcao: " + ultFuncao);
-                }
-        }
+                } 
+        } 
 
         public void adicionaFuncao(Token token){
 				System.out.println("Funcao "+token.getText());
@@ -148,29 +142,29 @@ tokens {
                         setUltFuncao(token.getText());
                 } else{
                         throw new RuntimeException("Funcao '"+token.getText()+"' ja foi declarado. Erro em "+ token.getLine());
-                }
-        }
+                } 
+        } 
 
         public void verificaFuncao(Token token){
                 if(mapaFuncaoVar.get(token.getText()) == null){
                         throw new RuntimeException("Funcao '"+token.getText()+"' nao declarado em "+ token.getLine());
-                }
-        }
+                } 
+        } 
 
         public void setUltTipo(String tipo){
                 ultTipo = tipo;
-        }
+        } 
 
         public void setUltFuncao(String funcao){
                 ultFuncao = funcao;
-        }
+        } 
 
         public void escreveMapa(){
                 System.out.println("Mapa de tokens\n");
                 for (java.util.Map.Entry<String,LinguagemToken> entry : mapa.entrySet()){
                         System.out.println(entry.toString());
-                }
-        }
+                } 
+        } 
 
 		public String getLinhaTabela(String linha, String token, String tipo, String funcao, String valor){
 			int length = 15;
@@ -185,7 +179,7 @@ tokens {
 				(funcao + celula).substring(0, length) + separador +
 				(valor + celula).substring(0, length) + separador
 				;
-		}
+		} 
 	
     public static void main(String[] args) throws Exception {
         HelloLexer lex = new HelloLexer(new ANTLRFileStream(args[0]));
@@ -215,23 +209,23 @@ tokens {
 				Token token = tokens.get(i);
 				if (token.getChannel() == parser.HIDDEN) {
 					continue;
-				}
+				} 
 
 				if (token.getChannel() == parser.HIDDEN) {
 					continue;
-				}
+				} 
 				
 				if (token.getType() == -1 ) {
 					continue;
-				}
+				} 
 
 				if (parser.tokenNames[token.getType()].equals("FUNCAO")) {
 					ultFuncao = token.getText();
-				}
+				} 
 
 				if (parser.tokenNames[token.getType()].equals("TIPOS")) {
 					ultTipo = token.getText();
-				}
+				} 
 
 				// LinguagemToken tempToken = new LinguagemToken(ultFuncao, token.getText(), ultTipo);
 
@@ -244,23 +238,23 @@ tokens {
 				);
 				writer.println(linha);
 				// System.out.println(linha);
-			}
+			} 
 			writer.close();
 
         } catch (RecognitionException e)  {
             e.printStackTrace();
         } catch (Exception e)  {
             e.printStackTrace();
-        }
-    }
-}
+        } 
+    } 
+} 
 
 program	:
 	( statement | funclist )
 	;
 	
 funcdef
-	: T_DEF { adicionaFuncao(input.LT(1)); } FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+	: T_DEF {adicionaFuncao(input.LT(1));} FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
 		T_ABRECHAVE 
 				statelist
 		T_FECHACHAVE 
@@ -269,45 +263,47 @@ funcdef
 funclist : funcdef funclist | funcdef
 	;
 
-paramlist :  ( 
-				TIPOS { adicionaToken(input.LT(1));} ID paramlist_linha
-				// TIPOS  { adicionaToken(input.LT(1));} ID
-			)?
+paramlist 
+	: ( TIPOS {adicionaToken(input.LT(1));} ID paramlist_linha )?
 	;
 
-paramlist_linha: ( T_VIRGULA paramlist )?
+paramlist_linha
+	: T_VIRGULA paramlist 
+	| /* epsilon */ 
 	;
 
 statelist : statement (statelist)?
 	;
 
-statement
-	:(vardecl EOL |
-	atribstat EOL |
-	printstat EOL |	
-	readstat EOL|
-	returnstat EOL |
-	ifstat |
-	forstat |
-	T_ABRECHAVE statelist T_FECHACHAVE |
-	T_BREAK EOL |
-	EOL)
+statement:
+	(
+		vardecl EOL |
+		atribstat EOL |
+		printstat EOL |	
+		readstat EOL|
+		returnstat EOL |
+		ifstat |
+		forstat |
+		T_ABRECHAVE statelist T_FECHACHAVE |
+		T_BREAK EOL |
+		EOL
+	)
 	;
 
 vardecl	
 	: 
-		{ setUltTipo(input.LT(1).getText()); } TIPOS 
-		{ adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( { verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
+		{setUltTipo(input.LT(1).getText());} TIPOS 
+		{adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
 lvalue
-	: { verificaToken(input.LT(1));} ID
+	: {verificaToken(input.LT(1));} ID
 		( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 	;
 
 atribstat
 	:
-	lvalue   // atribuição de array   a[b] ou a[1]
+	lvalue 
 	T_ATRIBUICAO 
 	( expression | allocexpression | funccall | TEXTO )
 	;
@@ -323,7 +319,15 @@ funccall
 	;
 
 paramlistcall
-	:   ( ({ verificaToken(input.LT(1));} ID | TEXTO | expression) T_VIRGULA paramlistcall | ({ verificaToken(input.LT(1));} ID | TEXTO | expression) )?
+	:   (
+			 ({verificaToken(input.LT(1));} ID | TEXTO | expression) paramlistcall_linha
+		)?
+	;
+
+paramlistcall_linha
+	:
+	T_VIRGULA paramlistcall
+	| /* epsilon */
 	;
 
 printstat
@@ -338,8 +342,13 @@ returnstat
 	: T_RETURN ( TEXTO | expression )?
 	;
 	
-ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES statement
-		 ( T_ELSE  statement )?
+ifstat	
+	: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
+	;
+
+ifstat_linha
+	: T_ELSE  statement
+	| /* epsilon */
 	;
 	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
@@ -361,7 +370,7 @@ unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 
 factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
-	
+
 TIPOS 
 	:	('int' | 'float' | 'string')
 	;
@@ -383,11 +392,11 @@ NUMERO
         ;
 
 ESPACO_BRANCO 
-	: 	( '\t' | ' ' | '\r' | '\n' )+    { $channel = HIDDEN; } 
+	: 	( '\t' | ' ' | '\r' | '\n' )+    {$channel = HIDDEN;} 
 	;
 
 COMENTARIO
-    : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+    : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;} 
     ;
 /*
 program	:
@@ -414,7 +423,7 @@ statement
 	returnstat ':' |
 	ifstat |
 	forstat |
-	'{' statelist '}' |
+	'{' statelist '} ' |
 	'break' ';' |
 	';')
 	;
