@@ -99,6 +99,9 @@ tokens {
 	
 	T_BREAK = 'break'
 		;
+
+	T_NULL = 'null'
+		;
 }
 
 @header {
@@ -253,7 +256,7 @@ tokens {
 }
 
 program	:
-	( statement | funclist)
+	( statement | funclist )
 	;
 	
 funcdef
@@ -353,7 +356,7 @@ term : // relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expr
 unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 	;
 
-factor : ( NUMERO | lvalue | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
 	
 TIPOS 
