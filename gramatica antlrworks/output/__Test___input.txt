@@ -4,5 +4,108 @@ def func1 (int A, int B)
     int C;
     SM[0] = A + B;
     SM[1] = B * C;
-    return ;
+
+    // teste da regra atribstat
+    C = new int[5];
+
+    return A < B;
+}
+
+def fatoracao(int N){
+    if(N == 1){
+        return N;
+    }
+
+    return N * (N - 1);
+}
+
+def main(){
+    int A;
+    int B;
+
+    for(A = 1; A < B; A = A + 1){
+        if(A == B){
+            
+            break;
+        }
+    }
+
+    if(A){
+        break;
+    }
+
+    if(A == B){
+
+    }
+
+    if(A != B){
+
+    }
+
+    if(A >= B){
+
+    }
+
+    if(A <= B){
+
+    }
+
+    if(A){
+
+    }else{
+        
+    }
+
+    if(A){
+
+    }else if(B){
+        
+    }
+
+    if(A){
+
+    }elseif(B == A){
+        
+    }elseif(B <= A){
+        
+    }else{
+
+    }elseif(B <= A){
+        
+    }
+
+    if(A){
+        if(A == B){
+            if(1){
+
+            }
+        }
+    }
+
+    int AMENOSUM;
+    AMENOSUM = A - 1;
+
+    int C[A];
+    C[AMENOSUM] = funcao1(A, B);
+
+    C[A][B] = 10;
+    C[A][10] = 10;
+    C[10][B] = 10;
+
+    // texto
+    string D;
+    D = "texto";
+    D = "";
+
+    int F;
+    int H;
+    H = 5;
+    F = fatoracao(H);
+
+    F = 1;
+    int G;
+    for(G = 1; G <= 5; G = G + 1){
+        F = F * G;
+    }
+
 }

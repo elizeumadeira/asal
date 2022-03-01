@@ -88,9 +88,6 @@ tokens {
 	T_ELSE = 'else'
 		;
 
-	T_ELSEIF = 'elseif'
-		;
-		
 	T_FOR = 'for'
 		;
 
@@ -137,15 +134,16 @@ tokens {
 
                 // System.out.println("TempToken: " + tempToken.toString());
                 // escreveMapa();
-
+				// System.out.println(tempToken.toString() + " " + token.getText());
                 if(mapa.get(tempToken.toString()) == null){
                         throw new RuntimeException("ID '"+token.getText()+"' nao declarado em "+ token.getLine() + " / Funcao: " + ultFuncao);
                 }
         }
 
         public void adicionaFuncao(Token token){
-		System.out.println("Funcao "+token.getText());
-                if(mapaFuncaoVar.get(token.getText()) == null){
+				System.out.println("Funcao "+token.getText());
+                
+				if(mapaFuncaoVar.get(token.getText()) == null){
                         mapaFuncaoVar.put(token.getText(), token.getText());
                         setUltFuncao(token.getText());
                 } else{
@@ -251,6 +249,8 @@ tokens {
 
         } catch (RecognitionException e)  {
             e.printStackTrace();
+        } catch (Exception e)  {
+            e.printStackTrace();
         }
     }
 }
@@ -332,11 +332,8 @@ returnstat
 	: T_RETURN ( TEXTO | expression )?
 	;
 	
-ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES 
-			T_ABRECHAVE (statement)*
-			( T_FECHACHAVE T_ELSEIF T_ABREPARENTESES expression T_FECHAPARENTESES T_ABRECHAVE (statement)* )*
-			( T_FECHACHAVE T_ELSE T_ABRECHAVE (statement)* )?
-			T_FECHACHAVE
+ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES statement
+		 ( T_ELSE  statement )?
 	;
 	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
@@ -349,7 +346,7 @@ expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGU
 numexpression : term (( T_SOMA | T_SUBTRACAO ) term)*
 	;
 
-term : // relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expression )*
+term :
 	unaryexpr ( (T_MULTIPLICACAO | T_DIVISAO ) unaryexpr)*
 	;
 
@@ -380,7 +377,7 @@ NUMERO
         ;
 
 ESPACO_BRANCO 
-	: 	( '\t' | ' ' | '\r' | '\n'| '\u000C' )+    { $channel = HIDDEN; } 
+	: 	( '\t' | ' ' | '\r' | '\n' )+    { $channel = HIDDEN; } 
 	;
 
 COMENTARIO

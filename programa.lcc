@@ -22,64 +22,64 @@ def fatoracao(int N){
 def main(){
     int A;
     int B;
-    
-    // comentario
+
     for(A = 1; A < B; A = A + 1){
         if(A == B){
-            
             break;
         }
     }
 
-    // variacoes de condicao "if"
     if(A){
         break;
     }
 
     if(A == B){
-
+        ;
     }
 
     if(A != B){
-
+        ;
     }
 
     if(A >= B){
-
+        ;
     }
 
     if(A <= B){
-
+        ;
     }
 
     if(A){
-
+        ;
     }else{
-        
+        ;
     }
 
     if(A){
-
-    }elseif(B){
-        
+        ;
+    }else if(B){
+        ;
     }
 
     if(A){
-
-    }elseif(B == A){
-        
+        ;
+    }else if(B == A){
+        ;
+    }else if(B <= A){
+        ;
     }else{
-
+        ;
     }
 
-    // teste varios blocos um dentro do outro
     if(A){
         if(A == B){
             if(1){
-
+                ;
             }
         }
     }
+
+    if(A) ;
 
     int AMENOSUM;
     AMENOSUM = A - 1;
@@ -87,7 +87,6 @@ def main(){
     int C[A];
     C[AMENOSUM] = funcao1(A, B);
 
-    // permite arrays multidimensionais
     C[A][B] = 10;
     C[A][10] = 10;
     C[10][B] = 10;
@@ -97,13 +96,11 @@ def main(){
     D = "texto";
     D = "";
 
-    // fatoracao exemplo 1
     int F;
     int H;
     H = 5;
     F = fatoracao(H);
 
-    // fatoracao exemplo 2
     F = 1;
     int G;
     for(G = 1; G <= 5; G = G + 1){

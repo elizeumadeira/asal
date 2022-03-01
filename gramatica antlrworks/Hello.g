@@ -4,7 +4,6 @@ options {
     backtrack=true;
     memoize=true;
     k=1;
-    output = AST;
 } 
 
 tokens {
@@ -38,17 +37,17 @@ tokens {
 	T_ATRIBUICAO = '='
 		        ;
 		
-	T_COMPARACAO = '=='
+	T_IGUAL = '=='
 		        ;
 		
 	T_DIFERENTE = '!='
 		        ;
 		
-	T_E = '&'
-		        ;
+	// T_E = '&'
+	// 	        ;
 		
-	T_OU = '|'
-		        ;
+	// T_OU = '|'
+	// 	        ;
 		
 	T_MAIOROUIGUAL  = '>=' 
 		        ;
@@ -74,7 +73,7 @@ tokens {
 	T_DIVISAO = '/'
 		  ;
 		  
-	T_ESCREVA = 'print'
+	T_WRITE = 'print'
 		;
 		
 	T_READ = 'read'
@@ -94,32 +93,38 @@ tokens {
 		
 	T_FOR = 'for'
 		;
+
+	T_NEW = 'new'
+		;
 	
 	T_BREAK = 'break'
+		;
+
+	T_NULL = 'null'
 		;
 }
 
 
 program	:
-	( statement | funclist)
+	( statement | funclist )
 	;
 	
-funclist
-	:
-		(
-                T_DEF  FUNCAO 
-                        T_ABREPARENTESES 
-                                ( 
-                                         TIPOS   ID
-                                        (T_VIRGULA   TIPOS   ID  )*
-                                )?
-                        T_FECHAPARENTESES
-                        T_ABRECHAVE 
-                                (statement)+
-                        T_FECHACHAVE 
-        )*
+funcdef
+	: T_DEF  FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+		T_ABRECHAVE 
+				statelist
+		T_FECHACHAVE 
 	;
-	
+
+funclist : funcdef funclist | funcdef
+	;
+
+paramlist :  ( TIPOS   ID T_VIRGULA paramlist | TIPOS   ID)?
+	;
+
+statelist : statement (statelist)?
+	;
+
 statement
 	:(vardecl EOL |
 	atribstat EOL |
@@ -129,6 +134,7 @@ statement
 	ifstat |
 	forstat |
 	T_ABRECHAVE statelist T_FECHACHAVE |
+	ESPACO_BRANCO |
 	T_BREAK EOL |
 	EOL)
 	;
@@ -139,69 +145,76 @@ vardecl
 		 ID (T_ABRECOLCHETE (  ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
+lvalue
+	:  ID
+		( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+	;
+
 atribstat
 	:
-	ID    // atribuiÃ§Ã£o de array   a[b] ou a[1]
-                (T_ABRECOLCHETE (ID | NUMERO ) T_FECHACOLCHETE)*
-                T_ATRIBUICAO 
-                ( expression | funccall | TEXTO )
+	lvalue   // atribuição de array   a[b] ou a[1]
+	T_ATRIBUICAO 
+	( expression | allocexpression | funccall | TEXTO )
+	;
+
+allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 	;
 
 funccall
 	: FUNCAO 
         T_ABREPARENTESES 
-                ( (ID | NUMERO)
-                (T_VIRGULA (ID | NUMERO) )*)?
+                ( paramlistcall )?
         T_FECHAPARENTESES
 	;
 
+paramlistcall
+	:   ( ( ID | TEXTO | expression) T_VIRGULA paramlistcall | ( ID | TEXTO | expression) )?
+	;
+
 printstat
-	: T_ESCREVA( ID |TEXTO | expression ) 
+	: T_WRITE ( lvalue | TEXTO | expression )
 	;
 	
 readstat
-	: T_READ( ID |TEXTO | expression ) 
+	: T_READ lvalue
 	;
 	
 returnstat
 	: T_RETURN ( TEXTO | expression )?
 	;
 	
-ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES 
-			T_ABRECHAVE (statement)*
-			( T_FECHACHAVE T_ELSEIF T_ABREPARENTESES expression T_FECHAPARENTESES T_ABRECHAVE (statement)* )*
-			( T_FECHACHAVE T_ELSE T_ABRECHAVE (statement)* )?
-			T_FECHACHAVE
-	;
+// ifstat	
+// 	: 'if' '(' expression ')' statement ('else' statement)?
+// 	;
+
+// ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES 
+// 			T_ABRECHAVE (statement)*
+// 			// ( T_FECHACHAVE T_ELSEIF T_ABREPARENTESES expression T_FECHAPARENTESES T_ABRECHAVE (statement)* )*
+// 			( T_FECHACHAVE T_ELSE T_ABRECHAVE (statement)* )?
+// 			T_FECHACHAVE
+// 	;
 	
+ifstat	: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement (T_ELSE statement)?
+	;
+
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
 	        T_ABRECHAVE (statement)* T_FECHACHAVE
 	;	
 	
-statelist :	(statement)*
-	;
-	
-expression : expression_linha ( ( T_E | T_OU ) expression_linha)*
-	;
-expression_linha : term (( T_SOMA | T_SUBTRACAO ) term)*
+expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression)?
 	;
 
-term : relational_expression (( T_MULTIPLICACAO | T_DIVISAO ) relational_expression )*
+numexpression : term (( T_SOMA | T_SUBTRACAO ) term)*
 	;
 
-relational_expression : relational_expression_2 (( T_MAIOR | T_MENOR ) relational_expression_2 )*
+term :
+	unaryexpr ( (T_MULTIPLICACAO | T_DIVISAO ) unaryexpr)*
 	;
 
-relational_expression_2 : equal_expression (( T_MAIOROUIGUAL | T_MENOROUIGUAL ) equal_expression )*
+unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 	;
 
-equal_expression :  unaryexpr (( T_COMPARACAO | T_DIFERENTE ) unaryexpr )*
-	;
-
-unaryexpr :  factor (( T_SOMA | T_SUBTRACAO ) factor )*
-	;
-
-factor : (  ID  | NUMERO | T_ABREPARENTESES expression T_FECHAPARENTESES )
+factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
 	
 TIPOS 
@@ -231,101 +244,4 @@ ESPACO_BRANCO
 COMENTARIO
     : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
     ;
-/*
-program	:
-	(statement| funclist)
-	;
-
-funclist
-	: funcdef funclist | funcdef
-	;
 	
-funcdef	
-	:'def' 'ident' '(' paramlist ')' '{' statelist ')'
-	;
-	
-paramlist
-	: ('int' | 'float' | 'string') ('ident' ','  paramlist | ('int' | 'float' | 'string'))+
-	;
-
-statement
-	:(vardecl ':' |
-	atribstat ':' |
-	printstat ':' |	
-	readstat ':'|
-	returnstat ':' |
-	ifstat |
-	forstat |
-	'{' statelist '}' |
-	'break' ';' |
-	';')
-	;
-
-vardecl	
-	: ('int' | 'float' | 'string') 'ident' ('[int_constant]')*
-	;
-	
-atribstat
-	:	lvalue '=' (expression | allocexpression | funccall)
-	;
-	
-funccall
-	:'ident' '(' paramlistcall ')'	
-	;
-
-paramlistcall
-	: 'ident' (',' paramlistcall | 'ident')?
-	;
-	
-printstat
-	: 'print' expression
-	;
-
-readstat
-	: lvalue	
-	;
-	
-returnstat
-	: 'return'
-	;
-	
-ifstat	
-	: 'if' '(' expression ')' statement ('else' statement)?
-	;
-	
-forstat	
-	: 'for' '(' atribstat ';' expression ';' atribstat ')' statement
-	;
-	
-statelist
-	: statement (statelist)?
-	;
-	
-allocexpression
-	: 'new' ('int' | 'float' | 'string') ('[' numexpression ']')+
-	;
-	
-expression
-	: numexpression ( ( '<' | '>' | '<=' | '>=' | '==' | '!=') numexpression)?
-	;
-	
-numexpression
-	: term ( ('+' | '-' ) term)*
-	;
-	
-term
-	: unaryexpr ( ('*' | '/' | '%') unaryexpr)*
-	;
-	
-unaryexpr
-	: ('+' | '-')?	factor
-	;
-	
-factor
-	: ('int_constant' | 'float_constant' | 'string_constant' | 'null' | lvalue | '(' numexpression ')')
-	;
-
-lvalue	
-	: 'ident' ('[' numexpression ']')*
-	;
-*/
