@@ -269,7 +269,13 @@ funcdef
 funclist : funcdef funclist | funcdef
 	;
 
-paramlist :  ( TIPOS  { adicionaToken(input.LT(1));} ID T_VIRGULA paramlist | TIPOS  { adicionaToken(input.LT(1));} ID)?
+paramlist :  ( 
+				TIPOS { adicionaToken(input.LT(1));} ID paramlist_linha
+				// TIPOS  { adicionaToken(input.LT(1));} ID
+			)?
+	;
+
+paramlist_linha: ( T_VIRGULA paramlist )?
 	;
 
 statelist : statement (statelist)?
