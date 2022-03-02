@@ -1,0 +1,115 @@
+def power(int BASE, int A) {
+    if (A != 0){
+        int P;
+        P = power(BASE, (A - 1));
+        return (BASE * P);
+    }
+    return 1;
+}
+
+def main() {
+    int BASE;
+    int A;
+    int RESULT;
+
+    print "Enter base number ";
+    read BASE;
+
+    print "Enter power number ";
+    read A;
+
+    RESULT = power(BASE, A);
+    print "result ";
+    print RESULT;
+
+    return 0;
+}
+
+def largest_element_in_array() {
+  int N;
+  print "Enter the number of elements 1 to 100 ";
+  read N;
+
+  int ARR[N];
+    
+  int I;
+  for (I = 0; I < N; I = I + 1) {
+    print "Enter number ";
+    read ARR[I];
+  }
+
+  // storing the largest number to arr[0]
+  int O;
+  for (O = 0; O < N; O = O + 1) {
+    if (ARR[0] < ARR[O]) {
+      ARR[0] = ARR[O];
+    }
+  }
+
+  print "Largest element ";
+  print ARR[0];
+
+  return 0;
+}
+
+def adding_two_matrices() {
+  int R;
+  int C;
+  
+  int J;
+
+  print "Enter the number of rows";
+  read R;
+  print "Enter the number of columns";
+  read C;
+
+  int A[R][C];
+  int B[R][C];
+  int SUM[R][C];
+
+  print "Enter elements of 1st matrix";
+  int I;
+  for (I = 0; I < R; I = I + 1){
+    for (J = 0; J < C; J = J + 1) {
+      print "Enter element of line ";
+      print I;
+      print " and column ";
+      print J;
+
+      read A[I][J];
+    }
+  }
+
+  print "Enter elements of 2st matrix";
+  for (I = 0; I < R; I = I + 1){
+    for (J = 0; J < C; J = J + 1) {
+      print "Enter element of line ";
+      print I;
+      print " and column ";
+      print J;
+
+      read A[I][J];
+    }
+  }
+
+  // adding two matrices
+  for (I = 0; I < R; I = I + 1){
+    for (J = 0; J < C; J = J + 1) {
+     SUM[I][J] = A[I][J] + B[I][J];
+    }
+  }
+  
+  // printing the result
+  print "Sum of two matrices ";
+  for (I = 0; I < R; I = I + 1){
+    for (J = 0; J < C; J = J + 1) {
+     print SUM[I][J];
+
+     if(J == (C - 1)){
+        print " next line ";
+     }
+    }
+  }
+
+  return 0;
+}

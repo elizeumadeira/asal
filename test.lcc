@@ -1,18 +1,20 @@
-def func1 (int A, int B)
-{
-    int SM [2];
-    int C;
-    SM[0] = A + B;
-    SM[1] = B * C;
-    return ;
-}
-def principal ()
-{
-    int C;
-    int D;
-    int R;
-    C = 4;
-    D = 5;
-    R = func1 (C, D);
-    return ;
+def adding_two_matrices() {
+  int R;
+  int C;
+
+  int A[R][C];
+  int B[R][C];
+  int SUM[R][C];
+    int I;
+    int J;
+
+    I = 10;
+    J = 10;
+    int T;
+  // adding two matrices
+  for (I = 0; I < R; I = I + 1){
+    for (J = 0; J < C; J = J + 1) {
+     SUM[I][J] = A[I][J] + B[I][J];
+    }
+  }
 }

@@ -1,101 +1,120 @@
-def funcao(){
-    int A;
+def bubble_sort(){
 
-    while(A){
+    int ARR[50];
+    int NUM;
+    int X;
+    int Y;
+    int TEMP;    
 
+    print "Please Enter the Number of Elements you want in the array ";
+
+    read NUM;
+
+    print "Please Enter the Value of Elements ";
+
+    for(X = 0; X < NUM; X = X + 1){
+        read ARR[X];
     }
 
-    return A;
-
-    # retorno abaixo nao sera executado em uma linguagem real, no entanto o interpretador nao deve ver problemas com ele
-    return 1;
-}
-
-def funcao2(int A){
-    while(A){
-
-    }
-
-    #deve ser possivel o retorno sem nada
-    return;
-}
-
-def funcao3(int A, string B){
-    while(A){
-
-    }
-
-    #retono nao eh obrigatorio, o sistema deve permitir funcoes sem retorno
-}
-
-def main(){
-    int A;
-    string B;
-    int C;
-    int D[10];
-    
-    funcao(A);
-
-    funcao(A, B);
-
-    funcao(A, 1);
-
-    read A;
-
-    print B;
-
-    C = funcao2();
-
-    C = funcao2(1);
-
-    C = funcao2(A);
-
-    D[A] = funcao2(A);
-
-    # permite arrays multidimensionais
-    D[A][B] = 10;
-    D[A][10] = 10;
-    D[10][B] = 10;
-
-    # criei uma funcao hipotetica para verificacao do tamanho de um array
-    A = sizeof D;
-    A = sizeof D[2];
-
-    # teste varios blocos um dentro do outro
-    if(A){
-        if(A == B){
-            if(1){
-
+    for(X = 0; X < NUM - 1; X = X + 1){       
+        for(Y = 0; Y < NUM - X - 1; Y = Y + 1){          
+            if(ARR[Y] > ARR[Y + 1]){               
+                TEMP = ARR[Y];
+                ARR[Y] = ARR[Y + 1];
+                ARR[Y + 1] = TEMP;
             }
         }
     }
 
-    for(A = 1; A < 6; A = A + 1){
+    print "Array after implementing bubble sort";
+
+    for(X = 0; X < NUM; X = X + 1){
+        print ARR[X];
 
     }
 
-    foreach(int E in D){
-        int F;
-        F = funcao2(E);
+    return 0;
+}
+
+def even_or_odd() {
+    int NUM;
+    print "Enter an integer ";
+    read NUM;
+
+    // true if num is perfectly divisible by 2
+    // neo eh  possivel o caractere de modulos
+    // por isso troquei por divisao normal
+    if(NUM / 2 == 0)
+        print "is even";
+    else
+        print "is odd";
+    
+    return 0;
+}
+
+def vowel_or_consonant() {
+    string C;
+    print "Enter an alphabet ";
+    read C;
+    string A;
+    string E;
+    string I;
+    string O;
+    string U;
+
+    A = "a";
+    E = "e";
+    I = "i";
+    O = "o";
+    U = "u";
+
+    // evaluates to 1 (true) if c is a vowel
+    if (C == A){
+        print "is a vowel";
+    }else if (C == E){
+        print "is a vowel";
+    }else if (C == I){
+        print "is a vowel";
+    }else if (C == O){
+        print "is a vowel";
+    }else if (C == U){
+        print "is a vowel";
+    }else{
+        print "is a consonant";
     }
+}
 
-    # possivel fazer varredura em matriz
-    int Z;
-    foreach(int G in D){
-        Z = sizeof G;
-        foreach(int H in D[Z]){
+def fibonacci() {
+  int I;
+  int N;
 
-        }
-    }
+  // initialize first and second terms
+  int T1;
+  T1 = 0;
+  int T2;
+  T2 = 1;
 
-    # libera o usuario inserir um texto ou numero aleatorio no sistema
-    "teste";
-    10;
+  // initialize the next term (3rd term)
+  int NEXTTERM;
+  NEXTTERM = T1 + T2;
 
-    # declaracao de numero nao inteiro
-    float I;
-    I = 1.0;
-    I = 2;
+  // get no. of terms from user
+  print "Enter the number of terms ";
+  read N;
 
-    return;
+  // print the first two terms t1 and t2
+   print "Fibonacci Series ";
+   print T1;
+   print "-";
+   print T2;
+
+  // print 3rd to nth terms
+  for (I = 3; I <= N; I = I + 1) {
+    print NEXTTERM;
+    T1 = T2;
+    T2 = NEXTTERM;
+    NEXTTERM = T1 + T2;
+  }
+
+  return 0;
 }

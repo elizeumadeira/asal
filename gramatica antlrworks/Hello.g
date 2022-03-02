@@ -42,13 +42,7 @@ tokens {
 		
 	T_DIFERENTE = '!='
 		        ;
-		
-	// T_E = '&'
-	// 	        ;
-		
-	// T_OU = '|'
-	// 	        ;
-		
+
 	T_MAIOROUIGUAL  = '>=' 
 		        ;
 		
@@ -88,9 +82,6 @@ tokens {
 	T_ELSE = 'else'
 		;
 
-	T_ELSEIF = 'elseif'
-		;
-		
 	T_FOR = 'for'
 		;
 
@@ -102,41 +93,53 @@ tokens {
 
 	T_NULL = 'null'
 		;
-}
-
+} 
 
 program	:
 	( statement | funclist )
 	;
 	
 funcdef
-	: T_DEF  FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+	: (T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
 		T_ABRECHAVE 
 				statelist
-		T_FECHACHAVE 
+		T_FECHACHAVE )*
 	;
 
-funclist : funcdef funclist | funcdef
+// funclist : funcdef funclist_linha
+// 	;
+
+// funclist_linha
+// 	: funclist 
+// 	| /* epsilon */
+// 	;
+
+paramlist 
+	: ( TIPOS  ID paramlist_linha )?
 	;
 
-paramlist :  ( TIPOS   ID T_VIRGULA paramlist | TIPOS   ID)?
+paramlist_linha
+	: T_VIRGULA paramlist 
+	| /* epsilon */ 
 	;
 
 statelist : statement (statelist)?
 	;
 
-statement
-	:(vardecl EOL |
-	atribstat EOL |
-	printstat EOL |	
-	readstat EOL|
-	returnstat EOL |
-	ifstat |
-	forstat |
-	T_ABRECHAVE statelist T_FECHACHAVE |
-	ESPACO_BRANCO |
-	T_BREAK EOL |
-	EOL)
+statement:
+	
+		vardecl EOL |
+		atribstat EOL |
+		printstat EOL |	
+		readstat EOL|
+		T_RETURN ( TEXTO | expression )? EOL |
+		ifstat |
+		forstat |
+		T_ABRECHAVE statement T_FECHACHAVE |
+		T_BREAK EOL |
+		EOL |
+		/* epsilon */
+	
 	;
 
 vardecl	
@@ -152,7 +155,7 @@ lvalue
 
 atribstat
 	:
-	lvalue   // atribuição de array   a[b] ou a[1]
+	lvalue 
 	T_ATRIBUICAO 
 	( expression | allocexpression | funccall | TEXTO )
 	;
@@ -168,7 +171,15 @@ funccall
 	;
 
 paramlistcall
-	:   ( ( ID | TEXTO | expression) T_VIRGULA paramlistcall | ( ID | TEXTO | expression) )?
+	:   (
+			 ( ID | TEXTO | expression) paramlistcall_linha
+		)?
+	;
+
+paramlistcall_linha
+	:
+	T_VIRGULA paramlistcall
+	| /* epsilon */
 	;
 
 printstat
@@ -179,24 +190,19 @@ readstat
 	: T_READ lvalue
 	;
 	
-returnstat
-	: T_RETURN ( TEXTO | expression )?
-	;
-	
-// ifstat	
-// 	: 'if' '(' expression ')' statement ('else' statement)?
-// 	;
-
-// ifstat	: T_IF  T_ABREPARENTESES expression T_FECHAPARENTESES 
-// 			T_ABRECHAVE (statement)*
-// 			// ( T_FECHACHAVE T_ELSEIF T_ABREPARENTESES expression T_FECHAPARENTESES T_ABRECHAVE (statement)* )*
-// 			( T_FECHACHAVE T_ELSE T_ABRECHAVE (statement)* )?
-// 			T_FECHACHAVE
+// returnstat
+// 	: T_RETURN ( TEXTO | expression )?
 // 	;
 	
-ifstat	: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement (T_ELSE statement)?
+ifstat	
+	: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
 	;
 
+ifstat_linha
+	: T_ELSE  statement
+	| /* epsilon */
+	;
+	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
 	        T_ABRECHAVE (statement)* T_FECHACHAVE
 	;	
@@ -216,7 +222,7 @@ unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 
 factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
-	
+
 TIPOS 
 	:	('int' | 'float' | 'string')
 	;
@@ -230,18 +236,10 @@ FUNCAO
         ;
 	        
 TEXTO 
-	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_' | '-')* '"'
+	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_')* '"'
         ;
 	
 NUMERO 
 	:	('0'..'9')+   ( '.' ('0'..'9')+  )?
         ;
 
-ESPACO_BRANCO 
-	: 	( '\t' | ' ' | '\r' | '\n'| '\u000C' )+    { $channel = HIDDEN; } 
-	;
-
-COMENTARIO
-    : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    ;
-	

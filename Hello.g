@@ -252,7 +252,15 @@ tokens {
 program	:
 	( statement | funclist )
 	;
-	
+
+funclist : funcdef funclist_linha
+	;
+
+funclist_linha
+	: funclist 
+	| /* epsilon */
+	;
+
 funcdef
 	: T_DEF {adicionaFuncao(input.LT(1));} FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
 		T_ABRECHAVE 
@@ -260,8 +268,6 @@ funcdef
 		T_FECHACHAVE 
 	;
 
-funclist : funcdef funclist | funcdef
-	;
 
 paramlist 
 	: ( TIPOS {adicionaToken(input.LT(1));} ID paramlist_linha )?
@@ -331,7 +337,7 @@ paramlistcall_linha
 	;
 
 printstat
-	: T_WRITE ( lvalue | TEXTO | expression )
+	: T_WRITE ( TEXTO | expression )
 	;
 	
 readstat
