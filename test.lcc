@@ -1,55 +1,57 @@
 {
-  int A;
-  int B;
+  {
+    int A;
+    int B;
 
-  for(A = 1; A < B; A = A + 1){
-      if(A == B){
-          break;
-      }
-  }
+    for(A = 1; A < B; A = A + 1){
+        if(A == B){
+            break;
+        }
+    }
 
-  if(A){
-      ;
-  }else if(B == A){
-      ;
-  }else if(B <= A){
-      ;
-  }else{
-      ;
-  }
+    if(A){
+        ;
+    }else if(B == A){
+        ;
+    }else if(B <= A){
+        ;
+    }else{
+        ;
+    }
 
-  if(A){
-      if(A == B){
-          if(1){
-              ;
-          }
-      }
-  }
+    if(A){
+        if(A == B){
+            if(1){
+                ;
+            }
+        }
+    }
 
-  if(A) ;
+    if(A) ;
 
-  int AMENOSUM;
-  AMENOSUM = A - 1;
+    int AMENOSUM;
+    AMENOSUM = A - 1;
 
-  int C[A];
-  C[AMENOSUM] = funcao1(A, B);
+    int C[A];
+    C[AMENOSUM] = funcao1(A, B);
 
-  C[A][B] = 10;
-  C[A][10] = 10;
-  C[10][B] = 10;
+    C[A][B] = 10;
+    C[A][10] = 10;
+    C[10][B] = 10;
 
-  // texto
-  string D;
-  D = "texto";
-  D = "";
+    // texto
+    string D;
+    D = "texto";
+    D = "";
 
-  int F;
-  int H;
-  H = 5;
+    int F;
+    int H;
+    H = 5;
 
-  F = 1;
-  int G;
-  for(G = 1; G <= 5; G = G + 1){
-      F = F * G;
+    F = 1;
+    int G;
+    for(G = 1; G <= 5; G = G + 1){
+        F = F * G;
+    }
   }
 }
