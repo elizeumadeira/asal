@@ -1,20 +1,55 @@
-def adding_two_matrices() {
-  int R;
-  int C;
+{
+  int A;
+  int B;
 
-  int A[R][C];
-  int B[R][C];
-  int SUM[R][C];
-    int I;
-    int J;
+  for(A = 1; A < B; A = A + 1){
+      if(A == B){
+          break;
+      }
+  }
 
-    I = 10;
-    J = 10;
-    int T;
-  // adding two matrices
-  for (I = 0; I < R; I = I + 1){
-    for (J = 0; J < C; J = J + 1) {
-     SUM[I][J] = A[I][J] + B[I][J];
-    }
+  if(A){
+      ;
+  }else if(B == A){
+      ;
+  }else if(B <= A){
+      ;
+  }else{
+      ;
+  }
+
+  if(A){
+      if(A == B){
+          if(1){
+              ;
+          }
+      }
+  }
+
+  if(A) ;
+
+  int AMENOSUM;
+  AMENOSUM = A - 1;
+
+  int C[A];
+  C[AMENOSUM] = funcao1(A, B);
+
+  C[A][B] = 10;
+  C[A][10] = 10;
+  C[10][B] = 10;
+
+  // texto
+  string D;
+  D = "texto";
+  D = "";
+
+  int F;
+  int H;
+  H = 5;
+
+  F = 1;
+  int G;
+  for(G = 1; G <= 5; G = G + 1){
+      F = F * G;
   }
 }
