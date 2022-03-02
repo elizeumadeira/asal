@@ -19,6 +19,47 @@ def fatoracao(int N){
     return N * (N - 1);
 }
 
+def selection_sort(){
+   // Here i & j for loop counters temp for swapping,
+   // count for total number of elements number TABRECOLCHETE T_FECHACOLCHETE to
+   // store the input numbers in array
+   // You can increase or decrease the size of number array as per requirement
+   int I;
+   int J; 
+   int COUNT;
+   int TEMP;
+   
+
+   print "How many numbers u are going to enter ";
+   read COUNT;
+
+   int NUMBER[25];
+
+   print "Enter n of elements as specified for COUNT ";
+   // Loop to get the elements stored in array
+   for(I=0;I<COUNT; I = I+1){
+      read NUMBER[I];
+   }
+ 
+   // Logic of selection sort algorithm
+   for(I=0;I<COUNT; I = I + 1){
+      for(J=I+1;J<COUNT;J = J + 1){
+         if(NUMBER[I]>NUMBER[J]){
+            TEMP=NUMBER[I];
+            NUMBER[I]=NUMBER[J];
+            NUMBER[J]=TEMP;
+         }
+      }
+   }
+
+   print "Sorted elements ";
+   for(I=0;I<COUNT;I = I + 1){
+      print NUMBER[I];
+   }
+
+   return 0;
+}
+
 def main(){
     int A;
     int B;
@@ -27,38 +68,6 @@ def main(){
         if(A == B){
             break;
         }
-    }
-
-    if(A){
-        break;
-    }
-
-    if(A == B){
-        ;
-    }
-
-    if(A != B){
-        ;
-    }
-
-    if(A >= B){
-        ;
-    }
-
-    if(A <= B){
-        ;
-    }
-
-    if(A){
-        ;
-    }else{
-        ;
-    }
-
-    if(A){
-        ;
-    }else if(B){
-        ;
     }
 
     if(A){
