@@ -2,7 +2,6 @@ grammar Hello;
 
 options {
     backtrack=true;
-    memoize=true;
     k=1;
 } 
 
@@ -358,7 +357,7 @@ ifstat_linha
 	;
 	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
-	        T_ABRECHAVE (statement)* T_FECHACHAVE
+	     statement
 	;	
 	
 expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression)?

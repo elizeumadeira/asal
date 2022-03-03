@@ -98,24 +98,25 @@ tokens {
 program	:
 	( statement | funclist )
 	;
-	
-funcdef
-	: (T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
-		T_ABRECHAVE 
-				statelist
-		T_FECHACHAVE )*
+
+funclist : funcdef funclist_linha
 	;
 
-// funclist : funcdef funclist_linha
-// 	;
+funclist_linha
+	: funclist 
+	| /* epsilon */
+	;
 
-// funclist_linha
-// 	: funclist 
-// 	| /* epsilon */
-// 	;
+funcdef
+	: T_DEF {adicionaFuncao(input.LT(1));} FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+		T_ABRECHAVE 
+				statement
+		T_FECHACHAVE 
+	;
+
 
 paramlist 
-	: ( TIPOS  ID paramlist_linha )?
+	: ( TIPOS {adicionaToken(input.LT(1));} ID paramlist_linha )?
 	;
 
 paramlist_linha
@@ -127,29 +128,19 @@ statelist : statement (statelist)?
 	;
 
 statement:
-	
-		vardecl EOL |
-		atribstat EOL |
-		printstat EOL |	
-		readstat EOL|
-		T_RETURN ( TEXTO | expression )? EOL |
-		ifstat |
-		forstat |
-		T_ABRECHAVE statement T_FECHACHAVE |
-		T_BREAK EOL |
-		EOL |
-		/* epsilon */
-	
+		vardecl EOL 
+		|/* epsilon */
+		
 	;
 
 vardecl	
 	: 
-		 TIPOS 
-		 ID (T_ABRECOLCHETE (  ID | NUMERO ) T_FECHACOLCHETE)*
+		{setUltTipo(input.LT(1).getText());} TIPOS 
+		{adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
 lvalue
-	:  ID
+	: {verificaToken(input.LT(1));} ID
 		( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 	;
 
@@ -172,7 +163,7 @@ funccall
 
 paramlistcall
 	:   (
-			 ( ID | TEXTO | expression) paramlistcall_linha
+			 ({verificaToken(input.LT(1));} ID | TEXTO | expression) paramlistcall_linha
 		)?
 	;
 
@@ -183,16 +174,16 @@ paramlistcall_linha
 	;
 
 printstat
-	: T_WRITE ( lvalue | TEXTO | expression )
+	: T_WRITE ( TEXTO | expression )
 	;
 	
 readstat
 	: T_READ lvalue
 	;
 	
-// returnstat
-// 	: T_RETURN ( TEXTO | expression )?
-// 	;
+returnstat
+	: T_RETURN ( TEXTO | expression )?
+	;
 	
 ifstat	
 	: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
@@ -236,10 +227,13 @@ FUNCAO
         ;
 	        
 TEXTO 
-	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_')* '"'
+	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_' )* '"'
         ;
 	
 NUMERO 
 	:	('0'..'9')+   ( '.' ('0'..'9')+  )?
         ;
 
+COMENTARIO
+    : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;} 
+    ;

@@ -454,12 +454,3 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 116             | EOL             | --              | --              | ;               | 
 117             | T_FECHACHAVE    | --              | --              | }               | 
 119             | T_FECHACHAVE    | --              | --              | }               | 
-121             | T_ABRECHAVE     | --              | --              | {               | 
-122             | TIPOS           | --              | --              | string          | 
-122             | ID              | string          | fatoracao       | TESTE           | 
-122             | EOL             | --              | --              | ;               | 
-123             | ID              | string          | fatoracao       | TESTE           | 
-123             | T_ATRIBUICAO    | --              | --              | =               | 
-123             | TEXTO           | --              | --              | "fora de funcao | 
-123             | EOL             | --              | --              | ;               | 
-124             | T_FECHACHAVE    | --              | --              | }               | 
