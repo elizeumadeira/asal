@@ -325,7 +325,7 @@ funccall
 
 paramlistcall
 	:   (
-			 ({verificaToken(input.LT(1));} ID | TEXTO | expression) paramlistcall_linha
+			 ( TEXTO | expression) paramlistcall_linha
 		)?
 	;
 

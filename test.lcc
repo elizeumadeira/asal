@@ -2,6 +2,8 @@
   {
     int A;
     int B;
+    int TESTE;
+    TESTE = A+B;
 
     for(A = 1; A < B; A = A + 1){
         if(A == B){
