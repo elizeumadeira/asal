@@ -1,98 +1,7 @@
 grammar Hello;
 
 options {
-    backtrack=true;
-    memoize=true;
     k=1;
-} 
-
-tokens {
-	EOL = ';'
-		;
-		
-	T_DEF = 'def'
-		;
-	
-	T_VIRGULA = ','
-		        ;
-		
-	T_ABREPARENTESES = '('
-		        ;
-		
-	T_FECHAPARENTESES = ')'
-		        ;
-		
-	T_ABRECHAVE = '{'
-		        ;
-		
-	T_FECHACHAVE =  '}'
-		        ;
-		
-	T_ABRECOLCHETE = '['
-		        ;
-		
-	T_FECHACOLCHETE =  ']'
-		        ;
-
-	T_ATRIBUICAO = '='
-		        ;
-		
-	T_IGUAL = '=='
-		        ;
-		
-	T_DIFERENTE = '!='
-		        ;
-
-	T_MAIOROUIGUAL  = '>=' 
-		        ;
-		
-	T_MENOROUIGUAL = '<='
-		        ;
-		
-	T_MAIOR = '>'
-		        ;
-		
-	T_MENOR = '<'
-		        ;
-		
-	T_SOMA = '+'
-		        ;
-		
-	T_SUBTRACAO = '-'
-		        ;
-		
-	T_MULTIPLICACAO = '*'
-		        ;
-		
-	T_DIVISAO = '/'
-		  ;
-		  
-	T_WRITE = 'print'
-		;
-		
-	T_READ = 'read'
-		;
-		
-	T_RETURN = 'return'
-		;
-	
-	T_IF = 'if'
-		;
-		
-	T_ELSE = 'else'
-		;
-
-	T_FOR = 'for'
-		;
-
-	T_NEW = 'new'
-		;
-	
-	T_BREAK = 'break'
-		;
-
-	T_NULL = 'null'
-		;
 } 
 
 program	:
@@ -108,15 +17,15 @@ funclist_linha
 	;
 
 funcdef
-	: T_DEF {adicionaFuncao(input.LT(1));} FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
+	: T_DEF  FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES 
 		T_ABRECHAVE 
-				statement
+				statelist
 		T_FECHACHAVE 
 	;
 
 
 paramlist 
-	: ( TIPOS {adicionaToken(input.LT(1));} ID paramlist_linha )?
+	: ( TIPOS  ID paramlist_linha )?
 	;
 
 paramlist_linha
@@ -128,19 +37,28 @@ statelist : statement (statelist)?
 	;
 
 statement:
-		vardecl EOL 
-		|/* epsilon */
-		
+	(
+		vardecl EOL |
+		atribstat EOL |
+		printstat EOL |	
+		readstat EOL|
+		returnstat EOL |
+		ifstat |
+		forstat |
+		T_ABRECHAVE statelist T_FECHACHAVE |
+		T_BREAK EOL |
+		EOL
+	)
 	;
 
 vardecl	
 	: 
-		{setUltTipo(input.LT(1).getText());} TIPOS 
-		{adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
+		TIPOS 
+		ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
 lvalue
-	: {verificaToken(input.LT(1));} ID
+	: ID
 		( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 	;
 
@@ -157,14 +75,14 @@ allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 funccall
 	: FUNCAO 
         T_ABREPARENTESES 
-                ( paramlistcall )?
+                paramlistcall
         T_FECHAPARENTESES
 	;
 
 paramlistcall
-	:   (
-			 ({verificaToken(input.LT(1));} ID | TEXTO | expression) paramlistcall_linha
-		)?
+	: TEXTO paramlistcall_linha 
+	| expression paramlistcall_linha 
+	| /* epsilon */
 	;
 
 paramlistcall_linha
@@ -195,7 +113,7 @@ ifstat_linha
 	;
 	
 forstat	: T_FOR	T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES 
-	        T_ABRECHAVE (statement)* T_FECHACHAVE
+	     statement
 	;	
 	
 expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression)?
@@ -227,12 +145,106 @@ FUNCAO
         ;
 	        
 TEXTO 
-	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_' )* '"'
+	:	'"' ( 'A'..'Z' | 'a'..'z' | '0' .. '9' | ' ' | '!'  | '_' | '-')* '"'
         ;
 	
 NUMERO 
 	:	('0'..'9')+   ( '.' ('0'..'9')+  )?
         ;
+
+EOL 	:	 ';'
+	;
+		
+T_DEF 	
+	:	 'def'
+	;
+	
+T_VIRGULA 
+	: ','
+		        ;
+		
+T_ABREPARENTESES 
+	:	 '('
+		        ;
+		
+	T_FECHAPARENTESES : ')'
+		        ;
+		
+	T_ABRECHAVE : '{'
+		        ;
+		
+	T_FECHACHAVE :  '}'
+		        ;
+		
+	T_ABRECOLCHETE : '['
+		        ;
+		
+	T_FECHACOLCHETE :  ']'
+		        ;
+
+	T_ATRIBUICAO : '='
+		        ;
+		
+	T_IGUAL : '=='
+		        ;
+		
+	T_DIFERENTE : '!='
+		        ;
+
+	T_MAIOROUIGUAL  : '>=' 
+		        ;
+		
+	T_MENOROUIGUAL : '<='
+		        ;
+		
+	T_MAIOR : '>'
+		        ;
+		
+	T_MENOR : '<'
+		        ;
+		
+	T_SOMA : '+'
+		        ;
+		
+	T_SUBTRACAO : '-'
+		        ;
+		
+	T_MULTIPLICACAO : '*'
+		        ;
+		
+	T_DIVISAO : '/'
+		  ;
+		  
+	T_WRITE : 'print'
+		;
+		
+	T_READ : 'read'
+		;
+		
+	T_RETURN : 'return'
+		;
+	
+	T_IF : 'if'
+		;
+		
+	T_ELSE : 'else'
+		;
+
+	T_FOR : 'for'
+		;
+
+	T_NEW : 'new'
+		;
+	
+	T_BREAK : 'break'
+		;
+
+	T_NULL : 'null'
+		;
+
+ESPACO_BRANCO 
+	: 	( '\t' | ' ' | '\r' | '\n' )+    {$channel = HIDDEN;} 
+	;
 
 COMENTARIO
     : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;} 

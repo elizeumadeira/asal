@@ -6,7 +6,7 @@ import org.antlr.runtime.debug.DebugEventSocketProxy;
 public class __Test__ {
 
     public static void main(String args[]) throws Exception {
-        HelloLexer lex = new HelloLexer(new ANTLRFileStream("C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\programa.lcc", "UTF8"));
+        HelloLexer lex = new HelloLexer(new ANTLRFileStream("C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         HelloParser g = new HelloParser(tokens, 49100, null);

@@ -281,7 +281,6 @@ statelist : statement (statelist)?
 	;
 
 statement:
-	(
 		vardecl EOL |
 		atribstat EOL |
 		printstat EOL |	
@@ -292,7 +291,6 @@ statement:
 		T_ABRECHAVE statelist T_FECHACHAVE |
 		T_BREAK EOL |
 		EOL
-	)
 	;
 
 vardecl	
@@ -319,14 +317,14 @@ allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 funccall
 	: FUNCAO 
         T_ABREPARENTESES 
-                ( paramlistcall )?
+                paramlistcall
         T_FECHAPARENTESES
 	;
 
 paramlistcall
-	:   (
-			 ( TEXTO | expression) paramlistcall_linha
-		)?
+	: TEXTO paramlistcall_linha 
+	| expression paramlistcall_linha 
+	| /* epsilon */
 	;
 
 paramlistcall_linha

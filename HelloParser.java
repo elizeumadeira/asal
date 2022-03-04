@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Hello.g 2022-03-03 20:54:57
+// $ANTLR 3.5.2 Hello.g 2022-03-04 19:25:08
 
 	import java.util.Set;
 	import java.util.HashSet;
@@ -549,13 +549,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "statement"
-	// Hello.g:283:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) ;
+	// Hello.g:283:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL );
 	public final void statement() throws RecognitionException {
 		try {
-			// Hello.g:283:10: ( ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) )
-			// Hello.g:284:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
-			{
-			// Hello.g:284:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
+			// Hello.g:283:10: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
 			int alt6=10;
 			switch ( input.LA(1) ) {
 			case TIPOS:
@@ -616,102 +613,99 @@ public class HelloParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// Hello.g:285:3: vardecl EOL
+					// Hello.g:284:3: vardecl EOL
 					{
-					pushFollow(FOLLOW_vardecl_in_statement737);
+					pushFollow(FOLLOW_vardecl_in_statement734);
 					vardecl();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement739); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement736); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:286:3: atribstat EOL
+					// Hello.g:285:3: atribstat EOL
 					{
-					pushFollow(FOLLOW_atribstat_in_statement745);
+					pushFollow(FOLLOW_atribstat_in_statement742);
 					atribstat();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement747); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement744); if (state.failed) return;
 					}
 					break;
 				case 3 :
-					// Hello.g:287:3: printstat EOL
+					// Hello.g:286:3: printstat EOL
 					{
-					pushFollow(FOLLOW_printstat_in_statement753);
+					pushFollow(FOLLOW_printstat_in_statement750);
 					printstat();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement755); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement752); if (state.failed) return;
 					}
 					break;
 				case 4 :
-					// Hello.g:288:3: readstat EOL
+					// Hello.g:287:3: readstat EOL
 					{
-					pushFollow(FOLLOW_readstat_in_statement762);
+					pushFollow(FOLLOW_readstat_in_statement759);
 					readstat();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement764); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement761); if (state.failed) return;
 					}
 					break;
 				case 5 :
-					// Hello.g:289:3: returnstat EOL
+					// Hello.g:288:3: returnstat EOL
 					{
-					pushFollow(FOLLOW_returnstat_in_statement769);
+					pushFollow(FOLLOW_returnstat_in_statement766);
 					returnstat();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement771); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement768); if (state.failed) return;
 					}
 					break;
 				case 6 :
-					// Hello.g:290:3: ifstat
+					// Hello.g:289:3: ifstat
 					{
-					pushFollow(FOLLOW_ifstat_in_statement777);
+					pushFollow(FOLLOW_ifstat_in_statement774);
 					ifstat();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 7 :
-					// Hello.g:291:3: forstat
+					// Hello.g:290:3: forstat
 					{
-					pushFollow(FOLLOW_forstat_in_statement783);
+					pushFollow(FOLLOW_forstat_in_statement780);
 					forstat();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 8 :
-					// Hello.g:292:3: T_ABRECHAVE statelist T_FECHACHAVE
+					// Hello.g:291:3: T_ABRECHAVE statelist T_FECHACHAVE
 					{
-					match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_statement789); if (state.failed) return;
-					pushFollow(FOLLOW_statelist_in_statement791);
+					match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_statement786); if (state.failed) return;
+					pushFollow(FOLLOW_statelist_in_statement788);
 					statelist();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_statement793); if (state.failed) return;
+					match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_statement790); if (state.failed) return;
 					}
 					break;
 				case 9 :
-					// Hello.g:293:3: T_BREAK EOL
+					// Hello.g:292:3: T_BREAK EOL
 					{
-					match(input,T_BREAK,FOLLOW_T_BREAK_in_statement799); if (state.failed) return;
-					match(input,EOL,FOLLOW_EOL_in_statement801); if (state.failed) return;
+					match(input,T_BREAK,FOLLOW_T_BREAK_in_statement796); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement798); if (state.failed) return;
 					}
 					break;
 				case 10 :
-					// Hello.g:294:3: EOL
+					// Hello.g:293:3: EOL
 					{
-					match(input,EOL,FOLLOW_EOL_in_statement807); if (state.failed) return;
+					match(input,EOL,FOLLOW_EOL_in_statement804); if (state.failed) return;
 					}
 					break;
 
 			}
-
-			}
-
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -726,17 +720,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "vardecl"
-	// Hello.g:298:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
+	// Hello.g:296:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
 	public final void vardecl() throws RecognitionException {
 		try {
-			// Hello.g:299:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
-			// Hello.g:300:3: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			// Hello.g:297:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
+			// Hello.g:298:3: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			{
 			if ( state.backtracking==0 ) {setUltTipo(input.LT(1).getText());}
-			match(input,TIPOS,FOLLOW_TIPOS_in_vardecl827); if (state.failed) return;
+			match(input,TIPOS,FOLLOW_TIPOS_in_vardecl821); if (state.failed) return;
 			if ( state.backtracking==0 ) {adicionaToken(input.LT(1));}
-			match(input,ID,FOLLOW_ID_in_vardecl834); if (state.failed) return;
-			// Hello.g:301:36: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			match(input,ID,FOLLOW_ID_in_vardecl828); if (state.failed) return;
+			// Hello.g:299:36: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -747,10 +741,10 @@ public class HelloParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// Hello.g:301:37: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
+					// Hello.g:299:37: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
 					{
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_vardecl837); if (state.failed) return;
-					// Hello.g:301:52: ( ID | NUMERO )
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_vardecl831); if (state.failed) return;
+					// Hello.g:299:52: ( ID | NUMERO )
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( (LA7_0==ID) ) {
@@ -769,22 +763,22 @@ public class HelloParser extends Parser {
 
 					switch (alt7) {
 						case 1 :
-							// Hello.g:301:54: ID
+							// Hello.g:299:54: ID
 							{
 							if ( state.backtracking==0 ) {verificaToken(input.LT(1));}
-							match(input,ID,FOLLOW_ID_in_vardecl843); if (state.failed) return;
+							match(input,ID,FOLLOW_ID_in_vardecl837); if (state.failed) return;
 							}
 							break;
 						case 2 :
-							// Hello.g:301:89: NUMERO
+							// Hello.g:299:89: NUMERO
 							{
-							match(input,NUMERO,FOLLOW_NUMERO_in_vardecl847); if (state.failed) return;
+							match(input,NUMERO,FOLLOW_NUMERO_in_vardecl841); if (state.failed) return;
 							}
 							break;
 
 					}
 
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_vardecl851); if (state.failed) return;
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_vardecl845); if (state.failed) return;
 					}
 					break;
 
@@ -809,15 +803,15 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "lvalue"
-	// Hello.g:304:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
+	// Hello.g:302:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
 	public final void lvalue() throws RecognitionException {
 		try {
-			// Hello.g:305:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
-			// Hello.g:305:4: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			// Hello.g:303:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
+			// Hello.g:303:4: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			{
 			if ( state.backtracking==0 ) {verificaToken(input.LT(1));}
-			match(input,ID,FOLLOW_ID_in_lvalue866); if (state.failed) return;
-			// Hello.g:306:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			match(input,ID,FOLLOW_ID_in_lvalue860); if (state.failed) return;
+			// Hello.g:304:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -828,19 +822,19 @@ public class HelloParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// Hello.g:306:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
+					// Hello.g:304:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
 					{
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_lvalue872); if (state.failed) return;
-					// Hello.g:306:20: ( numexpression )
-					// Hello.g:306:22: numexpression
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_lvalue866); if (state.failed) return;
+					// Hello.g:304:20: ( numexpression )
+					// Hello.g:304:22: numexpression
 					{
-					pushFollow(FOLLOW_numexpression_in_lvalue876);
+					pushFollow(FOLLOW_numexpression_in_lvalue870);
 					numexpression();
 					state._fsp--;
 					if (state.failed) return;
 					}
 
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_lvalue880); if (state.failed) return;
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_lvalue874); if (state.failed) return;
 					}
 					break;
 
@@ -865,18 +859,18 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "atribstat"
-	// Hello.g:309:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
+	// Hello.g:307:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
 	public final void atribstat() throws RecognitionException {
 		try {
-			// Hello.g:310:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
-			// Hello.g:311:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
+			// Hello.g:308:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
+			// Hello.g:309:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
 			{
-			pushFollow(FOLLOW_lvalue_in_atribstat895);
+			pushFollow(FOLLOW_lvalue_in_atribstat889);
 			lvalue();
 			state._fsp--;
 			if (state.failed) return;
-			match(input,T_ATRIBUICAO,FOLLOW_T_ATRIBUICAO_in_atribstat899); if (state.failed) return;
-			// Hello.g:313:2: ( expression | allocexpression | funccall | TEXTO )
+			match(input,T_ATRIBUICAO,FOLLOW_T_ATRIBUICAO_in_atribstat893); if (state.failed) return;
+			// Hello.g:311:2: ( expression | allocexpression | funccall | TEXTO )
 			int alt10=4;
 			switch ( input.LA(1) ) {
 			case ID:
@@ -912,36 +906,36 @@ public class HelloParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// Hello.g:313:4: expression
+					// Hello.g:311:4: expression
 					{
-					pushFollow(FOLLOW_expression_in_atribstat905);
+					pushFollow(FOLLOW_expression_in_atribstat899);
 					expression();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:313:17: allocexpression
+					// Hello.g:311:17: allocexpression
 					{
-					pushFollow(FOLLOW_allocexpression_in_atribstat909);
+					pushFollow(FOLLOW_allocexpression_in_atribstat903);
 					allocexpression();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 3 :
-					// Hello.g:313:35: funccall
+					// Hello.g:311:35: funccall
 					{
-					pushFollow(FOLLOW_funccall_in_atribstat913);
+					pushFollow(FOLLOW_funccall_in_atribstat907);
 					funccall();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 4 :
-					// Hello.g:313:46: TEXTO
+					// Hello.g:311:46: TEXTO
 					{
-					match(input,TEXTO,FOLLOW_TEXTO_in_atribstat917); if (state.failed) return;
+					match(input,TEXTO,FOLLOW_TEXTO_in_atribstat911); if (state.failed) return;
 					}
 					break;
 
@@ -963,15 +957,15 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "allocexpression"
-	// Hello.g:316:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
+	// Hello.g:314:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
 	public final void allocexpression() throws RecognitionException {
 		try {
-			// Hello.g:316:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
-			// Hello.g:316:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			// Hello.g:314:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
+			// Hello.g:314:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			{
-			match(input,T_NEW,FOLLOW_T_NEW_in_allocexpression929); if (state.failed) return;
-			match(input,TIPOS,FOLLOW_TIPOS_in_allocexpression931); if (state.failed) return;
-			// Hello.g:316:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			match(input,T_NEW,FOLLOW_T_NEW_in_allocexpression923); if (state.failed) return;
+			match(input,TIPOS,FOLLOW_TIPOS_in_allocexpression925); if (state.failed) return;
+			// Hello.g:314:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			int cnt11=0;
 			loop11:
 			while (true) {
@@ -983,14 +977,14 @@ public class HelloParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// Hello.g:316:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
+					// Hello.g:314:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
 					{
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_allocexpression934); if (state.failed) return;
-					pushFollow(FOLLOW_numexpression_in_allocexpression936);
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_allocexpression928); if (state.failed) return;
+					pushFollow(FOLLOW_numexpression_in_allocexpression930);
 					numexpression();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_allocexpression938); if (state.failed) return;
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_allocexpression932); if (state.failed) return;
 					}
 					break;
 
@@ -1019,40 +1013,19 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "funccall"
-	// Hello.g:319:1: funccall : FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES ;
+	// Hello.g:317:1: funccall : FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES ;
 	public final void funccall() throws RecognitionException {
 		try {
-			// Hello.g:320:2: ( FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES )
-			// Hello.g:320:4: FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES
+			// Hello.g:318:2: ( FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES )
+			// Hello.g:318:4: FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES
 			{
-			match(input,FUNCAO,FOLLOW_FUNCAO_in_funccall951); if (state.failed) return;
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funccall962); if (state.failed) return;
-			// Hello.g:322:17: ( paramlistcall )?
-			int alt12=2;
-			int LA12_0 = input.LA(1);
-			if ( (LA12_0==T_FECHAPARENTESES) ) {
-				int LA12_1 = input.LA(2);
-				if ( (synpred22_Hello()) ) {
-					alt12=1;
-				}
-			}
-			else if ( ((LA12_0 >= ID && LA12_0 <= TEXTO)||LA12_0==T_ABREPARENTESES||LA12_0==T_NULL||(LA12_0 >= T_SOMA && LA12_0 <= T_SUBTRACAO)) ) {
-				alt12=1;
-			}
-			switch (alt12) {
-				case 1 :
-					// Hello.g:322:19: paramlistcall
-					{
-					pushFollow(FOLLOW_paramlistcall_in_funccall983);
-					paramlistcall();
-					state._fsp--;
-					if (state.failed) return;
-					}
-					break;
-
-			}
-
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funccall996); if (state.failed) return;
+			match(input,FUNCAO,FOLLOW_FUNCAO_in_funccall945); if (state.failed) return;
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funccall956); if (state.failed) return;
+			pushFollow(FOLLOW_paramlistcall_in_funccall975);
+			paramlistcall();
+			state._fsp--;
+			if (state.failed) return;
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funccall985); if (state.failed) return;
 			}
 
 		}
@@ -1069,69 +1042,70 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlistcall"
-	// Hello.g:326:1: paramlistcall : ( ( TEXTO | expression ) paramlistcall_linha )? ;
+	// Hello.g:324:1: paramlistcall : ( TEXTO paramlistcall_linha | expression paramlistcall_linha |);
 	public final void paramlistcall() throws RecognitionException {
 		try {
-			// Hello.g:327:2: ( ( ( TEXTO | expression ) paramlistcall_linha )? )
-			// Hello.g:327:6: ( ( TEXTO | expression ) paramlistcall_linha )?
-			{
-			// Hello.g:327:6: ( ( TEXTO | expression ) paramlistcall_linha )?
-			int alt14=2;
-			int LA14_0 = input.LA(1);
-			if ( ((LA14_0 >= ID && LA14_0 <= TEXTO)||LA14_0==T_ABREPARENTESES||LA14_0==T_NULL||(LA14_0 >= T_SOMA && LA14_0 <= T_SUBTRACAO)) ) {
-				alt14=1;
+			// Hello.g:325:2: ( TEXTO paramlistcall_linha | expression paramlistcall_linha |)
+			int alt12=3;
+			switch ( input.LA(1) ) {
+			case TEXTO:
+				{
+				alt12=1;
+				}
+				break;
+			case ID:
+			case NUMERO:
+			case T_ABREPARENTESES:
+			case T_NULL:
+			case T_SOMA:
+			case T_SUBTRACAO:
+				{
+				alt12=2;
+				}
+				break;
+			case EOF:
+			case T_FECHAPARENTESES:
+				{
+				alt12=3;
+				}
+				break;
+			default:
+				if (state.backtracking>0) {state.failed=true; return;}
+				NoViableAltException nvae =
+					new NoViableAltException("", 12, 0, input);
+				throw nvae;
 			}
-			switch (alt14) {
+			switch (alt12) {
 				case 1 :
-					// Hello.g:328:5: ( TEXTO | expression ) paramlistcall_linha
+					// Hello.g:325:4: TEXTO paramlistcall_linha
 					{
-					// Hello.g:328:5: ( TEXTO | expression )
-					int alt13=2;
-					int LA13_0 = input.LA(1);
-					if ( (LA13_0==TEXTO) ) {
-						alt13=1;
-					}
-					else if ( ((LA13_0 >= ID && LA13_0 <= NUMERO)||LA13_0==T_ABREPARENTESES||LA13_0==T_NULL||(LA13_0 >= T_SOMA && LA13_0 <= T_SUBTRACAO)) ) {
-						alt13=2;
-					}
-
-					else {
-						if (state.backtracking>0) {state.failed=true; return;}
-						NoViableAltException nvae =
-							new NoViableAltException("", 13, 0, input);
-						throw nvae;
-					}
-
-					switch (alt13) {
-						case 1 :
-							// Hello.g:328:7: TEXTO
-							{
-							match(input,TEXTO,FOLLOW_TEXTO_in_paramlistcall1017); if (state.failed) return;
-							}
-							break;
-						case 2 :
-							// Hello.g:328:15: expression
-							{
-							pushFollow(FOLLOW_expression_in_paramlistcall1021);
-							expression();
-							state._fsp--;
-							if (state.failed) return;
-							}
-							break;
-
-					}
-
-					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall1024);
+					match(input,TEXTO,FOLLOW_TEXTO_in_paramlistcall996); if (state.failed) return;
+					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall998);
 					paramlistcall_linha();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
+				case 2 :
+					// Hello.g:326:4: expression paramlistcall_linha
+					{
+					pushFollow(FOLLOW_expression_in_paramlistcall1004);
+					expression();
+					state._fsp--;
+					if (state.failed) return;
+					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall1006);
+					paramlistcall_linha();
+					state._fsp--;
+					if (state.failed) return;
+					}
+					break;
+				case 3 :
+					// Hello.g:328:2: 
+					{
+					}
+					break;
 
 			}
-
-			}
-
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -1146,39 +1120,39 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlistcall_linha"
-	// Hello.g:332:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
+	// Hello.g:330:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
 	public final void paramlistcall_linha() throws RecognitionException {
 		try {
-			// Hello.g:333:2: ( T_VIRGULA paramlistcall |)
-			int alt15=2;
-			int LA15_0 = input.LA(1);
-			if ( (LA15_0==T_VIRGULA) ) {
-				alt15=1;
+			// Hello.g:331:2: ( T_VIRGULA paramlistcall |)
+			int alt13=2;
+			int LA13_0 = input.LA(1);
+			if ( (LA13_0==T_VIRGULA) ) {
+				alt13=1;
 			}
-			else if ( (LA15_0==EOF||LA15_0==T_FECHAPARENTESES) ) {
-				alt15=2;
+			else if ( (LA13_0==EOF||LA13_0==T_FECHAPARENTESES) ) {
+				alt13=2;
 			}
 
 			else {
 				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 15, 0, input);
+					new NoViableAltException("", 13, 0, input);
 				throw nvae;
 			}
 
-			switch (alt15) {
+			switch (alt13) {
 				case 1 :
-					// Hello.g:334:2: T_VIRGULA paramlistcall
+					// Hello.g:332:2: T_VIRGULA paramlistcall
 					{
-					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlistcall_linha1041); if (state.failed) return;
-					pushFollow(FOLLOW_paramlistcall_in_paramlistcall_linha1043);
+					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlistcall_linha1024); if (state.failed) return;
+					pushFollow(FOLLOW_paramlistcall_in_paramlistcall_linha1026);
 					paramlistcall();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:336:2: 
+					// Hello.g:334:2: 
 					{
 					}
 					break;
@@ -1198,41 +1172,41 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "printstat"
-	// Hello.g:338:1: printstat : T_WRITE ( TEXTO | expression ) ;
+	// Hello.g:336:1: printstat : T_WRITE ( TEXTO | expression ) ;
 	public final void printstat() throws RecognitionException {
 		try {
-			// Hello.g:339:2: ( T_WRITE ( TEXTO | expression ) )
-			// Hello.g:339:4: T_WRITE ( TEXTO | expression )
+			// Hello.g:337:2: ( T_WRITE ( TEXTO | expression ) )
+			// Hello.g:337:4: T_WRITE ( TEXTO | expression )
 			{
-			match(input,T_WRITE,FOLLOW_T_WRITE_in_printstat1059); if (state.failed) return;
-			// Hello.g:339:12: ( TEXTO | expression )
-			int alt16=2;
-			int LA16_0 = input.LA(1);
-			if ( (LA16_0==TEXTO) ) {
-				alt16=1;
+			match(input,T_WRITE,FOLLOW_T_WRITE_in_printstat1042); if (state.failed) return;
+			// Hello.g:337:12: ( TEXTO | expression )
+			int alt14=2;
+			int LA14_0 = input.LA(1);
+			if ( (LA14_0==TEXTO) ) {
+				alt14=1;
 			}
-			else if ( ((LA16_0 >= ID && LA16_0 <= NUMERO)||LA16_0==T_ABREPARENTESES||LA16_0==T_NULL||(LA16_0 >= T_SOMA && LA16_0 <= T_SUBTRACAO)) ) {
-				alt16=2;
+			else if ( ((LA14_0 >= ID && LA14_0 <= NUMERO)||LA14_0==T_ABREPARENTESES||LA14_0==T_NULL||(LA14_0 >= T_SOMA && LA14_0 <= T_SUBTRACAO)) ) {
+				alt14=2;
 			}
 
 			else {
 				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 16, 0, input);
+					new NoViableAltException("", 14, 0, input);
 				throw nvae;
 			}
 
-			switch (alt16) {
+			switch (alt14) {
 				case 1 :
-					// Hello.g:339:14: TEXTO
+					// Hello.g:337:14: TEXTO
 					{
-					match(input,TEXTO,FOLLOW_TEXTO_in_printstat1063); if (state.failed) return;
+					match(input,TEXTO,FOLLOW_TEXTO_in_printstat1046); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:339:22: expression
+					// Hello.g:337:22: expression
 					{
-					pushFollow(FOLLOW_expression_in_printstat1067);
+					pushFollow(FOLLOW_expression_in_printstat1050);
 					expression();
 					state._fsp--;
 					if (state.failed) return;
@@ -1257,14 +1231,14 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "readstat"
-	// Hello.g:342:1: readstat : T_READ lvalue ;
+	// Hello.g:340:1: readstat : T_READ lvalue ;
 	public final void readstat() throws RecognitionException {
 		try {
-			// Hello.g:343:2: ( T_READ lvalue )
-			// Hello.g:343:4: T_READ lvalue
+			// Hello.g:341:2: ( T_READ lvalue )
+			// Hello.g:341:4: T_READ lvalue
 			{
-			match(input,T_READ,FOLLOW_T_READ_in_readstat1081); if (state.failed) return;
-			pushFollow(FOLLOW_lvalue_in_readstat1083);
+			match(input,T_READ,FOLLOW_T_READ_in_readstat1064); if (state.failed) return;
+			pushFollow(FOLLOW_lvalue_in_readstat1066);
 			lvalue();
 			state._fsp--;
 			if (state.failed) return;
@@ -1284,33 +1258,33 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "returnstat"
-	// Hello.g:346:1: returnstat : T_RETURN ( TEXTO | expression )? ;
+	// Hello.g:344:1: returnstat : T_RETURN ( TEXTO | expression )? ;
 	public final void returnstat() throws RecognitionException {
 		try {
-			// Hello.g:347:2: ( T_RETURN ( TEXTO | expression )? )
-			// Hello.g:347:4: T_RETURN ( TEXTO | expression )?
+			// Hello.g:345:2: ( T_RETURN ( TEXTO | expression )? )
+			// Hello.g:345:4: T_RETURN ( TEXTO | expression )?
 			{
-			match(input,T_RETURN,FOLLOW_T_RETURN_in_returnstat1095); if (state.failed) return;
-			// Hello.g:347:13: ( TEXTO | expression )?
-			int alt17=3;
-			int LA17_0 = input.LA(1);
-			if ( (LA17_0==TEXTO) ) {
-				alt17=1;
+			match(input,T_RETURN,FOLLOW_T_RETURN_in_returnstat1078); if (state.failed) return;
+			// Hello.g:345:13: ( TEXTO | expression )?
+			int alt15=3;
+			int LA15_0 = input.LA(1);
+			if ( (LA15_0==TEXTO) ) {
+				alt15=1;
 			}
-			else if ( ((LA17_0 >= ID && LA17_0 <= NUMERO)||LA17_0==T_ABREPARENTESES||LA17_0==T_NULL||(LA17_0 >= T_SOMA && LA17_0 <= T_SUBTRACAO)) ) {
-				alt17=2;
+			else if ( ((LA15_0 >= ID && LA15_0 <= NUMERO)||LA15_0==T_ABREPARENTESES||LA15_0==T_NULL||(LA15_0 >= T_SOMA && LA15_0 <= T_SUBTRACAO)) ) {
+				alt15=2;
 			}
-			switch (alt17) {
+			switch (alt15) {
 				case 1 :
-					// Hello.g:347:15: TEXTO
+					// Hello.g:345:15: TEXTO
 					{
-					match(input,TEXTO,FOLLOW_TEXTO_in_returnstat1099); if (state.failed) return;
+					match(input,TEXTO,FOLLOW_TEXTO_in_returnstat1082); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:347:23: expression
+					// Hello.g:345:23: expression
 					{
-					pushFollow(FOLLOW_expression_in_returnstat1103);
+					pushFollow(FOLLOW_expression_in_returnstat1086);
 					expression();
 					state._fsp--;
 					if (state.failed) return;
@@ -1335,24 +1309,24 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "ifstat"
-	// Hello.g:350:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
+	// Hello.g:348:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
 	public final void ifstat() throws RecognitionException {
 		try {
-			// Hello.g:351:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
-			// Hello.g:351:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
+			// Hello.g:349:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
+			// Hello.g:349:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
 			{
-			match(input,T_IF,FOLLOW_T_IF_in_ifstat1119); if (state.failed) return;
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_ifstat1121); if (state.failed) return;
-			pushFollow(FOLLOW_expression_in_ifstat1123);
+			match(input,T_IF,FOLLOW_T_IF_in_ifstat1102); if (state.failed) return;
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_ifstat1104); if (state.failed) return;
+			pushFollow(FOLLOW_expression_in_ifstat1106);
 			expression();
 			state._fsp--;
 			if (state.failed) return;
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_ifstat1125); if (state.failed) return;
-			pushFollow(FOLLOW_statement_in_ifstat1127);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_ifstat1108); if (state.failed) return;
+			pushFollow(FOLLOW_statement_in_ifstat1110);
 			statement();
 			state._fsp--;
 			if (state.failed) return;
-			pushFollow(FOLLOW_ifstat_linha_in_ifstat1129);
+			pushFollow(FOLLOW_ifstat_linha_in_ifstat1112);
 			ifstat_linha();
 			state._fsp--;
 			if (state.failed) return;
@@ -1372,46 +1346,46 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "ifstat_linha"
-	// Hello.g:354:1: ifstat_linha : ( T_ELSE statement |);
+	// Hello.g:352:1: ifstat_linha : ( T_ELSE statement |);
 	public final void ifstat_linha() throws RecognitionException {
 		try {
-			// Hello.g:355:2: ( T_ELSE statement |)
-			int alt18=2;
-			int LA18_0 = input.LA(1);
-			if ( (LA18_0==T_ELSE) ) {
-				int LA18_1 = input.LA(2);
-				if ( (synpred29_Hello()) ) {
-					alt18=1;
+			// Hello.g:353:2: ( T_ELSE statement |)
+			int alt16=2;
+			int LA16_0 = input.LA(1);
+			if ( (LA16_0==T_ELSE) ) {
+				int LA16_1 = input.LA(2);
+				if ( (synpred28_Hello()) ) {
+					alt16=1;
 				}
 				else if ( (true) ) {
-					alt18=2;
+					alt16=2;
 				}
 
 			}
-			else if ( (LA18_0==EOL||LA18_0==ID||(LA18_0 >= TIPOS && LA18_0 <= T_ABRECHAVE)||LA18_0==T_BREAK||LA18_0==T_FECHACHAVE||(LA18_0 >= T_FOR && LA18_0 <= T_IF)||(LA18_0 >= T_READ && LA18_0 <= T_RETURN)||LA18_0==T_WRITE) ) {
-				alt18=2;
+			else if ( (LA16_0==EOL||LA16_0==ID||(LA16_0 >= TIPOS && LA16_0 <= T_ABRECHAVE)||LA16_0==T_BREAK||LA16_0==T_FECHACHAVE||(LA16_0 >= T_FOR && LA16_0 <= T_IF)||(LA16_0 >= T_READ && LA16_0 <= T_RETURN)||LA16_0==T_WRITE) ) {
+				alt16=2;
 			}
 
 			else {
 				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 18, 0, input);
+					new NoViableAltException("", 16, 0, input);
 				throw nvae;
 			}
 
-			switch (alt18) {
+			switch (alt16) {
 				case 1 :
-					// Hello.g:355:4: T_ELSE statement
+					// Hello.g:353:4: T_ELSE statement
 					{
-					match(input,T_ELSE,FOLLOW_T_ELSE_in_ifstat_linha1140); if (state.failed) return;
-					pushFollow(FOLLOW_statement_in_ifstat_linha1143);
+					match(input,T_ELSE,FOLLOW_T_ELSE_in_ifstat_linha1123); if (state.failed) return;
+					pushFollow(FOLLOW_statement_in_ifstat_linha1126);
 					statement();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:357:2: 
+					// Hello.g:355:2: 
 					{
 					}
 					break;
@@ -1431,30 +1405,30 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "forstat"
-	// Hello.g:359:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement ;
+	// Hello.g:357:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement ;
 	public final void forstat() throws RecognitionException {
 		try {
-			// Hello.g:359:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement )
-			// Hello.g:359:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement
+			// Hello.g:357:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement )
+			// Hello.g:357:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement
 			{
-			match(input,T_FOR,FOLLOW_T_FOR_in_forstat1159); if (state.failed) return;
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_forstat1161); if (state.failed) return;
-			pushFollow(FOLLOW_atribstat_in_forstat1163);
+			match(input,T_FOR,FOLLOW_T_FOR_in_forstat1142); if (state.failed) return;
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_forstat1144); if (state.failed) return;
+			pushFollow(FOLLOW_atribstat_in_forstat1146);
 			atribstat();
 			state._fsp--;
 			if (state.failed) return;
-			match(input,EOL,FOLLOW_EOL_in_forstat1165); if (state.failed) return;
-			pushFollow(FOLLOW_expression_in_forstat1167);
+			match(input,EOL,FOLLOW_EOL_in_forstat1148); if (state.failed) return;
+			pushFollow(FOLLOW_expression_in_forstat1150);
 			expression();
 			state._fsp--;
 			if (state.failed) return;
-			match(input,EOL,FOLLOW_EOL_in_forstat1169); if (state.failed) return;
-			pushFollow(FOLLOW_atribstat_in_forstat1171);
+			match(input,EOL,FOLLOW_EOL_in_forstat1152); if (state.failed) return;
+			pushFollow(FOLLOW_atribstat_in_forstat1154);
 			atribstat();
 			state._fsp--;
 			if (state.failed) return;
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_forstat1173); if (state.failed) return;
-			pushFollow(FOLLOW_statement_in_forstat1182);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_forstat1156); if (state.failed) return;
+			pushFollow(FOLLOW_statement_in_forstat1165);
 			statement();
 			state._fsp--;
 			if (state.failed) return;
@@ -1474,25 +1448,25 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// Hello.g:363:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
+	// Hello.g:361:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
 	public final void expression() throws RecognitionException {
 		try {
-			// Hello.g:363:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
-			// Hello.g:363:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			// Hello.g:361:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
+			// Hello.g:361:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
 			{
-			pushFollow(FOLLOW_numexpression_in_expression1194);
+			pushFollow(FOLLOW_numexpression_in_expression1177);
 			numexpression();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:363:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
-			int alt19=2;
-			int LA19_0 = input.LA(1);
-			if ( (LA19_0==T_DIFERENTE||(LA19_0 >= T_IGUAL && LA19_0 <= T_MENOROUIGUAL)) ) {
-				alt19=1;
+			// Hello.g:361:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			int alt17=2;
+			int LA17_0 = input.LA(1);
+			if ( (LA17_0==T_DIFERENTE||(LA17_0 >= T_IGUAL && LA17_0 <= T_MENOROUIGUAL)) ) {
+				alt17=1;
 			}
-			switch (alt19) {
+			switch (alt17) {
 				case 1 :
-					// Hello.g:363:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
+					// Hello.g:361:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
 					{
 					if ( input.LA(1)==T_DIFERENTE||(input.LA(1) >= T_IGUAL && input.LA(1) <= T_MENOROUIGUAL) ) {
 						input.consume();
@@ -1504,7 +1478,7 @@ public class HelloParser extends Parser {
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						throw mse;
 					}
-					pushFollow(FOLLOW_numexpression_in_expression1224);
+					pushFollow(FOLLOW_numexpression_in_expression1207);
 					numexpression();
 					state._fsp--;
 					if (state.failed) return;
@@ -1529,28 +1503,28 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "numexpression"
-	// Hello.g:366:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
+	// Hello.g:364:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
 	public final void numexpression() throws RecognitionException {
 		try {
-			// Hello.g:366:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
-			// Hello.g:366:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
+			// Hello.g:364:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
+			// Hello.g:364:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
 			{
-			pushFollow(FOLLOW_term_in_numexpression1236);
+			pushFollow(FOLLOW_term_in_numexpression1219);
 			term();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:366:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
-			loop20:
+			// Hello.g:364:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
+			loop18:
 			while (true) {
-				int alt20=2;
-				int LA20_0 = input.LA(1);
-				if ( ((LA20_0 >= T_SOMA && LA20_0 <= T_SUBTRACAO)) ) {
-					alt20=1;
+				int alt18=2;
+				int LA18_0 = input.LA(1);
+				if ( ((LA18_0 >= T_SOMA && LA18_0 <= T_SUBTRACAO)) ) {
+					alt18=1;
 				}
 
-				switch (alt20) {
+				switch (alt18) {
 				case 1 :
-					// Hello.g:366:23: ( T_SOMA | T_SUBTRACAO ) term
+					// Hello.g:364:23: ( T_SOMA | T_SUBTRACAO ) term
 					{
 					if ( (input.LA(1) >= T_SOMA && input.LA(1) <= T_SUBTRACAO) ) {
 						input.consume();
@@ -1562,7 +1536,7 @@ public class HelloParser extends Parser {
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						throw mse;
 					}
-					pushFollow(FOLLOW_term_in_numexpression1249);
+					pushFollow(FOLLOW_term_in_numexpression1232);
 					term();
 					state._fsp--;
 					if (state.failed) return;
@@ -1570,7 +1544,7 @@ public class HelloParser extends Parser {
 					break;
 
 				default :
-					break loop20;
+					break loop18;
 				}
 			}
 
@@ -1590,28 +1564,28 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "term"
-	// Hello.g:369:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
+	// Hello.g:367:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
 	public final void term() throws RecognitionException {
 		try {
-			// Hello.g:369:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
-			// Hello.g:370:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			// Hello.g:367:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
+			// Hello.g:368:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
 			{
-			pushFollow(FOLLOW_unaryexpr_in_term1262);
+			pushFollow(FOLLOW_unaryexpr_in_term1245);
 			unaryexpr();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:370:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
-			loop21:
+			// Hello.g:368:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			loop19:
 			while (true) {
-				int alt21=2;
-				int LA21_0 = input.LA(1);
-				if ( (LA21_0==T_DIVISAO||LA21_0==T_MULTIPLICACAO) ) {
-					alt21=1;
+				int alt19=2;
+				int LA19_0 = input.LA(1);
+				if ( (LA19_0==T_DIVISAO||LA19_0==T_MULTIPLICACAO) ) {
+					alt19=1;
 				}
 
-				switch (alt21) {
+				switch (alt19) {
 				case 1 :
-					// Hello.g:370:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
+					// Hello.g:368:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
 					{
 					if ( input.LA(1)==T_DIVISAO||input.LA(1)==T_MULTIPLICACAO ) {
 						input.consume();
@@ -1623,7 +1597,7 @@ public class HelloParser extends Parser {
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						throw mse;
 					}
-					pushFollow(FOLLOW_unaryexpr_in_term1275);
+					pushFollow(FOLLOW_unaryexpr_in_term1258);
 					unaryexpr();
 					state._fsp--;
 					if (state.failed) return;
@@ -1631,7 +1605,7 @@ public class HelloParser extends Parser {
 					break;
 
 				default :
-					break loop21;
+					break loop19;
 				}
 			}
 
@@ -1651,19 +1625,19 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "unaryexpr"
-	// Hello.g:373:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
+	// Hello.g:371:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
 	public final void unaryexpr() throws RecognitionException {
 		try {
-			// Hello.g:373:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
-			// Hello.g:373:14: ( T_SOMA | T_SUBTRACAO )? factor
+			// Hello.g:371:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
+			// Hello.g:371:14: ( T_SOMA | T_SUBTRACAO )? factor
 			{
-			// Hello.g:373:14: ( T_SOMA | T_SUBTRACAO )?
-			int alt22=2;
-			int LA22_0 = input.LA(1);
-			if ( ((LA22_0 >= T_SOMA && LA22_0 <= T_SUBTRACAO)) ) {
-				alt22=1;
+			// Hello.g:371:14: ( T_SOMA | T_SUBTRACAO )?
+			int alt20=2;
+			int LA20_0 = input.LA(1);
+			if ( ((LA20_0 >= T_SOMA && LA20_0 <= T_SUBTRACAO)) ) {
+				alt20=1;
 			}
-			switch (alt22) {
+			switch (alt20) {
 				case 1 :
 					// Hello.g:
 					{
@@ -1682,7 +1656,7 @@ public class HelloParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_factor_in_unaryexpr1299);
+			pushFollow(FOLLOW_factor_in_unaryexpr1282);
 			factor();
 			state._fsp--;
 			if (state.failed) return;
@@ -1702,72 +1676,72 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "factor"
-	// Hello.g:376:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
+	// Hello.g:374:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
 	public final void factor() throws RecognitionException {
 		try {
-			// Hello.g:376:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
-			// Hello.g:376:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			// Hello.g:374:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
+			// Hello.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 			{
-			// Hello.g:376:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
-			int alt23=4;
+			// Hello.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			int alt21=4;
 			switch ( input.LA(1) ) {
 			case NUMERO:
 				{
-				alt23=1;
+				alt21=1;
 				}
 				break;
 			case ID:
 				{
-				alt23=2;
+				alt21=2;
 				}
 				break;
 			case T_NULL:
 				{
-				alt23=3;
+				alt21=3;
 				}
 				break;
 			case T_ABREPARENTESES:
 				{
-				alt23=4;
+				alt21=4;
 				}
 				break;
 			default:
 				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 23, 0, input);
+					new NoViableAltException("", 21, 0, input);
 				throw nvae;
 			}
-			switch (alt23) {
+			switch (alt21) {
 				case 1 :
-					// Hello.g:376:12: NUMERO
+					// Hello.g:374:12: NUMERO
 					{
-					match(input,NUMERO,FOLLOW_NUMERO_in_factor1311); if (state.failed) return;
+					match(input,NUMERO,FOLLOW_NUMERO_in_factor1294); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:376:21: lvalue
+					// Hello.g:374:21: lvalue
 					{
-					pushFollow(FOLLOW_lvalue_in_factor1315);
+					pushFollow(FOLLOW_lvalue_in_factor1298);
 					lvalue();
 					state._fsp--;
 					if (state.failed) return;
 					}
 					break;
 				case 3 :
-					// Hello.g:376:30: T_NULL
+					// Hello.g:374:30: T_NULL
 					{
-					match(input,T_NULL,FOLLOW_T_NULL_in_factor1319); if (state.failed) return;
+					match(input,T_NULL,FOLLOW_T_NULL_in_factor1302); if (state.failed) return;
 					}
 					break;
 				case 4 :
-					// Hello.g:376:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
+					// Hello.g:374:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
 					{
-					match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_factor1323); if (state.failed) return;
-					pushFollow(FOLLOW_numexpression_in_factor1325);
+					match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_factor1306); if (state.failed) return;
+					pushFollow(FOLLOW_numexpression_in_factor1308);
 					numexpression();
 					state._fsp--;
 					if (state.failed) return;
-					match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_factor1327); if (state.failed) return;
+					match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_factor1310); if (state.failed) return;
 					}
 					break;
 
@@ -1786,56 +1760,28 @@ public class HelloParser extends Parser {
 	}
 	// $ANTLR end "factor"
 
-	// $ANTLR start synpred22_Hello
-	public final void synpred22_Hello_fragment() throws RecognitionException {
-		// Hello.g:322:19: ( paramlistcall )
-		// Hello.g:322:19: paramlistcall
+	// $ANTLR start synpred28_Hello
+	public final void synpred28_Hello_fragment() throws RecognitionException {
+		// Hello.g:353:4: ( T_ELSE statement )
+		// Hello.g:353:4: T_ELSE statement
 		{
-		pushFollow(FOLLOW_paramlistcall_in_synpred22_Hello983);
-		paramlistcall();
-		state._fsp--;
-		if (state.failed) return;
-		}
-
-	}
-	// $ANTLR end synpred22_Hello
-
-	// $ANTLR start synpred29_Hello
-	public final void synpred29_Hello_fragment() throws RecognitionException {
-		// Hello.g:355:4: ( T_ELSE statement )
-		// Hello.g:355:4: T_ELSE statement
-		{
-		match(input,T_ELSE,FOLLOW_T_ELSE_in_synpred29_Hello1140); if (state.failed) return;
-		pushFollow(FOLLOW_statement_in_synpred29_Hello1143);
+		match(input,T_ELSE,FOLLOW_T_ELSE_in_synpred28_Hello1123); if (state.failed) return;
+		pushFollow(FOLLOW_statement_in_synpred28_Hello1126);
 		statement();
 		state._fsp--;
 		if (state.failed) return;
 		}
 
 	}
-	// $ANTLR end synpred29_Hello
+	// $ANTLR end synpred28_Hello
 
 	// Delegated rules
 
-	public final boolean synpred29_Hello() {
+	public final boolean synpred28_Hello() {
 		state.backtracking++;
 		int start = input.mark();
 		try {
-			synpred29_Hello_fragment(); // can never throw exception
-		} catch (RecognitionException re) {
-			System.err.println("impossible: "+re);
-		}
-		boolean success = !state.failed;
-		input.rewind(start);
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
-	public final boolean synpred22_Hello() {
-		state.backtracking++;
-		int start = input.mark();
-		try {
-			synpred22_Hello_fragment(); // can never throw exception
+			synpred28_Hello_fragment(); // can never throw exception
 		} catch (RecognitionException re) {
 			System.err.println("impossible: "+re);
 		}
@@ -1868,96 +1814,96 @@ public class HelloParser extends Parser {
 	public static final BitSet FOLLOW_paramlist_in_paramlist_linha701 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_statement_in_statelist718 = new BitSet(new long[]{0x0000008C03011922L});
 	public static final BitSet FOLLOW_statelist_in_statelist721 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_vardecl_in_statement737 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement739 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atribstat_in_statement745 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement747 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_printstat_in_statement753 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement755 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_readstat_in_statement762 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement764 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_returnstat_in_statement769 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement771 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ifstat_in_statement777 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_forstat_in_statement783 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ABRECHAVE_in_statement789 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statelist_in_statement791 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_T_FECHACHAVE_in_statement793 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_BREAK_in_statement799 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement801 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EOL_in_statement807 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TIPOS_in_vardecl827 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_ID_in_vardecl834 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_vardecl837 = new BitSet(new long[]{0x0000000000000300L});
-	public static final BitSet FOLLOW_ID_in_vardecl843 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_NUMERO_in_vardecl847 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_vardecl851 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_ID_in_lvalue866 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_lvalue872 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_lvalue876 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_lvalue880 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_lvalue_in_atribstat895 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_T_ATRIBUICAO_in_atribstat899 = new BitSet(new long[]{0x0000003300004780L});
-	public static final BitSet FOLLOW_expression_in_atribstat905 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_allocexpression_in_atribstat909 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funccall_in_atribstat913 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TEXTO_in_atribstat917 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_NEW_in_allocexpression929 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_TIPOS_in_allocexpression931 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_allocexpression934 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_allocexpression936 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_allocexpression938 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_FUNCAO_in_funccall951 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funccall962 = new BitSet(new long[]{0x0000003200804700L});
-	public static final BitSet FOLLOW_paramlistcall_in_funccall983 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funccall996 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TEXTO_in_paramlistcall1017 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_expression_in_paramlistcall1021 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall1024 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_VIRGULA_in_paramlistcall_linha1041 = new BitSet(new long[]{0x0000003200004700L});
-	public static final BitSet FOLLOW_paramlistcall_in_paramlistcall_linha1043 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_WRITE_in_printstat1059 = new BitSet(new long[]{0x0000003200004700L});
-	public static final BitSet FOLLOW_TEXTO_in_printstat1063 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_printstat1067 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_READ_in_readstat1081 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_lvalue_in_readstat1083 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_RETURN_in_returnstat1095 = new BitSet(new long[]{0x0000003200004702L});
-	public static final BitSet FOLLOW_TEXTO_in_returnstat1099 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_returnstat1103 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_IF_in_ifstat1119 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_ifstat1121 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_expression_in_ifstat1123 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_ifstat1125 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_ifstat1127 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_ifstat_linha_in_ifstat1129 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ELSE_in_ifstat_linha1140 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_ifstat_linha1143 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_FOR_in_forstat1159 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_forstat1161 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_atribstat_in_forstat1163 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_forstat1165 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_expression_in_forstat1167 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_forstat1169 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_atribstat_in_forstat1171 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_forstat1173 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_forstat1182 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_numexpression_in_expression1194 = new BitSet(new long[]{0x000000007C040002L});
-	public static final BitSet FOLLOW_set_in_expression1198 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_expression1224 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_numexpression1236 = new BitSet(new long[]{0x0000003000000002L});
-	public static final BitSet FOLLOW_set_in_numexpression1239 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_term_in_numexpression1249 = new BitSet(new long[]{0x0000003000000002L});
-	public static final BitSet FOLLOW_unaryexpr_in_term1262 = new BitSet(new long[]{0x0000000080080002L});
-	public static final BitSet FOLLOW_set_in_term1266 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_unaryexpr_in_term1275 = new BitSet(new long[]{0x0000000080080002L});
-	public static final BitSet FOLLOW_factor_in_unaryexpr1299 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NUMERO_in_factor1311 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lvalue_in_factor1315 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_NULL_in_factor1319 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_factor1323 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_factor1325 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_factor1327 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_paramlistcall_in_synpred22_Hello983 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ELSE_in_synpred29_Hello1140 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_synpred29_Hello1143 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_vardecl_in_statement734 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement736 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_atribstat_in_statement742 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement744 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_printstat_in_statement750 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement752 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_readstat_in_statement759 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement761 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_returnstat_in_statement766 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement768 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifstat_in_statement774 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_forstat_in_statement780 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ABRECHAVE_in_statement786 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statelist_in_statement788 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_T_FECHACHAVE_in_statement790 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_BREAK_in_statement796 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement798 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EOL_in_statement804 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TIPOS_in_vardecl821 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_ID_in_vardecl828 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_vardecl831 = new BitSet(new long[]{0x0000000000000300L});
+	public static final BitSet FOLLOW_ID_in_vardecl837 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_NUMERO_in_vardecl841 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_vardecl845 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_ID_in_lvalue860 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_lvalue866 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_lvalue870 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_lvalue874 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_lvalue_in_atribstat889 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_T_ATRIBUICAO_in_atribstat893 = new BitSet(new long[]{0x0000003300004780L});
+	public static final BitSet FOLLOW_expression_in_atribstat899 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_allocexpression_in_atribstat903 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funccall_in_atribstat907 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TEXTO_in_atribstat911 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_NEW_in_allocexpression923 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_TIPOS_in_allocexpression925 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_allocexpression928 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_allocexpression930 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_allocexpression932 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_FUNCAO_in_funccall945 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funccall956 = new BitSet(new long[]{0x0000003200804700L});
+	public static final BitSet FOLLOW_paramlistcall_in_funccall975 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funccall985 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TEXTO_in_paramlistcall996 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall998 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_paramlistcall1004 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall1006 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_VIRGULA_in_paramlistcall_linha1024 = new BitSet(new long[]{0x0000003200004700L});
+	public static final BitSet FOLLOW_paramlistcall_in_paramlistcall_linha1026 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_WRITE_in_printstat1042 = new BitSet(new long[]{0x0000003200004700L});
+	public static final BitSet FOLLOW_TEXTO_in_printstat1046 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_printstat1050 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_READ_in_readstat1064 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_lvalue_in_readstat1066 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_RETURN_in_returnstat1078 = new BitSet(new long[]{0x0000003200004702L});
+	public static final BitSet FOLLOW_TEXTO_in_returnstat1082 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_returnstat1086 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_IF_in_ifstat1102 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_ifstat1104 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_expression_in_ifstat1106 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_ifstat1108 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_ifstat1110 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_ifstat_linha_in_ifstat1112 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ELSE_in_ifstat_linha1123 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_ifstat_linha1126 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_FOR_in_forstat1142 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_forstat1144 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_atribstat_in_forstat1146 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_forstat1148 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_expression_in_forstat1150 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_forstat1152 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_atribstat_in_forstat1154 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_forstat1156 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_forstat1165 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_numexpression_in_expression1177 = new BitSet(new long[]{0x000000007C040002L});
+	public static final BitSet FOLLOW_set_in_expression1181 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_expression1207 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_numexpression1219 = new BitSet(new long[]{0x0000003000000002L});
+	public static final BitSet FOLLOW_set_in_numexpression1222 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_term_in_numexpression1232 = new BitSet(new long[]{0x0000003000000002L});
+	public static final BitSet FOLLOW_unaryexpr_in_term1245 = new BitSet(new long[]{0x0000000080080002L});
+	public static final BitSet FOLLOW_set_in_term1249 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_unaryexpr_in_term1258 = new BitSet(new long[]{0x0000000080080002L});
+	public static final BitSet FOLLOW_factor_in_unaryexpr1282 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NUMERO_in_factor1294 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lvalue_in_factor1298 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_NULL_in_factor1302 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_factor1306 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_factor1308 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_factor1310 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ELSE_in_synpred28_Hello1123 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_synpred28_Hello1126 = new BitSet(new long[]{0x0000000000000002L});
 }

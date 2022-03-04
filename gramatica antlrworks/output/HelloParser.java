@@ -1,11 +1,9 @@
-// $ANTLR 3.5.1 C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g 2022-03-01 20:24:09
+// $ANTLR 3.5.1 C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g 2022-03-03 21:51:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
 
 import org.antlr.runtime.debug.*;
 import java.io.IOException;
@@ -67,29 +65,18 @@ public class HelloParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "synpred6_Hello", "synpred24_Hello", "synpred20_Hello", 
-		"paramlist_linha", "synpred38_Hello", "synpred7_Hello", "synpred36_Hello", 
-		"paramlist", "synpred2_Hello", "ifstat_linha", "synpred37_Hello", "synpred43_Hello", 
-		"synpred46_Hello", "vardecl", "synpred13_Hello", "synpred39_Hello", "synpred41_Hello", 
-		"allocexpression", "synpred14_Hello", "atribstat", "synpred23_Hello", 
-		"synpred34_Hello", "funcdef", "synpred10_Hello", "funclist", "expression", 
-		"synpred21_Hello", "term", "synpred47_Hello", "numexpression", "synpred19_Hello", 
-		"synpred31_Hello", "synpred4_Hello", "synpred42_Hello", "paramlistcall_linha", 
-		"synpred33_Hello", "synpred45_Hello", "synpred17_Hello", "returnstat", 
-		"forstat", "paramlistcall", "synpred18_Hello", "ifstat", "synpred35_Hello", 
-		"funclist_linha", "synpred28_Hello", "statelist", "readstat", "unaryexpr", 
-		"factor", "synpred29_Hello", "synpred32_Hello", "synpred11_Hello", "synpred30_Hello", 
-		"funccall", "synpred1_Hello", "statement", "lvalue", "synpred12_Hello", 
-		"synpred16_Hello", "synpred26_Hello", "synpred22_Hello", "synpred8_Hello", 
-		"synpred9_Hello", "synpred3_Hello", "program", "synpred27_Hello", "synpred40_Hello", 
-		"synpred15_Hello", "printstat", "synpred5_Hello", "synpred25_Hello", "synpred44_Hello"
+		"invalidRule", "unaryexpr", "paramlistcall_linha", "factor", "vardecl", 
+		"paramlist", "lvalue", "numexpression", "atribstat", "term", "allocexpression", 
+		"funclist", "printstat", "ifstat_linha2", "funcdef", "readstat", "forstat", 
+		"statelist", "returnstat", "program", "funclist_linha", "funccall", "ifstat", 
+		"statement", "paramlistcall", "ifstat_linha", "paramlist_linha", "expression"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
 		false, // invalid decision
 		false, false, false, false, false, false, false, false, false, false, 
-		    true, true, false, false, true, false, true, false, false, false, 
-		    false, false, false, false
+		    false, false, false, false, false, false, false, false, false, false, 
+		    false
 	};
 
  
@@ -102,9 +89,6 @@ public class HelloParser extends DebugParser {
 	}
 	public HelloParser(TokenStream input, int port, RecognizerSharedState state) {
 		super(input, state);
-		this.state.ruleMemo = new HashMap[73+1];
-
-
 		DebugEventSocketProxy proxy =
 			new DebugEventSocketProxy(this, port, null);
 
@@ -119,9 +103,6 @@ public class HelloParser extends DebugParser {
 
 	public HelloParser(TokenStream input, DebugEventListener dbg) {
 		super(input, dbg, new RecognizerSharedState());
-		this.state.ruleMemo = new HashMap[73+1];
-
-
 	}
 
 	protected boolean evalPredicate(boolean result, String predicate) {
@@ -135,25 +116,21 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "program"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:98:1: program : ( statement | funclist ) ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:96:1: program : ( statement | funclist ) ;
 	public final void program() throws RecognitionException {
-		int program_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "program");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(98, 0);
+		dbg.location(96, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:98:9: ( ( statement | funclist ) )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:96:9: ( ( statement | funclist ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:99:2: ( statement | funclist )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:97:2: ( statement | funclist )
 			{
-			dbg.location(99,2);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:99:2: ( statement | funclist )
+			dbg.location(97,2);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:97:2: ( statement | funclist )
 			int alt1=2;
 			try { dbg.enterSubRule(1);
 			try { dbg.enterDecision(1, decisionCanBacktrack[1]);
@@ -167,7 +144,6 @@ public class HelloParser extends DebugParser {
 			}
 
 			else {
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
 					new NoViableAltException("", 1, 0, input);
 				dbg.recognitionException(nvae);
@@ -180,25 +156,25 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:99:4: statement
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:97:4: statement
 					{
-					dbg.location(99,4);
-					pushFollow(FOLLOW_statement_in_program586);
+					dbg.location(97,4);
+					pushFollow(FOLLOW_statement_in_program568);
 					statement();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:99:16: funclist
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:97:16: funclist
 					{
-					dbg.location(99,16);
-					pushFollow(FOLLOW_funclist_in_program590);
+					dbg.location(97,16);
+					pushFollow(FOLLOW_funclist_in_program572);
 					funclist();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
@@ -214,10 +190,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 1, program_StartIndex); }
-
 		}
-		dbg.location(100, 1);
+		dbg.location(98, 1);
 
 		}
 		finally {
@@ -231,92 +205,29 @@ public class HelloParser extends DebugParser {
 
 
 
-	// $ANTLR start "funcdef"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:102:1: funcdef : T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE ;
-	public final void funcdef() throws RecognitionException {
-		int funcdef_StartIndex = input.index();
-
-		try { dbg.enterRule(getGrammarFileName(), "funcdef");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(102, 0);
-
-		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:103:2: ( T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:103:4: T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE
-			{
-			dbg.location(103,4);
-			match(input,T_DEF,FOLLOW_T_DEF_in_funcdef604); if (state.failed) return;dbg.location(103,11);
-			match(input,FUNCAO,FOLLOW_FUNCAO_in_funcdef607); if (state.failed) return;dbg.location(103,18);
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funcdef609); if (state.failed) return;dbg.location(103,35);
-			pushFollow(FOLLOW_paramlist_in_funcdef611);
-			paramlist();
-			state._fsp--;
-			if (state.failed) return;dbg.location(103,45);
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funcdef613); if (state.failed) return;dbg.location(104,3);
-			match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_funcdef618); if (state.failed) return;dbg.location(105,5);
-			pushFollow(FOLLOW_statelist_in_funcdef625);
-			statelist();
-			state._fsp--;
-			if (state.failed) return;dbg.location(106,3);
-			match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_funcdef629); if (state.failed) return;
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 2, funcdef_StartIndex); }
-
-		}
-		dbg.location(107, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "funcdef");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-	}
-	// $ANTLR end "funcdef"
-
-
-
 	// $ANTLR start "funclist"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:109:1: funclist : funcdef funclist_linha ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:100:1: funclist : funcdef funclist_linha ;
 	public final void funclist() throws RecognitionException {
-		int funclist_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "funclist");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(109, 0);
+		dbg.location(100, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:109:10: ( funcdef funclist_linha )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:100:10: ( funcdef funclist_linha )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:109:12: funcdef funclist_linha
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:100:12: funcdef funclist_linha
 			{
-			dbg.location(109,12);
-			pushFollow(FOLLOW_funcdef_in_funclist640);
+			dbg.location(100,12);
+			pushFollow(FOLLOW_funcdef_in_funclist584);
 			funcdef();
 			state._fsp--;
-			if (state.failed) return;dbg.location(109,20);
-			pushFollow(FOLLOW_funclist_linha_in_funclist642);
+			dbg.location(100,20);
+			pushFollow(FOLLOW_funclist_linha_in_funclist586);
 			funclist_linha();
 			state._fsp--;
-			if (state.failed) return;
+
 			}
 
 		}
@@ -326,10 +237,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 3, funclist_StartIndex); }
-
 		}
-		dbg.location(110, 1);
+		dbg.location(101, 1);
 
 		}
 		finally {
@@ -344,19 +253,15 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "funclist_linha"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:112:1: funclist_linha : ( funclist |);
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:103:1: funclist_linha : ( funclist |);
 	public final void funclist_linha() throws RecognitionException {
-		int funclist_linha_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "funclist_linha");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(112, 0);
+		dbg.location(103, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:113:2: ( funclist |)
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:104:2: ( funclist |)
 			int alt2=2;
 			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
@@ -369,7 +274,6 @@ public class HelloParser extends DebugParser {
 			}
 
 			else {
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
 					new NoViableAltException("", 2, 0, input);
 				dbg.recognitionException(nvae);
@@ -382,19 +286,19 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:113:4: funclist
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:104:4: funclist
 					{
-					dbg.location(113,4);
-					pushFollow(FOLLOW_funclist_in_funclist_linha653);
+					dbg.location(104,4);
+					pushFollow(FOLLOW_funclist_in_funclist_linha597);
 					funclist();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:115:2: 
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:106:2: 
 					{
 					}
 					break;
@@ -407,10 +311,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 4, funclist_linha_StartIndex); }
-
 		}
-		dbg.location(115, 1);
+		dbg.location(106, 1);
 
 		}
 		finally {
@@ -424,26 +326,75 @@ public class HelloParser extends DebugParser {
 
 
 
-	// $ANTLR start "paramlist"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:117:1: paramlist : ( TIPOS ID paramlist_linha )? ;
-	public final void paramlist() throws RecognitionException {
-		int paramlist_StartIndex = input.index();
+	// $ANTLR start "funcdef"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:108:1: funcdef : T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE ;
+	public final void funcdef() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "funcdef");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(108, 0);
 
+		try {
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:109:2: ( T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE )
+			dbg.enterAlt(1);
+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:109:4: T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE
+			{
+			dbg.location(109,4);
+			match(input,T_DEF,FOLLOW_T_DEF_in_funcdef614); dbg.location(109,10);
+			match(input,FUNCAO,FOLLOW_FUNCAO_in_funcdef616); dbg.location(109,17);
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funcdef618); dbg.location(109,34);
+			pushFollow(FOLLOW_paramlist_in_funcdef620);
+			paramlist();
+			state._fsp--;
+			dbg.location(109,44);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funcdef622); dbg.location(110,3);
+			match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_funcdef627); dbg.location(111,5);
+			pushFollow(FOLLOW_statelist_in_funcdef634);
+			statelist();
+			state._fsp--;
+			dbg.location(112,3);
+			match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_funcdef638); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(113, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "funcdef");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "funcdef"
+
+
+
+	// $ANTLR start "paramlist"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:116:1: paramlist : ( TIPOS ID paramlist_linha )? ;
+	public final void paramlist() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "paramlist");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(117, 0);
+		dbg.location(116, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:118:2: ( ( TIPOS ID paramlist_linha )? )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:117:2: ( ( TIPOS ID paramlist_linha )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:118:4: ( TIPOS ID paramlist_linha )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:117:4: ( TIPOS ID paramlist_linha )?
 			{
-			dbg.location(118,4);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:118:4: ( TIPOS ID paramlist_linha )?
+			dbg.location(117,4);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:117:4: ( TIPOS ID paramlist_linha )?
 			int alt3=2;
 			try { dbg.enterSubRule(3);
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
@@ -458,15 +409,15 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:118:6: TIPOS ID paramlist_linha
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:117:6: TIPOS ID paramlist_linha
 					{
-					dbg.location(118,6);
-					match(input,TIPOS,FOLLOW_TIPOS_in_paramlist673); if (state.failed) return;dbg.location(118,13);
-					match(input,ID,FOLLOW_ID_in_paramlist676); if (state.failed) return;dbg.location(118,16);
-					pushFollow(FOLLOW_paramlist_linha_in_paramlist678);
+					dbg.location(117,6);
+					match(input,TIPOS,FOLLOW_TIPOS_in_paramlist654); dbg.location(117,13);
+					match(input,ID,FOLLOW_ID_in_paramlist657); dbg.location(117,16);
+					pushFollow(FOLLOW_paramlist_linha_in_paramlist659);
 					paramlist_linha();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
@@ -482,10 +433,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 5, paramlist_StartIndex); }
-
 		}
-		dbg.location(119, 1);
+		dbg.location(118, 1);
 
 		}
 		finally {
@@ -500,19 +449,15 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "paramlist_linha"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:121:1: paramlist_linha : ( T_VIRGULA paramlist |);
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:120:1: paramlist_linha : ( T_VIRGULA paramlist |);
 	public final void paramlist_linha() throws RecognitionException {
-		int paramlist_linha_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "paramlist_linha");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(121, 0);
+		dbg.location(120, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:122:2: ( T_VIRGULA paramlist |)
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:121:2: ( T_VIRGULA paramlist |)
 			int alt4=2;
 			try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
@@ -520,12 +465,11 @@ public class HelloParser extends DebugParser {
 			if ( (LA4_0==T_VIRGULA) ) {
 				alt4=1;
 			}
-			else if ( (LA4_0==EOF||LA4_0==T_FECHAPARENTESES) ) {
+			else if ( (LA4_0==T_FECHAPARENTESES) ) {
 				alt4=2;
 			}
 
 			else {
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
 					new NoViableAltException("", 4, 0, input);
 				dbg.recognitionException(nvae);
@@ -538,20 +482,20 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:122:4: T_VIRGULA paramlist
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:121:4: T_VIRGULA paramlist
 					{
-					dbg.location(122,4);
-					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlist_linha692); if (state.failed) return;dbg.location(122,14);
-					pushFollow(FOLLOW_paramlist_in_paramlist_linha694);
+					dbg.location(121,4);
+					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlist_linha673); dbg.location(121,14);
+					pushFollow(FOLLOW_paramlist_in_paramlist_linha675);
 					paramlist();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:124:2: 
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:123:2: 
 					{
 					}
 					break;
@@ -564,10 +508,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 6, paramlist_linha_StartIndex); }
-
 		}
-		dbg.location(124, 1);
+		dbg.location(123, 1);
 
 		}
 		finally {
@@ -582,29 +524,25 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "statelist"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:126:1: statelist : statement ( statelist )? ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:125:1: statelist : statement ( statelist )? ;
 	public final void statelist() throws RecognitionException {
-		int statelist_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "statelist");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(126, 0);
+		dbg.location(125, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:126:11: ( statement ( statelist )? )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:125:11: ( statement ( statelist )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:126:13: statement ( statelist )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:125:13: statement ( statelist )?
 			{
-			dbg.location(126,13);
-			pushFollow(FOLLOW_statement_in_statelist711);
+			dbg.location(125,13);
+			pushFollow(FOLLOW_statement_in_statelist692);
 			statement();
 			state._fsp--;
-			if (state.failed) return;dbg.location(126,23);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:126:23: ( statelist )?
+			dbg.location(125,23);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:125:23: ( statelist )?
 			int alt5=2;
 			try { dbg.enterSubRule(5);
 			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
@@ -619,13 +557,13 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:126:24: statelist
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:125:24: statelist
 					{
-					dbg.location(126,24);
-					pushFollow(FOLLOW_statelist_in_statelist714);
+					dbg.location(125,24);
+					pushFollow(FOLLOW_statelist_in_statelist695);
 					statelist();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
@@ -641,10 +579,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 7, statelist_StartIndex); }
-
 		}
-		dbg.location(127, 1);
+		dbg.location(126, 1);
 
 		}
 		finally {
@@ -659,25 +595,21 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "statement"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:129:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:128:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) ;
 	public final void statement() throws RecognitionException {
-		int statement_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "statement");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(129, 0);
+		dbg.location(128, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:129:10: ( ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:128:10: ( ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:130:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:129:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
 			{
-			dbg.location(130,2);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:130:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
+			dbg.location(129,2);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:129:2: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
 			int alt6=10;
 			try { dbg.enterSubRule(6);
 			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
@@ -734,7 +666,6 @@ public class HelloParser extends DebugParser {
 				}
 				break;
 			default:
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
 					new NoViableAltException("", 6, 0, input);
 				dbg.recognitionException(nvae);
@@ -746,123 +677,123 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:131:3: vardecl EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:130:3: vardecl EOL
 					{
-					dbg.location(131,3);
-					pushFollow(FOLLOW_vardecl_in_statement730);
+					dbg.location(130,3);
+					pushFollow(FOLLOW_vardecl_in_statement711);
 					vardecl();
 					state._fsp--;
-					if (state.failed) return;dbg.location(131,11);
-					match(input,EOL,FOLLOW_EOL_in_statement732); if (state.failed) return;
+					dbg.location(130,11);
+					match(input,EOL,FOLLOW_EOL_in_statement713); 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:132:3: atribstat EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:131:3: atribstat EOL
 					{
-					dbg.location(132,3);
-					pushFollow(FOLLOW_atribstat_in_statement738);
+					dbg.location(131,3);
+					pushFollow(FOLLOW_atribstat_in_statement719);
 					atribstat();
 					state._fsp--;
-					if (state.failed) return;dbg.location(132,13);
-					match(input,EOL,FOLLOW_EOL_in_statement740); if (state.failed) return;
+					dbg.location(131,13);
+					match(input,EOL,FOLLOW_EOL_in_statement721); 
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:133:3: printstat EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:132:3: printstat EOL
 					{
-					dbg.location(133,3);
-					pushFollow(FOLLOW_printstat_in_statement746);
+					dbg.location(132,3);
+					pushFollow(FOLLOW_printstat_in_statement727);
 					printstat();
 					state._fsp--;
-					if (state.failed) return;dbg.location(133,13);
-					match(input,EOL,FOLLOW_EOL_in_statement748); if (state.failed) return;
+					dbg.location(132,13);
+					match(input,EOL,FOLLOW_EOL_in_statement729); 
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:134:3: readstat EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:133:3: readstat EOL
 					{
-					dbg.location(134,3);
-					pushFollow(FOLLOW_readstat_in_statement755);
+					dbg.location(133,3);
+					pushFollow(FOLLOW_readstat_in_statement736);
 					readstat();
 					state._fsp--;
-					if (state.failed) return;dbg.location(134,12);
-					match(input,EOL,FOLLOW_EOL_in_statement757); if (state.failed) return;
+					dbg.location(133,12);
+					match(input,EOL,FOLLOW_EOL_in_statement738); 
 					}
 					break;
 				case 5 :
 					dbg.enterAlt(5);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:135:3: returnstat EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:134:3: returnstat EOL
 					{
-					dbg.location(135,3);
-					pushFollow(FOLLOW_returnstat_in_statement762);
+					dbg.location(134,3);
+					pushFollow(FOLLOW_returnstat_in_statement743);
 					returnstat();
 					state._fsp--;
-					if (state.failed) return;dbg.location(135,14);
-					match(input,EOL,FOLLOW_EOL_in_statement764); if (state.failed) return;
+					dbg.location(134,14);
+					match(input,EOL,FOLLOW_EOL_in_statement745); 
 					}
 					break;
 				case 6 :
 					dbg.enterAlt(6);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:136:3: ifstat
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:135:3: ifstat
 					{
-					dbg.location(136,3);
-					pushFollow(FOLLOW_ifstat_in_statement770);
+					dbg.location(135,3);
+					pushFollow(FOLLOW_ifstat_in_statement751);
 					ifstat();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 7 :
 					dbg.enterAlt(7);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:137:3: forstat
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:136:3: forstat
 					{
-					dbg.location(137,3);
-					pushFollow(FOLLOW_forstat_in_statement776);
+					dbg.location(136,3);
+					pushFollow(FOLLOW_forstat_in_statement757);
 					forstat();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 8 :
 					dbg.enterAlt(8);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:138:3: T_ABRECHAVE statelist T_FECHACHAVE
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:137:3: T_ABRECHAVE statelist T_FECHACHAVE
 					{
-					dbg.location(138,3);
-					match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_statement782); if (state.failed) return;dbg.location(138,15);
-					pushFollow(FOLLOW_statelist_in_statement784);
+					dbg.location(137,3);
+					match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_statement763); dbg.location(137,15);
+					pushFollow(FOLLOW_statelist_in_statement765);
 					statelist();
 					state._fsp--;
-					if (state.failed) return;dbg.location(138,25);
-					match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_statement786); if (state.failed) return;
+					dbg.location(137,25);
+					match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_statement767); 
 					}
 					break;
 				case 9 :
 					dbg.enterAlt(9);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:139:3: T_BREAK EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:138:3: T_BREAK EOL
 					{
-					dbg.location(139,3);
-					match(input,T_BREAK,FOLLOW_T_BREAK_in_statement792); if (state.failed) return;dbg.location(139,11);
-					match(input,EOL,FOLLOW_EOL_in_statement794); if (state.failed) return;
+					dbg.location(138,3);
+					match(input,T_BREAK,FOLLOW_T_BREAK_in_statement773); dbg.location(138,11);
+					match(input,EOL,FOLLOW_EOL_in_statement775); 
 					}
 					break;
 				case 10 :
 					dbg.enterAlt(10);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:140:3: EOL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:139:3: EOL
 					{
-					dbg.location(140,3);
-					match(input,EOL,FOLLOW_EOL_in_statement800); if (state.failed) return;
+					dbg.location(139,3);
+					match(input,EOL,FOLLOW_EOL_in_statement781); 
 					}
 					break;
 
@@ -878,10 +809,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 8, statement_StartIndex); }
-
 		}
-		dbg.location(142, 1);
+		dbg.location(141, 1);
 
 		}
 		finally {
@@ -896,27 +825,23 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "vardecl"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:144:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:143:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
 	public final void vardecl() throws RecognitionException {
-		int vardecl_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "vardecl");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(144, 0);
+		dbg.location(143, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:145:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:144:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:146:4: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:145:3: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			{
-			dbg.location(146,4);
-			match(input,TIPOS,FOLLOW_TIPOS_in_vardecl819); if (state.failed) return;dbg.location(147,4);
-			match(input,ID,FOLLOW_ID_in_vardecl825); if (state.failed) return;dbg.location(147,7);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:147:7: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			dbg.location(145,3);
+			match(input,TIPOS,FOLLOW_TIPOS_in_vardecl799); dbg.location(146,3);
+			match(input,ID,FOLLOW_ID_in_vardecl804); dbg.location(146,6);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:146:6: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			try { dbg.enterSubRule(7);
 
 			loop7:
@@ -935,22 +860,20 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:147:8: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:146:7: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
 					{
-					dbg.location(147,8);
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_vardecl828); if (state.failed) return;dbg.location(147,23);
+					dbg.location(146,7);
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_vardecl807); dbg.location(146,22);
 					if ( (input.LA(1) >= ID && input.LA(1) <= NUMERO) ) {
 						input.consume();
 						state.errorRecovery=false;
-						state.failed=false;
 					}
 					else {
-						if (state.backtracking>0) {state.failed=true; return;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						dbg.recognitionException(mse);
 						throw mse;
-					}dbg.location(147,40);
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_vardecl841); if (state.failed) return;
+					}dbg.location(146,38);
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_vardecl819); 
 					}
 					break;
 
@@ -969,10 +892,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 9, vardecl_StartIndex); }
-
 		}
-		dbg.location(148, 1);
+		dbg.location(147, 1);
 
 		}
 		finally {
@@ -987,26 +908,22 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "lvalue"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:150:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:149:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
 	public final void lvalue() throws RecognitionException {
-		int lvalue_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "lvalue");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(150, 0);
+		dbg.location(149, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:150:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:5: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:150:5: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			{
-			dbg.location(151,5);
-			match(input,ID,FOLLOW_ID_in_lvalue855); if (state.failed) return;dbg.location(152,3);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:152:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			dbg.location(150,5);
+			match(input,ID,FOLLOW_ID_in_lvalue833); dbg.location(151,3);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			try { dbg.enterSubRule(8);
 
 			loop8:
@@ -1025,23 +942,23 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:152:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
 					{
-					dbg.location(152,5);
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_lvalue861); if (state.failed) return;dbg.location(152,20);
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:152:20: ( numexpression )
+					dbg.location(151,5);
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_lvalue839); dbg.location(151,20);
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:20: ( numexpression )
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:152:22: numexpression
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:151:22: numexpression
 					{
-					dbg.location(152,22);
-					pushFollow(FOLLOW_numexpression_in_lvalue865);
+					dbg.location(151,22);
+					pushFollow(FOLLOW_numexpression_in_lvalue843);
 					numexpression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
-					dbg.location(152,38);
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_lvalue869); if (state.failed) return;
+					dbg.location(151,38);
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_lvalue847); 
 					}
 					break;
 
@@ -1060,10 +977,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 10, lvalue_StartIndex); }
-
 		}
-		dbg.location(153, 1);
+		dbg.location(152, 1);
 
 		}
 		finally {
@@ -1078,30 +993,26 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "atribstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:155:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:154:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
 	public final void atribstat() throws RecognitionException {
-		int atribstat_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "atribstat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(155, 0);
+		dbg.location(154, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:156:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:155:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:157:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:156:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
 			{
-			dbg.location(157,2);
-			pushFollow(FOLLOW_lvalue_in_atribstat884);
+			dbg.location(156,2);
+			pushFollow(FOLLOW_lvalue_in_atribstat862);
 			lvalue();
 			state._fsp--;
-			if (state.failed) return;dbg.location(158,2);
-			match(input,T_ATRIBUICAO,FOLLOW_T_ATRIBUICAO_in_atribstat888); if (state.failed) return;dbg.location(159,2);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:159:2: ( expression | allocexpression | funccall | TEXTO )
+			dbg.location(157,2);
+			match(input,T_ATRIBUICAO,FOLLOW_T_ATRIBUICAO_in_atribstat866); dbg.location(158,2);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:158:2: ( expression | allocexpression | funccall | TEXTO )
 			int alt9=4;
 			try { dbg.enterSubRule(9);
 			try { dbg.enterDecision(9, decisionCanBacktrack[9]);
@@ -1133,7 +1044,6 @@ public class HelloParser extends DebugParser {
 				}
 				break;
 			default:
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
 					new NoViableAltException("", 9, 0, input);
 				dbg.recognitionException(nvae);
@@ -1145,46 +1055,46 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:159:4: expression
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:158:4: expression
 					{
-					dbg.location(159,4);
-					pushFollow(FOLLOW_expression_in_atribstat894);
+					dbg.location(158,4);
+					pushFollow(FOLLOW_expression_in_atribstat872);
 					expression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:159:17: allocexpression
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:158:17: allocexpression
 					{
-					dbg.location(159,17);
-					pushFollow(FOLLOW_allocexpression_in_atribstat898);
+					dbg.location(158,17);
+					pushFollow(FOLLOW_allocexpression_in_atribstat876);
 					allocexpression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:159:35: funccall
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:158:35: funccall
 					{
-					dbg.location(159,35);
-					pushFollow(FOLLOW_funccall_in_atribstat902);
+					dbg.location(158,35);
+					pushFollow(FOLLOW_funccall_in_atribstat880);
 					funccall();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:159:46: TEXTO
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:158:46: TEXTO
 					{
-					dbg.location(159,46);
-					match(input,TEXTO,FOLLOW_TEXTO_in_atribstat906); if (state.failed) return;
+					dbg.location(158,46);
+					match(input,TEXTO,FOLLOW_TEXTO_in_atribstat884); 
 					}
 					break;
 
@@ -1200,10 +1110,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 11, atribstat_StartIndex); }
-
 		}
-		dbg.location(160, 1);
+		dbg.location(159, 1);
 
 		}
 		finally {
@@ -1218,27 +1126,23 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "allocexpression"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:162:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:161:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
 	public final void allocexpression() throws RecognitionException {
-		int allocexpression_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "allocexpression");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(162, 0);
+		dbg.location(161, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:162:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:161:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:162:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:161:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			{
-			dbg.location(162,19);
-			match(input,T_NEW,FOLLOW_T_NEW_in_allocexpression918); if (state.failed) return;dbg.location(162,25);
-			match(input,TIPOS,FOLLOW_TIPOS_in_allocexpression920); if (state.failed) return;dbg.location(162,31);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:162:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			dbg.location(161,19);
+			match(input,T_NEW,FOLLOW_T_NEW_in_allocexpression896); dbg.location(161,25);
+			match(input,TIPOS,FOLLOW_TIPOS_in_allocexpression898); dbg.location(161,31);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:161:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			int cnt10=0;
 			try { dbg.enterSubRule(10);
 
@@ -1258,21 +1162,20 @@ public class HelloParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:162:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:161:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
 					{
-					dbg.location(162,32);
-					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_allocexpression923); if (state.failed) return;dbg.location(162,47);
-					pushFollow(FOLLOW_numexpression_in_allocexpression925);
+					dbg.location(161,32);
+					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_allocexpression901); dbg.location(161,47);
+					pushFollow(FOLLOW_numexpression_in_allocexpression903);
 					numexpression();
 					state._fsp--;
-					if (state.failed) return;dbg.location(162,61);
-					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_allocexpression927); if (state.failed) return;
+					dbg.location(161,61);
+					match(input,T_FECHACOLCHETE,FOLLOW_T_FECHACOLCHETE_in_allocexpression905); 
 					}
 					break;
 
 				default :
 					if ( cnt10 >= 1 ) break loop10;
-					if (state.backtracking>0) {state.failed=true; return;}
 					EarlyExitException eee = new EarlyExitException(10, input);
 					dbg.recognitionException(eee);
 
@@ -1291,10 +1194,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 12, allocexpression_StartIndex); }
-
 		}
-		dbg.location(163, 1);
+		dbg.location(162, 1);
 
 		}
 		finally {
@@ -1309,61 +1210,27 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "funccall"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:165:1: funccall : FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:164:1: funccall : FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES ;
 	public final void funccall() throws RecognitionException {
-		int funccall_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "funccall");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(165, 0);
+		dbg.location(164, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:166:2: ( FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:165:2: ( FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:166:4: FUNCAO T_ABREPARENTESES ( paramlistcall )? T_FECHAPARENTESES
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:165:4: FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES
 			{
-			dbg.location(166,4);
-			match(input,FUNCAO,FOLLOW_FUNCAO_in_funccall940); if (state.failed) return;dbg.location(167,9);
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funccall951); if (state.failed) return;dbg.location(168,17);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:168:17: ( paramlistcall )?
-			int alt11=2;
-			try { dbg.enterSubRule(11);
-			try { dbg.enterDecision(11, decisionCanBacktrack[11]);
-
-			int LA11_0 = input.LA(1);
-			if ( (LA11_0==T_FECHAPARENTESES) ) {
-				int LA11_1 = input.LA(2);
-				if ( (synpred22_Hello()) ) {
-					alt11=1;
-				}
-			}
-			else if ( ((LA11_0 >= ID && LA11_0 <= TEXTO)||LA11_0==T_ABREPARENTESES||LA11_0==T_NULL||(LA11_0 >= T_SOMA && LA11_0 <= T_SUBTRACAO)) ) {
-				alt11=1;
-			}
-			} finally {dbg.exitDecision(11);}
-
-			switch (alt11) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:168:19: paramlistcall
-					{
-					dbg.location(168,19);
-					pushFollow(FOLLOW_paramlistcall_in_funccall972);
-					paramlistcall();
-					state._fsp--;
-					if (state.failed) return;
-					}
-					break;
-
-			}
-			} finally {dbg.exitSubRule(11);}
-			dbg.location(169,9);
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funccall985); if (state.failed) return;
+			dbg.location(165,4);
+			match(input,FUNCAO,FOLLOW_FUNCAO_in_funccall918); dbg.location(166,9);
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funccall929); dbg.location(167,17);
+			pushFollow(FOLLOW_paramlistcall_in_funccall948);
+			paramlistcall();
+			state._fsp--;
+			dbg.location(168,9);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_funccall958); 
 			}
 
 		}
@@ -1373,10 +1240,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 13, funccall_StartIndex); }
-
 		}
-		dbg.location(170, 1);
+		dbg.location(169, 1);
 
 		}
 		finally {
@@ -1391,122 +1256,241 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "paramlistcall"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:172:1: paramlistcall : ( ( ID | TEXTO | expression ) paramlistcall_linha )? ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:171:1: paramlistcall : ( TEXTO paramlistcall_linha | expression paramlistcall_linha |);
 	public final void paramlistcall() throws RecognitionException {
-		int paramlistcall_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "paramlistcall");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(172, 0);
+		dbg.location(171, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return; }
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:172:2: ( TEXTO paramlistcall_linha | expression paramlistcall_linha |)
+			int alt11=3;
+			try { dbg.enterDecision(11, decisionCanBacktrack[11]);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:173:2: ( ( ( ID | TEXTO | expression ) paramlistcall_linha )? )
+			switch ( input.LA(1) ) {
+			case TEXTO:
+				{
+				alt11=1;
+				}
+				break;
+			case ID:
+			case NUMERO:
+			case T_ABREPARENTESES:
+			case T_NULL:
+			case T_SOMA:
+			case T_SUBTRACAO:
+				{
+				alt11=2;
+				}
+				break;
+			case T_FECHAPARENTESES:
+				{
+				alt11=3;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 11, 0, input);
+				dbg.recognitionException(nvae);
+				throw nvae;
+			}
+			} finally {dbg.exitDecision(11);}
+
+			switch (alt11) {
+				case 1 :
+					dbg.enterAlt(1);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:172:4: TEXTO paramlistcall_linha
+					{
+					dbg.location(172,4);
+					match(input,TEXTO,FOLLOW_TEXTO_in_paramlistcall969); dbg.location(172,10);
+					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall971);
+					paramlistcall_linha();
+					state._fsp--;
+
+					}
+					break;
+				case 2 :
+					dbg.enterAlt(2);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:173:4: expression paramlistcall_linha
+					{
+					dbg.location(173,4);
+					pushFollow(FOLLOW_expression_in_paramlistcall977);
+					expression();
+					state._fsp--;
+					dbg.location(173,15);
+					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall979);
+					paramlistcall_linha();
+					state._fsp--;
+
+					}
+					break;
+				case 3 :
+					dbg.enterAlt(3);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:175:2: 
+					{
+					}
+					break;
+
+			}
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(175, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "paramlistcall");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "paramlistcall"
+
+
+
+	// $ANTLR start "paramlistcall_linha"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:177:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
+	public final void paramlistcall_linha() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "paramlistcall_linha");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(177, 0);
+
+		try {
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:178:2: ( T_VIRGULA paramlistcall |)
+			int alt12=2;
+			try { dbg.enterDecision(12, decisionCanBacktrack[12]);
+
+			int LA12_0 = input.LA(1);
+			if ( (LA12_0==T_VIRGULA) ) {
+				alt12=1;
+			}
+			else if ( (LA12_0==T_FECHAPARENTESES) ) {
+				alt12=2;
+			}
+
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 12, 0, input);
+				dbg.recognitionException(nvae);
+				throw nvae;
+			}
+
+			} finally {dbg.exitDecision(12);}
+
+			switch (alt12) {
+				case 1 :
+					dbg.enterAlt(1);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:179:2: T_VIRGULA paramlistcall
+					{
+					dbg.location(179,2);
+					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlistcall_linha997); dbg.location(179,12);
+					pushFollow(FOLLOW_paramlistcall_in_paramlistcall_linha999);
+					paramlistcall();
+					state._fsp--;
+
+					}
+					break;
+				case 2 :
+					dbg.enterAlt(2);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:181:2: 
+					{
+					}
+					break;
+
+			}
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(181, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "paramlistcall_linha");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "paramlistcall_linha"
+
+
+
+	// $ANTLR start "printstat"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:183:1: printstat : T_WRITE ( TEXTO | expression ) ;
+	public final void printstat() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "printstat");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(183, 0);
+
+		try {
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:2: ( T_WRITE ( TEXTO | expression ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:173:6: ( ( ID | TEXTO | expression ) paramlistcall_linha )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:4: T_WRITE ( TEXTO | expression )
 			{
-			dbg.location(173,6);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:173:6: ( ( ID | TEXTO | expression ) paramlistcall_linha )?
+			dbg.location(184,4);
+			match(input,T_WRITE,FOLLOW_T_WRITE_in_printstat1015); dbg.location(184,12);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:12: ( TEXTO | expression )
 			int alt13=2;
 			try { dbg.enterSubRule(13);
 			try { dbg.enterDecision(13, decisionCanBacktrack[13]);
 
 			int LA13_0 = input.LA(1);
-			if ( ((LA13_0 >= ID && LA13_0 <= TEXTO)||LA13_0==T_ABREPARENTESES||LA13_0==T_NULL||(LA13_0 >= T_SOMA && LA13_0 <= T_SUBTRACAO)) ) {
+			if ( (LA13_0==TEXTO) ) {
 				alt13=1;
 			}
+			else if ( ((LA13_0 >= ID && LA13_0 <= NUMERO)||LA13_0==T_ABREPARENTESES||LA13_0==T_NULL||(LA13_0 >= T_SOMA && LA13_0 <= T_SUBTRACAO)) ) {
+				alt13=2;
+			}
+
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 13, 0, input);
+				dbg.recognitionException(nvae);
+				throw nvae;
+			}
+
 			} finally {dbg.exitDecision(13);}
 
 			switch (alt13) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:5: ( ID | TEXTO | expression ) paramlistcall_linha
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:14: TEXTO
 					{
-					dbg.location(174,5);
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:5: ( ID | TEXTO | expression )
-					int alt12=3;
-					try { dbg.enterSubRule(12);
-					try { dbg.enterDecision(12, decisionCanBacktrack[12]);
-
-					switch ( input.LA(1) ) {
-					case ID:
-						{
-						int LA12_1 = input.LA(2);
-						if ( (synpred23_Hello()) ) {
-							alt12=1;
-						}
-						else if ( (true) ) {
-							alt12=3;
-						}
-
-						}
-						break;
-					case TEXTO:
-						{
-						alt12=2;
-						}
-						break;
-					case NUMERO:
-					case T_ABREPARENTESES:
-					case T_NULL:
-					case T_SOMA:
-					case T_SUBTRACAO:
-						{
-						alt12=3;
-						}
-						break;
-					default:
-						if (state.backtracking>0) {state.failed=true; return;}
-						NoViableAltException nvae =
-							new NoViableAltException("", 12, 0, input);
-						dbg.recognitionException(nvae);
-						throw nvae;
+					dbg.location(184,14);
+					match(input,TEXTO,FOLLOW_TEXTO_in_printstat1019); 
 					}
-					} finally {dbg.exitDecision(12);}
+					break;
+				case 2 :
+					dbg.enterAlt(2);
 
-					switch (alt12) {
-						case 1 :
-							dbg.enterAlt(1);
-
-							// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:7: ID
-							{
-							dbg.location(174,7);
-							match(input,ID,FOLLOW_ID_in_paramlistcall1006); if (state.failed) return;
-							}
-							break;
-						case 2 :
-							dbg.enterAlt(2);
-
-							// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:12: TEXTO
-							{
-							dbg.location(174,12);
-							match(input,TEXTO,FOLLOW_TEXTO_in_paramlistcall1010); if (state.failed) return;
-							}
-							break;
-						case 3 :
-							dbg.enterAlt(3);
-
-							// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:20: expression
-							{
-							dbg.location(174,20);
-							pushFollow(FOLLOW_expression_in_paramlistcall1014);
-							expression();
-							state._fsp--;
-							if (state.failed) return;
-							}
-							break;
-
-					}
-					} finally {dbg.exitSubRule(12);}
-					dbg.location(174,32);
-					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall1017);
-					paramlistcall_linha();
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:22: expression
+					{
+					dbg.location(184,22);
+					pushFollow(FOLLOW_expression_in_printstat1023);
+					expression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
@@ -1522,217 +1506,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 14, paramlistcall_StartIndex); }
-
 		}
-		dbg.location(176, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "paramlistcall");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-	}
-	// $ANTLR end "paramlistcall"
-
-
-
-	// $ANTLR start "paramlistcall_linha"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:178:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
-	public final void paramlistcall_linha() throws RecognitionException {
-		int paramlistcall_linha_StartIndex = input.index();
-
-		try { dbg.enterRule(getGrammarFileName(), "paramlistcall_linha");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(178, 0);
-
-		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:179:2: ( T_VIRGULA paramlistcall |)
-			int alt14=2;
-			try { dbg.enterDecision(14, decisionCanBacktrack[14]);
-
-			int LA14_0 = input.LA(1);
-			if ( (LA14_0==T_VIRGULA) ) {
-				alt14=1;
-			}
-			else if ( (LA14_0==EOF||LA14_0==T_FECHAPARENTESES) ) {
-				alt14=2;
-			}
-
-			else {
-				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae =
-					new NoViableAltException("", 14, 0, input);
-				dbg.recognitionException(nvae);
-				throw nvae;
-			}
-
-			} finally {dbg.exitDecision(14);}
-
-			switch (alt14) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:180:2: T_VIRGULA paramlistcall
-					{
-					dbg.location(180,2);
-					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlistcall_linha1034); if (state.failed) return;dbg.location(180,12);
-					pushFollow(FOLLOW_paramlistcall_in_paramlistcall_linha1036);
-					paramlistcall();
-					state._fsp--;
-					if (state.failed) return;
-					}
-					break;
-				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:182:2: 
-					{
-					}
-					break;
-
-			}
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 15, paramlistcall_linha_StartIndex); }
-
-		}
-		dbg.location(182, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "paramlistcall_linha");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-	}
-	// $ANTLR end "paramlistcall_linha"
-
-
-
-	// $ANTLR start "printstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:184:1: printstat : T_WRITE ( lvalue | TEXTO | expression ) ;
-	public final void printstat() throws RecognitionException {
-		int printstat_StartIndex = input.index();
-
-		try { dbg.enterRule(getGrammarFileName(), "printstat");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(184, 0);
-
-		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:2: ( T_WRITE ( lvalue | TEXTO | expression ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:4: T_WRITE ( lvalue | TEXTO | expression )
-			{
-			dbg.location(185,4);
-			match(input,T_WRITE,FOLLOW_T_WRITE_in_printstat1052); if (state.failed) return;dbg.location(185,12);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:12: ( lvalue | TEXTO | expression )
-			int alt15=3;
-			try { dbg.enterSubRule(15);
-			try { dbg.enterDecision(15, decisionCanBacktrack[15]);
-
-			switch ( input.LA(1) ) {
-			case ID:
-				{
-				int LA15_1 = input.LA(2);
-				if ( (synpred27_Hello()) ) {
-					alt15=1;
-				}
-				else if ( (true) ) {
-					alt15=3;
-				}
-
-				}
-				break;
-			case TEXTO:
-				{
-				alt15=2;
-				}
-				break;
-			case NUMERO:
-			case T_ABREPARENTESES:
-			case T_NULL:
-			case T_SOMA:
-			case T_SUBTRACAO:
-				{
-				alt15=3;
-				}
-				break;
-			default:
-				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae =
-					new NoViableAltException("", 15, 0, input);
-				dbg.recognitionException(nvae);
-				throw nvae;
-			}
-			} finally {dbg.exitDecision(15);}
-
-			switch (alt15) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:14: lvalue
-					{
-					dbg.location(185,14);
-					pushFollow(FOLLOW_lvalue_in_printstat1056);
-					lvalue();
-					state._fsp--;
-					if (state.failed) return;
-					}
-					break;
-				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:23: TEXTO
-					{
-					dbg.location(185,23);
-					match(input,TEXTO,FOLLOW_TEXTO_in_printstat1060); if (state.failed) return;
-					}
-					break;
-				case 3 :
-					dbg.enterAlt(3);
-
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:31: expression
-					{
-					dbg.location(185,31);
-					pushFollow(FOLLOW_expression_in_printstat1064);
-					expression();
-					state._fsp--;
-					if (state.failed) return;
-					}
-					break;
-
-			}
-			} finally {dbg.exitSubRule(15);}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 16, printstat_StartIndex); }
-
-		}
-		dbg.location(186, 1);
+		dbg.location(185, 1);
 
 		}
 		finally {
@@ -1747,29 +1522,25 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "readstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:188:1: readstat : T_READ lvalue ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:187:1: readstat : T_READ lvalue ;
 	public final void readstat() throws RecognitionException {
-		int readstat_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "readstat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(188, 0);
+		dbg.location(187, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:189:2: ( T_READ lvalue )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:188:2: ( T_READ lvalue )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:189:4: T_READ lvalue
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:188:4: T_READ lvalue
 			{
-			dbg.location(189,4);
-			match(input,T_READ,FOLLOW_T_READ_in_readstat1078); if (state.failed) return;dbg.location(189,11);
-			pushFollow(FOLLOW_lvalue_in_readstat1080);
+			dbg.location(188,4);
+			match(input,T_READ,FOLLOW_T_READ_in_readstat1037); dbg.location(188,11);
+			pushFollow(FOLLOW_lvalue_in_readstat1039);
 			lvalue();
 			state._fsp--;
-			if (state.failed) return;
+
 			}
 
 		}
@@ -1779,10 +1550,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 17, readstat_StartIndex); }
-
 		}
-		dbg.location(190, 1);
+		dbg.location(189, 1);
 
 		}
 		finally {
@@ -1797,64 +1566,60 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "returnstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:1: returnstat : T_RETURN ( TEXTO | expression )? ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:191:1: returnstat : T_RETURN ( TEXTO | expression )? ;
 	public final void returnstat() throws RecognitionException {
-		int returnstat_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "returnstat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(192, 0);
+		dbg.location(191, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:193:2: ( T_RETURN ( TEXTO | expression )? )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:2: ( T_RETURN ( TEXTO | expression )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:193:4: T_RETURN ( TEXTO | expression )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:4: T_RETURN ( TEXTO | expression )?
 			{
-			dbg.location(193,4);
-			match(input,T_RETURN,FOLLOW_T_RETURN_in_returnstat1092); if (state.failed) return;dbg.location(193,13);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:193:13: ( TEXTO | expression )?
-			int alt16=3;
-			try { dbg.enterSubRule(16);
-			try { dbg.enterDecision(16, decisionCanBacktrack[16]);
+			dbg.location(192,4);
+			match(input,T_RETURN,FOLLOW_T_RETURN_in_returnstat1051); dbg.location(192,13);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:13: ( TEXTO | expression )?
+			int alt14=3;
+			try { dbg.enterSubRule(14);
+			try { dbg.enterDecision(14, decisionCanBacktrack[14]);
 
-			int LA16_0 = input.LA(1);
-			if ( (LA16_0==TEXTO) ) {
-				alt16=1;
+			int LA14_0 = input.LA(1);
+			if ( (LA14_0==TEXTO) ) {
+				alt14=1;
 			}
-			else if ( ((LA16_0 >= ID && LA16_0 <= NUMERO)||LA16_0==T_ABREPARENTESES||LA16_0==T_NULL||(LA16_0 >= T_SOMA && LA16_0 <= T_SUBTRACAO)) ) {
-				alt16=2;
+			else if ( ((LA14_0 >= ID && LA14_0 <= NUMERO)||LA14_0==T_ABREPARENTESES||LA14_0==T_NULL||(LA14_0 >= T_SOMA && LA14_0 <= T_SUBTRACAO)) ) {
+				alt14=2;
 			}
-			} finally {dbg.exitDecision(16);}
+			} finally {dbg.exitDecision(14);}
 
-			switch (alt16) {
+			switch (alt14) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:193:15: TEXTO
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:15: TEXTO
 					{
-					dbg.location(193,15);
-					match(input,TEXTO,FOLLOW_TEXTO_in_returnstat1096); if (state.failed) return;
+					dbg.location(192,15);
+					match(input,TEXTO,FOLLOW_TEXTO_in_returnstat1055); 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:193:23: expression
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:192:23: expression
 					{
-					dbg.location(193,23);
-					pushFollow(FOLLOW_expression_in_returnstat1100);
+					dbg.location(192,23);
+					pushFollow(FOLLOW_expression_in_returnstat1059);
 					expression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
 			}
-			} finally {dbg.exitSubRule(16);}
+			} finally {dbg.exitSubRule(14);}
 
 			}
 
@@ -1865,10 +1630,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 18, returnstat_StartIndex); }
-
 		}
-		dbg.location(194, 1);
+		dbg.location(193, 1);
 
 		}
 		finally {
@@ -1883,39 +1646,35 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "ifstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:196:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:195:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
 	public final void ifstat() throws RecognitionException {
-		int ifstat_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "ifstat");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(196, 0);
+		dbg.location(195, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:197:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:196:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:197:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:196:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
 			{
-			dbg.location(197,4);
-			match(input,T_IF,FOLLOW_T_IF_in_ifstat1116); if (state.failed) return;dbg.location(197,9);
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_ifstat1118); if (state.failed) return;dbg.location(197,26);
-			pushFollow(FOLLOW_expression_in_ifstat1120);
+			dbg.location(196,4);
+			match(input,T_IF,FOLLOW_T_IF_in_ifstat1075); dbg.location(196,9);
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_ifstat1077); dbg.location(196,26);
+			pushFollow(FOLLOW_expression_in_ifstat1079);
 			expression();
 			state._fsp--;
-			if (state.failed) return;dbg.location(197,37);
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_ifstat1122); if (state.failed) return;dbg.location(197,55);
-			pushFollow(FOLLOW_statement_in_ifstat1124);
+			dbg.location(196,37);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_ifstat1081); dbg.location(196,55);
+			pushFollow(FOLLOW_statement_in_ifstat1083);
 			statement();
 			state._fsp--;
-			if (state.failed) return;dbg.location(197,65);
-			pushFollow(FOLLOW_ifstat_linha_in_ifstat1126);
+			dbg.location(196,65);
+			pushFollow(FOLLOW_ifstat_linha_in_ifstat1085);
 			ifstat_linha();
 			state._fsp--;
-			if (state.failed) return;
+
 			}
 
 		}
@@ -1925,10 +1684,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 19, ifstat_StartIndex); }
-
 		}
-		dbg.location(198, 1);
+		dbg.location(197, 1);
 
 		}
 		finally {
@@ -1943,65 +1700,53 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "ifstat_linha"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:200:1: ifstat_linha : ( T_ELSE statement |);
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:199:1: ifstat_linha : ( T_ELSE statement |);
 	public final void ifstat_linha() throws RecognitionException {
-		int ifstat_linha_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "ifstat_linha");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(200, 0);
+		dbg.location(199, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return; }
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:200:2: ( T_ELSE statement |)
+			int alt15=2;
+			try { dbg.enterDecision(15, decisionCanBacktrack[15]);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:201:2: ( T_ELSE statement |)
-			int alt17=2;
-			try { dbg.enterDecision(17, decisionCanBacktrack[17]);
-
-			int LA17_0 = input.LA(1);
-			if ( (LA17_0==T_ELSE) ) {
-				int LA17_1 = input.LA(2);
-				if ( (synpred31_Hello()) ) {
-					alt17=1;
-				}
-				else if ( (true) ) {
-					alt17=2;
-				}
-
+			int LA15_0 = input.LA(1);
+			if ( (LA15_0==T_ELSE) ) {
+				alt15=1;
 			}
-			else if ( (LA17_0==EOL||LA17_0==ID||(LA17_0 >= TIPOS && LA17_0 <= T_ABRECHAVE)||LA17_0==T_BREAK||LA17_0==T_FECHACHAVE||(LA17_0 >= T_FOR && LA17_0 <= T_IF)||(LA17_0 >= T_READ && LA17_0 <= T_RETURN)||LA17_0==T_WRITE) ) {
-				alt17=2;
+			else if ( (LA15_0==EOF||LA15_0==EOL||LA15_0==ID||(LA15_0 >= TIPOS && LA15_0 <= T_ABRECHAVE)||LA15_0==T_BREAK||LA15_0==T_FECHACHAVE||(LA15_0 >= T_FOR && LA15_0 <= T_IF)||(LA15_0 >= T_READ && LA15_0 <= T_RETURN)||LA15_0==T_WRITE) ) {
+				alt15=2;
 			}
 
 			else {
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 17, 0, input);
+					new NoViableAltException("", 15, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
 
-			} finally {dbg.exitDecision(17);}
+			} finally {dbg.exitDecision(15);}
 
-			switch (alt17) {
+			switch (alt15) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:201:4: T_ELSE statement
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:200:4: T_ELSE statement
 					{
-					dbg.location(201,4);
-					match(input,T_ELSE,FOLLOW_T_ELSE_in_ifstat_linha1137); if (state.failed) return;dbg.location(201,12);
-					pushFollow(FOLLOW_statement_in_ifstat_linha1140);
+					dbg.location(200,4);
+					match(input,T_ELSE,FOLLOW_T_ELSE_in_ifstat_linha1096); dbg.location(200,11);
+					pushFollow(FOLLOW_statement_in_ifstat_linha1098);
 					statement();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:203:2: 
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:202:2: 
 					{
 					}
 					break;
@@ -2014,10 +1759,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 20, ifstat_linha_StartIndex); }
-
 		}
-		dbg.location(203, 1);
+		dbg.location(202, 1);
 
 		}
 		finally {
@@ -2031,79 +1774,121 @@ public class HelloParser extends DebugParser {
 
 
 
-	// $ANTLR start "forstat"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES T_ABRECHAVE ( statement )* T_FECHACHAVE ;
-	public final void forstat() throws RecognitionException {
-		int forstat_StartIndex = input.index();
-
-		try { dbg.enterRule(getGrammarFileName(), "forstat");
+	// $ANTLR start "ifstat_linha2"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:204:1: ifstat_linha2 : ( ifstat | statement );
+	public final void ifstat_linha2() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "ifstat_linha2");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(205, 0);
+		dbg.location(204, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return; }
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:2: ( ifstat | statement )
+			int alt16=2;
+			try { dbg.enterDecision(16, decisionCanBacktrack[16]);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES T_ABRECHAVE ( statement )* T_FECHACHAVE )
-			dbg.enterAlt(1);
+			int LA16_0 = input.LA(1);
+			if ( (LA16_0==T_IF) ) {
+				alt16=1;
+			}
+			else if ( (LA16_0==EOL||LA16_0==ID||(LA16_0 >= TIPOS && LA16_0 <= T_ABRECHAVE)||LA16_0==T_BREAK||LA16_0==T_FOR||(LA16_0 >= T_READ && LA16_0 <= T_RETURN)||LA16_0==T_WRITE) ) {
+				alt16=2;
+			}
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES T_ABRECHAVE ( statement )* T_FECHACHAVE
-			{
-			dbg.location(205,11);
-			match(input,T_FOR,FOLLOW_T_FOR_in_forstat1156); if (state.failed) return;dbg.location(205,17);
-			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_forstat1158); if (state.failed) return;dbg.location(205,34);
-			pushFollow(FOLLOW_atribstat_in_forstat1160);
-			atribstat();
-			state._fsp--;
-			if (state.failed) return;dbg.location(205,44);
-			match(input,EOL,FOLLOW_EOL_in_forstat1162); if (state.failed) return;dbg.location(205,48);
-			pushFollow(FOLLOW_expression_in_forstat1164);
-			expression();
-			state._fsp--;
-			if (state.failed) return;dbg.location(205,59);
-			match(input,EOL,FOLLOW_EOL_in_forstat1166); if (state.failed) return;dbg.location(205,63);
-			pushFollow(FOLLOW_atribstat_in_forstat1168);
-			atribstat();
-			state._fsp--;
-			if (state.failed) return;dbg.location(205,73);
-			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_forstat1170); if (state.failed) return;dbg.location(206,10);
-			match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_forstat1182); if (state.failed) return;dbg.location(206,22);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:206:22: ( statement )*
-			try { dbg.enterSubRule(18);
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 16, 0, input);
+				dbg.recognitionException(nvae);
+				throw nvae;
+			}
 
-			loop18:
-			while (true) {
-				int alt18=2;
-				try { dbg.enterDecision(18, decisionCanBacktrack[18]);
+			} finally {dbg.exitDecision(16);}
 
-				int LA18_0 = input.LA(1);
-				if ( (LA18_0==EOL||LA18_0==ID||(LA18_0 >= TIPOS && LA18_0 <= T_ABRECHAVE)||LA18_0==T_BREAK||(LA18_0 >= T_FOR && LA18_0 <= T_IF)||(LA18_0 >= T_READ && LA18_0 <= T_RETURN)||LA18_0==T_WRITE) ) {
-					alt18=1;
-				}
-
-				} finally {dbg.exitDecision(18);}
-
-				switch (alt18) {
+			switch (alt16) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:206:23: statement
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:4: ifstat
 					{
-					dbg.location(206,23);
-					pushFollow(FOLLOW_statement_in_forstat1185);
+					dbg.location(205,4);
+					pushFollow(FOLLOW_ifstat_in_ifstat_linha21116);
+					ifstat();
+					state._fsp--;
+
+					}
+					break;
+				case 2 :
+					dbg.enterAlt(2);
+
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:205:13: statement
+					{
+					dbg.location(205,13);
+					pushFollow(FOLLOW_statement_in_ifstat_linha21120);
 					statement();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
-				default :
-					break loop18;
-				}
 			}
-			} finally {dbg.exitSubRule(18);}
-			dbg.location(206,35);
-			match(input,T_FECHACHAVE,FOLLOW_T_FECHACHAVE_in_forstat1189); if (state.failed) return;
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(206, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "ifstat_linha2");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+	}
+	// $ANTLR end "ifstat_linha2"
+
+
+
+	// $ANTLR start "forstat"
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement ;
+	public final void forstat() throws RecognitionException {
+		try { dbg.enterRule(getGrammarFileName(), "forstat");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(208, 0);
+
+		try {
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement )
+			dbg.enterAlt(1);
+
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:208:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement
+			{
+			dbg.location(208,11);
+			match(input,T_FOR,FOLLOW_T_FOR_in_forstat1131); dbg.location(208,17);
+			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_forstat1133); dbg.location(208,34);
+			pushFollow(FOLLOW_atribstat_in_forstat1135);
+			atribstat();
+			state._fsp--;
+			dbg.location(208,44);
+			match(input,EOL,FOLLOW_EOL_in_forstat1137); dbg.location(208,48);
+			pushFollow(FOLLOW_expression_in_forstat1139);
+			expression();
+			state._fsp--;
+			dbg.location(208,59);
+			match(input,EOL,FOLLOW_EOL_in_forstat1141); dbg.location(208,63);
+			pushFollow(FOLLOW_atribstat_in_forstat1143);
+			atribstat();
+			state._fsp--;
+			dbg.location(208,73);
+			match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_forstat1145); dbg.location(209,7);
+			pushFollow(FOLLOW_statement_in_forstat1154);
+			statement();
+			state._fsp--;
+
 			}
 
 		}
@@ -2113,10 +1898,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 21, forstat_StartIndex); }
-
 		}
-		dbg.location(207, 1);
+		dbg.location(210, 1);
 
 		}
 		finally {
@@ -2131,66 +1914,60 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "expression"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:209:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
 	public final void expression() throws RecognitionException {
-		int expression_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "expression");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(209, 0);
+		dbg.location(212, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:209:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:209:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
 			{
-			dbg.location(209,14);
-			pushFollow(FOLLOW_numexpression_in_expression1201);
+			dbg.location(212,14);
+			pushFollow(FOLLOW_numexpression_in_expression1166);
 			numexpression();
 			state._fsp--;
-			if (state.failed) return;dbg.location(209,28);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:209:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
-			int alt19=2;
-			try { dbg.enterSubRule(19);
-			try { dbg.enterDecision(19, decisionCanBacktrack[19]);
+			dbg.location(212,28);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			int alt17=2;
+			try { dbg.enterSubRule(17);
+			try { dbg.enterDecision(17, decisionCanBacktrack[17]);
 
-			int LA19_0 = input.LA(1);
-			if ( (LA19_0==T_DIFERENTE||(LA19_0 >= T_IGUAL && LA19_0 <= T_MENOROUIGUAL)) ) {
-				alt19=1;
+			int LA17_0 = input.LA(1);
+			if ( (LA17_0==T_DIFERENTE||(LA17_0 >= T_IGUAL && LA17_0 <= T_MENOROUIGUAL)) ) {
+				alt17=1;
 			}
-			} finally {dbg.exitDecision(19);}
+			} finally {dbg.exitDecision(17);}
 
-			switch (alt19) {
+			switch (alt17) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:209:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
 					{
-					dbg.location(209,30);
+					dbg.location(212,30);
 					if ( input.LA(1)==T_DIFERENTE||(input.LA(1) >= T_IGUAL && input.LA(1) <= T_MENOROUIGUAL) ) {
 						input.consume();
 						state.errorRecovery=false;
-						state.failed=false;
 					}
 					else {
-						if (state.backtracking>0) {state.failed=true; return;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						dbg.recognitionException(mse);
 						throw mse;
-					}dbg.location(209,110);
-					pushFollow(FOLLOW_numexpression_in_expression1231);
+					}dbg.location(212,110);
+					pushFollow(FOLLOW_numexpression_in_expression1196);
 					numexpression();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
 			}
-			} finally {dbg.exitSubRule(19);}
+			} finally {dbg.exitSubRule(17);}
 
 			}
 
@@ -2201,10 +1978,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 22, expression_StartIndex); }
-
 		}
-		dbg.location(210, 1);
+		dbg.location(213, 1);
 
 		}
 		finally {
@@ -2219,73 +1994,67 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "numexpression"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
 	public final void numexpression() throws RecognitionException {
-		int numexpression_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "numexpression");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(212, 0);
+		dbg.location(215, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
 			{
-			dbg.location(212,17);
-			pushFollow(FOLLOW_term_in_numexpression1243);
+			dbg.location(215,17);
+			pushFollow(FOLLOW_term_in_numexpression1208);
 			term();
 			state._fsp--;
-			if (state.failed) return;dbg.location(212,22);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
-			try { dbg.enterSubRule(20);
+			dbg.location(215,22);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
+			try { dbg.enterSubRule(18);
 
-			loop20:
+			loop18:
 			while (true) {
-				int alt20=2;
-				try { dbg.enterDecision(20, decisionCanBacktrack[20]);
+				int alt18=2;
+				try { dbg.enterDecision(18, decisionCanBacktrack[18]);
 
-				int LA20_0 = input.LA(1);
-				if ( ((LA20_0 >= T_SOMA && LA20_0 <= T_SUBTRACAO)) ) {
-					alt20=1;
+				int LA18_0 = input.LA(1);
+				if ( ((LA18_0 >= T_SOMA && LA18_0 <= T_SUBTRACAO)) ) {
+					alt18=1;
 				}
 
-				} finally {dbg.exitDecision(20);}
+				} finally {dbg.exitDecision(18);}
 
-				switch (alt20) {
+				switch (alt18) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:212:23: ( T_SOMA | T_SUBTRACAO ) term
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:23: ( T_SOMA | T_SUBTRACAO ) term
 					{
-					dbg.location(212,23);
+					dbg.location(215,23);
 					if ( (input.LA(1) >= T_SOMA && input.LA(1) <= T_SUBTRACAO) ) {
 						input.consume();
 						state.errorRecovery=false;
-						state.failed=false;
 					}
 					else {
-						if (state.backtracking>0) {state.failed=true; return;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						dbg.recognitionException(mse);
 						throw mse;
-					}dbg.location(212,48);
-					pushFollow(FOLLOW_term_in_numexpression1256);
+					}dbg.location(215,48);
+					pushFollow(FOLLOW_term_in_numexpression1221);
 					term();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
 				default :
-					break loop20;
+					break loop18;
 				}
 			}
-			} finally {dbg.exitSubRule(20);}
+			} finally {dbg.exitSubRule(18);}
 
 			}
 
@@ -2296,10 +2065,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 23, numexpression_StartIndex); }
-
 		}
-		dbg.location(213, 1);
+		dbg.location(216, 1);
 
 		}
 		finally {
@@ -2314,73 +2081,67 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "term"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:218:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
 	public final void term() throws RecognitionException {
-		int term_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "term");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(215, 0);
+		dbg.location(218, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:215:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:218:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
 			{
-			dbg.location(216,2);
-			pushFollow(FOLLOW_unaryexpr_in_term1269);
+			dbg.location(219,2);
+			pushFollow(FOLLOW_unaryexpr_in_term1234);
 			unaryexpr();
 			state._fsp--;
-			if (state.failed) return;dbg.location(216,12);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
-			try { dbg.enterSubRule(21);
+			dbg.location(219,12);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			try { dbg.enterSubRule(19);
 
-			loop21:
+			loop19:
 			while (true) {
-				int alt21=2;
-				try { dbg.enterDecision(21, decisionCanBacktrack[21]);
+				int alt19=2;
+				try { dbg.enterDecision(19, decisionCanBacktrack[19]);
 
-				int LA21_0 = input.LA(1);
-				if ( (LA21_0==T_DIVISAO||LA21_0==T_MULTIPLICACAO) ) {
-					alt21=1;
+				int LA19_0 = input.LA(1);
+				if ( (LA19_0==T_DIVISAO||LA19_0==T_MULTIPLICACAO) ) {
+					alt19=1;
 				}
 
-				} finally {dbg.exitDecision(21);}
+				} finally {dbg.exitDecision(19);}
 
-				switch (alt21) {
+				switch (alt19) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:216:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
 					{
-					dbg.location(216,14);
+					dbg.location(219,14);
 					if ( input.LA(1)==T_DIVISAO||input.LA(1)==T_MULTIPLICACAO ) {
 						input.consume();
 						state.errorRecovery=false;
-						state.failed=false;
 					}
 					else {
-						if (state.backtracking>0) {state.failed=true; return;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						dbg.recognitionException(mse);
 						throw mse;
-					}dbg.location(216,45);
-					pushFollow(FOLLOW_unaryexpr_in_term1282);
+					}dbg.location(219,45);
+					pushFollow(FOLLOW_unaryexpr_in_term1247);
 					unaryexpr();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 
 				default :
-					break loop21;
+					break loop19;
 				}
 			}
-			} finally {dbg.exitSubRule(21);}
+			} finally {dbg.exitSubRule(19);}
 
 			}
 
@@ -2391,10 +2152,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 24, term_StartIndex); }
-
 		}
-		dbg.location(217, 1);
+		dbg.location(220, 1);
 
 		}
 		finally {
@@ -2409,49 +2168,43 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "unaryexpr"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
 	public final void unaryexpr() throws RecognitionException {
-		int unaryexpr_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "unaryexpr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(219, 0);
+		dbg.location(222, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:14: ( T_SOMA | T_SUBTRACAO )? factor
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:14: ( T_SOMA | T_SUBTRACAO )? factor
 			{
-			dbg.location(219,14);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:219:14: ( T_SOMA | T_SUBTRACAO )?
-			int alt22=2;
-			try { dbg.enterSubRule(22);
-			try { dbg.enterDecision(22, decisionCanBacktrack[22]);
+			dbg.location(222,14);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:14: ( T_SOMA | T_SUBTRACAO )?
+			int alt20=2;
+			try { dbg.enterSubRule(20);
+			try { dbg.enterDecision(20, decisionCanBacktrack[20]);
 
-			int LA22_0 = input.LA(1);
-			if ( ((LA22_0 >= T_SOMA && LA22_0 <= T_SUBTRACAO)) ) {
-				alt22=1;
+			int LA20_0 = input.LA(1);
+			if ( ((LA20_0 >= T_SOMA && LA20_0 <= T_SUBTRACAO)) ) {
+				alt20=1;
 			}
-			} finally {dbg.exitDecision(22);}
+			} finally {dbg.exitDecision(20);}
 
-			switch (alt22) {
+			switch (alt20) {
 				case 1 :
 					dbg.enterAlt(1);
 
 					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:
 					{
-					dbg.location(219,14);
+					dbg.location(222,14);
 					if ( (input.LA(1) >= T_SOMA && input.LA(1) <= T_SUBTRACAO) ) {
 						input.consume();
 						state.errorRecovery=false;
-						state.failed=false;
 					}
 					else {
-						if (state.backtracking>0) {state.failed=true; return;}
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						dbg.recognitionException(mse);
 						throw mse;
@@ -2460,12 +2213,12 @@ public class HelloParser extends DebugParser {
 					break;
 
 			}
-			} finally {dbg.exitSubRule(22);}
-			dbg.location(219,40);
-			pushFollow(FOLLOW_factor_in_unaryexpr1306);
+			} finally {dbg.exitSubRule(20);}
+			dbg.location(222,40);
+			pushFollow(FOLLOW_factor_in_unaryexpr1271);
 			factor();
 			state._fsp--;
-			if (state.failed) return;
+
 			}
 
 		}
@@ -2475,10 +2228,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 25, unaryexpr_StartIndex); }
-
 		}
-		dbg.location(220, 1);
+		dbg.location(223, 1);
 
 		}
 		finally {
@@ -2493,107 +2244,102 @@ public class HelloParser extends DebugParser {
 
 
 	// $ANTLR start "factor"
-	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
+	// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
 	public final void factor() throws RecognitionException {
-		int factor_StartIndex = input.index();
-
 		try { dbg.enterRule(getGrammarFileName(), "factor");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(222, 0);
+		dbg.location(225, 0);
 
 		try {
-			if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return; }
-
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 			{
-			dbg.location(222,10);
-			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
-			int alt23=4;
-			try { dbg.enterSubRule(23);
-			try { dbg.enterDecision(23, decisionCanBacktrack[23]);
+			dbg.location(225,10);
+			// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			int alt21=4;
+			try { dbg.enterSubRule(21);
+			try { dbg.enterDecision(21, decisionCanBacktrack[21]);
 
 			switch ( input.LA(1) ) {
 			case NUMERO:
 				{
-				alt23=1;
+				alt21=1;
 				}
 				break;
 			case ID:
 				{
-				alt23=2;
+				alt21=2;
 				}
 				break;
 			case T_NULL:
 				{
-				alt23=3;
+				alt21=3;
 				}
 				break;
 			case T_ABREPARENTESES:
 				{
-				alt23=4;
+				alt21=4;
 				}
 				break;
 			default:
-				if (state.backtracking>0) {state.failed=true; return;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 23, 0, input);
+					new NoViableAltException("", 21, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(23);}
+			} finally {dbg.exitDecision(21);}
 
-			switch (alt23) {
+			switch (alt21) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:12: NUMERO
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:12: NUMERO
 					{
-					dbg.location(222,12);
-					match(input,NUMERO,FOLLOW_NUMERO_in_factor1318); if (state.failed) return;
+					dbg.location(225,12);
+					match(input,NUMERO,FOLLOW_NUMERO_in_factor1283); 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:21: lvalue
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:21: lvalue
 					{
-					dbg.location(222,21);
-					pushFollow(FOLLOW_lvalue_in_factor1322);
+					dbg.location(225,21);
+					pushFollow(FOLLOW_lvalue_in_factor1287);
 					lvalue();
 					state._fsp--;
-					if (state.failed) return;
+
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:30: T_NULL
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:30: T_NULL
 					{
-					dbg.location(222,30);
-					match(input,T_NULL,FOLLOW_T_NULL_in_factor1326); if (state.failed) return;
+					dbg.location(225,30);
+					match(input,T_NULL,FOLLOW_T_NULL_in_factor1291); 
 					}
 					break;
 				case 4 :
 					dbg.enterAlt(4);
 
-					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:222:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
+					// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:225:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
 					{
-					dbg.location(222,39);
-					match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_factor1330); if (state.failed) return;dbg.location(222,56);
-					pushFollow(FOLLOW_numexpression_in_factor1332);
+					dbg.location(225,39);
+					match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_factor1295); dbg.location(225,56);
+					pushFollow(FOLLOW_numexpression_in_factor1297);
 					numexpression();
 					state._fsp--;
-					if (state.failed) return;dbg.location(222,70);
-					match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_factor1334); if (state.failed) return;
+					dbg.location(225,70);
+					match(input,T_FECHAPARENTESES,FOLLOW_T_FECHAPARENTESES_in_factor1299); 
 					}
 					break;
 
 			}
-			} finally {dbg.exitSubRule(23);}
+			} finally {dbg.exitSubRule(21);}
 
 			}
 
@@ -2604,10 +2350,8 @@ public class HelloParser extends DebugParser {
 		}
 		finally {
 			// do for sure before leaving
-			if ( state.backtracking>0 ) { memoize(input, 26, factor_StartIndex); }
-
 		}
-		dbg.location(223, 1);
+		dbg.location(226, 1);
 
 		}
 		finally {
@@ -2619,256 +2363,119 @@ public class HelloParser extends DebugParser {
 	}
 	// $ANTLR end "factor"
 
-	// $ANTLR start synpred22_Hello
-	public final void synpred22_Hello_fragment() throws RecognitionException {
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:168:19: ( paramlistcall )
-		dbg.enterAlt(1);
-
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:168:19: paramlistcall
-		{
-		dbg.location(168,19);
-		pushFollow(FOLLOW_paramlistcall_in_synpred22_Hello972);
-		paramlistcall();
-		state._fsp--;
-		if (state.failed) return;
-		}
-
-	}
-	// $ANTLR end synpred22_Hello
-
-	// $ANTLR start synpred23_Hello
-	public final void synpred23_Hello_fragment() throws RecognitionException {
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:7: ( ID )
-		dbg.enterAlt(1);
-
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:174:7: ID
-		{
-		dbg.location(174,7);
-		match(input,ID,FOLLOW_ID_in_synpred23_Hello1006); if (state.failed) return;
-		}
-
-	}
-	// $ANTLR end synpred23_Hello
-
-	// $ANTLR start synpred27_Hello
-	public final void synpred27_Hello_fragment() throws RecognitionException {
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:14: ( lvalue )
-		dbg.enterAlt(1);
-
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:185:14: lvalue
-		{
-		dbg.location(185,14);
-		pushFollow(FOLLOW_lvalue_in_synpred27_Hello1056);
-		lvalue();
-		state._fsp--;
-		if (state.failed) return;
-		}
-
-	}
-	// $ANTLR end synpred27_Hello
-
-	// $ANTLR start synpred31_Hello
-	public final void synpred31_Hello_fragment() throws RecognitionException {
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:201:4: ( T_ELSE statement )
-		dbg.enterAlt(1);
-
-		// C:\\Users\\Elizeu-pc\\Documents\\UFSC\\Compiladores\\ASAL\\asal\\gramatica antlrworks\\Hello.g:201:4: T_ELSE statement
-		{
-		dbg.location(201,4);
-		match(input,T_ELSE,FOLLOW_T_ELSE_in_synpred31_Hello1137); if (state.failed) return;dbg.location(201,12);
-		pushFollow(FOLLOW_statement_in_synpred31_Hello1140);
-		statement();
-		state._fsp--;
-		if (state.failed) return;
-		}
-
-	}
-	// $ANTLR end synpred31_Hello
-
 	// Delegated rules
 
-	public final boolean synpred22_Hello() {
-		state.backtracking++;
-		dbg.beginBacktrack(state.backtracking);
-		int start = input.mark();
-		try {
-			synpred22_Hello_fragment(); // can never throw exception
-		} catch (RecognitionException re) {
-			System.err.println("impossible: "+re);
-		}
-		boolean success = !state.failed;
-		input.rewind(start);
-		dbg.endBacktrack(state.backtracking, success);
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
-	public final boolean synpred27_Hello() {
-		state.backtracking++;
-		dbg.beginBacktrack(state.backtracking);
-		int start = input.mark();
-		try {
-			synpred27_Hello_fragment(); // can never throw exception
-		} catch (RecognitionException re) {
-			System.err.println("impossible: "+re);
-		}
-		boolean success = !state.failed;
-		input.rewind(start);
-		dbg.endBacktrack(state.backtracking, success);
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
-	public final boolean synpred23_Hello() {
-		state.backtracking++;
-		dbg.beginBacktrack(state.backtracking);
-		int start = input.mark();
-		try {
-			synpred23_Hello_fragment(); // can never throw exception
-		} catch (RecognitionException re) {
-			System.err.println("impossible: "+re);
-		}
-		boolean success = !state.failed;
-		input.rewind(start);
-		dbg.endBacktrack(state.backtracking, success);
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
-	public final boolean synpred31_Hello() {
-		state.backtracking++;
-		dbg.beginBacktrack(state.backtracking);
-		int start = input.mark();
-		try {
-			synpred31_Hello_fragment(); // can never throw exception
-		} catch (RecognitionException re) {
-			System.err.println("impossible: "+re);
-		}
-		boolean success = !state.failed;
-		input.rewind(start);
-		dbg.endBacktrack(state.backtracking, success);
-		state.backtracking--;
-		state.failed=false;
-		return success;
-	}
 
 
-
-	public static final BitSet FOLLOW_statement_in_program586 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funclist_in_program590 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_DEF_in_funcdef604 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_FUNCAO_in_funcdef607 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funcdef609 = new BitSet(new long[]{0x0000000000800800L});
-	public static final BitSet FOLLOW_paramlist_in_funcdef611 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funcdef613 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_T_ABRECHAVE_in_funcdef618 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statelist_in_funcdef625 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_T_FECHACHAVE_in_funcdef629 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funcdef_in_funclist640 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_funclist_linha_in_funclist642 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funclist_in_funclist_linha653 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TIPOS_in_paramlist673 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_ID_in_paramlist676 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_paramlist_linha_in_paramlist678 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_VIRGULA_in_paramlist_linha692 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_paramlist_in_paramlist_linha694 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_statement_in_statelist711 = new BitSet(new long[]{0x0000008C03011922L});
-	public static final BitSet FOLLOW_statelist_in_statelist714 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_vardecl_in_statement730 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement732 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atribstat_in_statement738 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement740 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_printstat_in_statement746 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement748 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_readstat_in_statement755 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement757 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_returnstat_in_statement762 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement764 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ifstat_in_statement770 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_forstat_in_statement776 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ABRECHAVE_in_statement782 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statelist_in_statement784 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_T_FECHACHAVE_in_statement786 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_BREAK_in_statement792 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_statement794 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EOL_in_statement800 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TIPOS_in_vardecl819 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_ID_in_vardecl825 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_vardecl828 = new BitSet(new long[]{0x0000000000000300L});
-	public static final BitSet FOLLOW_set_in_vardecl830 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_vardecl841 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_ID_in_lvalue855 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_lvalue861 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_lvalue865 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_lvalue869 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_lvalue_in_atribstat884 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_T_ATRIBUICAO_in_atribstat888 = new BitSet(new long[]{0x0000003300004780L});
-	public static final BitSet FOLLOW_expression_in_atribstat894 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_allocexpression_in_atribstat898 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funccall_in_atribstat902 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TEXTO_in_atribstat906 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_NEW_in_allocexpression918 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_TIPOS_in_allocexpression920 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_allocexpression923 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_allocexpression925 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_allocexpression927 = new BitSet(new long[]{0x0000000000002002L});
-	public static final BitSet FOLLOW_FUNCAO_in_funccall940 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funccall951 = new BitSet(new long[]{0x0000003200804700L});
-	public static final BitSet FOLLOW_paramlistcall_in_funccall972 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funccall985 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_paramlistcall1006 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_TEXTO_in_paramlistcall1010 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_expression_in_paramlistcall1014 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall1017 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_VIRGULA_in_paramlistcall_linha1034 = new BitSet(new long[]{0x0000003200004700L});
-	public static final BitSet FOLLOW_paramlistcall_in_paramlistcall_linha1036 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_WRITE_in_printstat1052 = new BitSet(new long[]{0x0000003200004700L});
-	public static final BitSet FOLLOW_lvalue_in_printstat1056 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TEXTO_in_printstat1060 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_printstat1064 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_READ_in_readstat1078 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_lvalue_in_readstat1080 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_RETURN_in_returnstat1092 = new BitSet(new long[]{0x0000003200004702L});
-	public static final BitSet FOLLOW_TEXTO_in_returnstat1096 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_returnstat1100 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_IF_in_ifstat1116 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_ifstat1118 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_expression_in_ifstat1120 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_ifstat1122 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_ifstat1124 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_ifstat_linha_in_ifstat1126 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ELSE_in_ifstat_linha1137 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_ifstat_linha1140 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_FOR_in_forstat1156 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_forstat1158 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_atribstat_in_forstat1160 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_forstat1162 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_expression_in_forstat1164 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_EOL_in_forstat1166 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_atribstat_in_forstat1168 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_forstat1170 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_T_ABRECHAVE_in_forstat1182 = new BitSet(new long[]{0x0000008C03211920L});
-	public static final BitSet FOLLOW_statement_in_forstat1185 = new BitSet(new long[]{0x0000008C03211920L});
-	public static final BitSet FOLLOW_T_FECHACHAVE_in_forstat1189 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_numexpression_in_expression1201 = new BitSet(new long[]{0x000000007C040002L});
-	public static final BitSet FOLLOW_set_in_expression1205 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_expression1231 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_numexpression1243 = new BitSet(new long[]{0x0000003000000002L});
-	public static final BitSet FOLLOW_set_in_numexpression1246 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_term_in_numexpression1256 = new BitSet(new long[]{0x0000003000000002L});
-	public static final BitSet FOLLOW_unaryexpr_in_term1269 = new BitSet(new long[]{0x0000000080080002L});
-	public static final BitSet FOLLOW_set_in_term1273 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_unaryexpr_in_term1282 = new BitSet(new long[]{0x0000000080080002L});
-	public static final BitSet FOLLOW_factor_in_unaryexpr1306 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NUMERO_in_factor1318 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lvalue_in_factor1322 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_NULL_in_factor1326 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ABREPARENTESES_in_factor1330 = new BitSet(new long[]{0x0000003200004300L});
-	public static final BitSet FOLLOW_numexpression_in_factor1332 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_factor1334 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_paramlistcall_in_synpred22_Hello972 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_synpred23_Hello1006 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_lvalue_in_synpred27_Hello1056 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ELSE_in_synpred31_Hello1137 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_synpred31_Hello1140 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statement_in_program568 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funclist_in_program572 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funcdef_in_funclist584 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_funclist_linha_in_funclist586 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funclist_in_funclist_linha597 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_DEF_in_funcdef614 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_FUNCAO_in_funcdef616 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funcdef618 = new BitSet(new long[]{0x0000000000800800L});
+	public static final BitSet FOLLOW_paramlist_in_funcdef620 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funcdef622 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_T_ABRECHAVE_in_funcdef627 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statelist_in_funcdef634 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_T_FECHACHAVE_in_funcdef638 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TIPOS_in_paramlist654 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_ID_in_paramlist657 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_paramlist_linha_in_paramlist659 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_VIRGULA_in_paramlist_linha673 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_paramlist_in_paramlist_linha675 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statement_in_statelist692 = new BitSet(new long[]{0x0000008C03011922L});
+	public static final BitSet FOLLOW_statelist_in_statelist695 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_vardecl_in_statement711 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement713 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_atribstat_in_statement719 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement721 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_printstat_in_statement727 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement729 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_readstat_in_statement736 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement738 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_returnstat_in_statement743 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement745 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifstat_in_statement751 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_forstat_in_statement757 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ABRECHAVE_in_statement763 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statelist_in_statement765 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_T_FECHACHAVE_in_statement767 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_BREAK_in_statement773 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_statement775 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EOL_in_statement781 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TIPOS_in_vardecl799 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_ID_in_vardecl804 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_vardecl807 = new BitSet(new long[]{0x0000000000000300L});
+	public static final BitSet FOLLOW_set_in_vardecl809 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_vardecl819 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_ID_in_lvalue833 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_lvalue839 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_lvalue843 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_lvalue847 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_lvalue_in_atribstat862 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_T_ATRIBUICAO_in_atribstat866 = new BitSet(new long[]{0x0000003300004780L});
+	public static final BitSet FOLLOW_expression_in_atribstat872 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_allocexpression_in_atribstat876 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funccall_in_atribstat880 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TEXTO_in_atribstat884 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_NEW_in_allocexpression896 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_TIPOS_in_allocexpression898 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_T_ABRECOLCHETE_in_allocexpression901 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_allocexpression903 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_T_FECHACOLCHETE_in_allocexpression905 = new BitSet(new long[]{0x0000000000002002L});
+	public static final BitSet FOLLOW_FUNCAO_in_funccall918 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_funccall929 = new BitSet(new long[]{0x0000003200804700L});
+	public static final BitSet FOLLOW_paramlistcall_in_funccall948 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_funccall958 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TEXTO_in_paramlistcall969 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall971 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_paramlistcall977 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_paramlistcall_linha_in_paramlistcall979 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_VIRGULA_in_paramlistcall_linha997 = new BitSet(new long[]{0x0000003200004700L});
+	public static final BitSet FOLLOW_paramlistcall_in_paramlistcall_linha999 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_WRITE_in_printstat1015 = new BitSet(new long[]{0x0000003200004700L});
+	public static final BitSet FOLLOW_TEXTO_in_printstat1019 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_printstat1023 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_READ_in_readstat1037 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_lvalue_in_readstat1039 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_RETURN_in_returnstat1051 = new BitSet(new long[]{0x0000003200004702L});
+	public static final BitSet FOLLOW_TEXTO_in_returnstat1055 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_returnstat1059 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_IF_in_ifstat1075 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_ifstat1077 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_expression_in_ifstat1079 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_ifstat1081 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_ifstat1083 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_ifstat_linha_in_ifstat1085 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ELSE_in_ifstat_linha1096 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_ifstat_linha1098 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifstat_in_ifstat_linha21116 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statement_in_ifstat_linha21120 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_FOR_in_forstat1131 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_forstat1133 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_atribstat_in_forstat1135 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_forstat1137 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_expression_in_forstat1139 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_EOL_in_forstat1141 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_atribstat_in_forstat1143 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_forstat1145 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_forstat1154 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_numexpression_in_expression1166 = new BitSet(new long[]{0x000000007C040002L});
+	public static final BitSet FOLLOW_set_in_expression1170 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_expression1196 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_numexpression1208 = new BitSet(new long[]{0x0000003000000002L});
+	public static final BitSet FOLLOW_set_in_numexpression1211 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_term_in_numexpression1221 = new BitSet(new long[]{0x0000003000000002L});
+	public static final BitSet FOLLOW_unaryexpr_in_term1234 = new BitSet(new long[]{0x0000000080080002L});
+	public static final BitSet FOLLOW_set_in_term1238 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_unaryexpr_in_term1247 = new BitSet(new long[]{0x0000000080080002L});
+	public static final BitSet FOLLOW_factor_in_unaryexpr1271 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NUMERO_in_factor1283 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_lvalue_in_factor1287 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_NULL_in_factor1291 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ABREPARENTESES_in_factor1295 = new BitSet(new long[]{0x0000003200004300L});
+	public static final BitSet FOLLOW_numexpression_in_factor1297 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_factor1299 = new BitSet(new long[]{0x0000000000000002L});
 }
