@@ -26,6 +26,6 @@ java -cp ./antlr-3.5.2-complete.jar;. HelloParser < test.lcc
 
 
 # rodar estes comandos
-java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool Hello.g && javac -cp ./antlr-3.5.2-complete.jar;. *.java
+java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool LCC.g && javac -cp ./antlr-3.5.2-complete.jar;. *.java
 
-java -cp ./antlr-3.5.2-complete.jar;. HelloParser programa.lcc
+java -cp ./antlr-3.5.2-complete.jar;. LCCParser programa.lcc

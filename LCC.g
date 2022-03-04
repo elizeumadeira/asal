@@ -1,4 +1,4 @@
-grammar Hello;
+grammar LCC;
 
 options {
     backtrack=true;
@@ -181,10 +181,10 @@ tokens {
 		} 
 	
     public static void main(String[] args) throws Exception {
-        HelloLexer lex = new HelloLexer(new ANTLRFileStream(args[0]));
+        LCCLexer lex = new LCCLexer(new ANTLRFileStream(args[0]));
         CommonTokenStream tokens = new CommonTokenStream(lex);
  
-        HelloParser parser = new HelloParser(tokens);
+        LCCParser parser = new LCCParser(tokens);
  
         try {
             parser.program();

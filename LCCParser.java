@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Hello.g 2022-03-04 19:25:08
+// $ANTLR 3.5.2 LCC.g 2022-03-04 19:32:41
 
 	import java.util.Set;
 	import java.util.HashSet;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 @SuppressWarnings("all")
-public class HelloParser extends Parser {
+public class LCCParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMENTARIO", "EOL", "ESPACO_BRANCO", 
 		"FUNCAO", "ID", "NUMERO", "TEXTO", "TIPOS", "T_ABRECHAVE", "T_ABRECOLCHETE", 
@@ -69,15 +69,15 @@ public class HelloParser extends Parser {
 	// delegators
 
 
-	public HelloParser(TokenStream input) {
+	public LCCParser(TokenStream input) {
 		this(input, new RecognizerSharedState());
 	}
-	public HelloParser(TokenStream input, RecognizerSharedState state) {
+	public LCCParser(TokenStream input, RecognizerSharedState state) {
 		super(input, state);
 	}
 
-	@Override public String[] getTokenNames() { return HelloParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "Hello.g"; }
+	@Override public String[] getTokenNames() { return LCCParser.tokenNames; }
+	@Override public String getGrammarFileName() { return "LCC.g"; }
 
 
 		java.util.HashMap<String, String> mapaVar = new java.util.HashMap<String, String>();;
@@ -160,10 +160,10 @@ public class HelloParser extends Parser {
 			} 
 		
 	    public static void main(String[] args) throws Exception {
-	        HelloLexer lex = new HelloLexer(new ANTLRFileStream(args[0]));
+	        LCCLexer lex = new LCCLexer(new ANTLRFileStream(args[0]));
 	        CommonTokenStream tokens = new CommonTokenStream(lex);
 	 
-	        HelloParser parser = new HelloParser(tokens);
+	        LCCParser parser = new LCCParser(tokens);
 	 
 	        try {
 	            parser.program();
@@ -229,13 +229,13 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "program"
-	// Hello.g:251:1: program : ( statement | funclist ) ;
+	// LCC.g:251:1: program : ( statement | funclist ) ;
 	public final void program() throws RecognitionException {
 		try {
-			// Hello.g:251:9: ( ( statement | funclist ) )
-			// Hello.g:252:2: ( statement | funclist )
+			// LCC.g:251:9: ( ( statement | funclist ) )
+			// LCC.g:252:2: ( statement | funclist )
 			{
-			// Hello.g:252:2: ( statement | funclist )
+			// LCC.g:252:2: ( statement | funclist )
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0==EOL||LA1_0==ID||(LA1_0 >= TIPOS && LA1_0 <= T_ABRECHAVE)||LA1_0==T_BREAK||(LA1_0 >= T_FOR && LA1_0 <= T_IF)||(LA1_0 >= T_READ && LA1_0 <= T_RETURN)||LA1_0==T_WRITE) ) {
@@ -254,7 +254,7 @@ public class HelloParser extends Parser {
 
 			switch (alt1) {
 				case 1 :
-					// Hello.g:252:4: statement
+					// LCC.g:252:4: statement
 					{
 					pushFollow(FOLLOW_statement_in_program591);
 					statement();
@@ -263,7 +263,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:252:16: funclist
+					// LCC.g:252:16: funclist
 					{
 					pushFollow(FOLLOW_funclist_in_program595);
 					funclist();
@@ -290,11 +290,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "funclist"
-	// Hello.g:255:1: funclist : funcdef funclist_linha ;
+	// LCC.g:255:1: funclist : funcdef funclist_linha ;
 	public final void funclist() throws RecognitionException {
 		try {
-			// Hello.g:255:10: ( funcdef funclist_linha )
-			// Hello.g:255:12: funcdef funclist_linha
+			// LCC.g:255:10: ( funcdef funclist_linha )
+			// LCC.g:255:12: funcdef funclist_linha
 			{
 			pushFollow(FOLLOW_funcdef_in_funclist607);
 			funcdef();
@@ -320,10 +320,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "funclist_linha"
-	// Hello.g:258:1: funclist_linha : ( funclist |);
+	// LCC.g:258:1: funclist_linha : ( funclist |);
 	public final void funclist_linha() throws RecognitionException {
 		try {
-			// Hello.g:259:2: ( funclist |)
+			// LCC.g:259:2: ( funclist |)
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==T_DEF) ) {
@@ -342,7 +342,7 @@ public class HelloParser extends Parser {
 
 			switch (alt2) {
 				case 1 :
-					// Hello.g:259:4: funclist
+					// LCC.g:259:4: funclist
 					{
 					pushFollow(FOLLOW_funclist_in_funclist_linha620);
 					funclist();
@@ -351,7 +351,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:261:2: 
+					// LCC.g:261:2: 
 					{
 					}
 					break;
@@ -371,11 +371,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "funcdef"
-	// Hello.g:263:1: funcdef : T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE ;
+	// LCC.g:263:1: funcdef : T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE ;
 	public final void funcdef() throws RecognitionException {
 		try {
-			// Hello.g:264:2: ( T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE )
-			// Hello.g:264:4: T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE
+			// LCC.g:264:2: ( T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE )
+			// LCC.g:264:4: T_DEF FUNCAO T_ABREPARENTESES paramlist T_FECHAPARENTESES T_ABRECHAVE statelist T_FECHACHAVE
 			{
 			match(input,T_DEF,FOLLOW_T_DEF_in_funcdef637); if (state.failed) return;
 			if ( state.backtracking==0 ) {adicionaFuncao(input.LT(1));}
@@ -408,13 +408,13 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlist"
-	// Hello.g:271:1: paramlist : ( TIPOS ID paramlist_linha )? ;
+	// LCC.g:271:1: paramlist : ( TIPOS ID paramlist_linha )? ;
 	public final void paramlist() throws RecognitionException {
 		try {
-			// Hello.g:272:2: ( ( TIPOS ID paramlist_linha )? )
-			// Hello.g:272:4: ( TIPOS ID paramlist_linha )?
+			// LCC.g:272:2: ( ( TIPOS ID paramlist_linha )? )
+			// LCC.g:272:4: ( TIPOS ID paramlist_linha )?
 			{
-			// Hello.g:272:4: ( TIPOS ID paramlist_linha )?
+			// LCC.g:272:4: ( TIPOS ID paramlist_linha )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==TIPOS) ) {
@@ -422,7 +422,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt3) {
 				case 1 :
-					// Hello.g:272:6: TIPOS ID paramlist_linha
+					// LCC.g:272:6: TIPOS ID paramlist_linha
 					{
 					match(input,TIPOS,FOLLOW_TIPOS_in_paramlist679); if (state.failed) return;
 					if ( state.backtracking==0 ) {adicionaToken(input.LT(1));}
@@ -452,10 +452,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlist_linha"
-	// Hello.g:275:1: paramlist_linha : ( T_VIRGULA paramlist |);
+	// LCC.g:275:1: paramlist_linha : ( T_VIRGULA paramlist |);
 	public final void paramlist_linha() throws RecognitionException {
 		try {
-			// Hello.g:276:2: ( T_VIRGULA paramlist |)
+			// LCC.g:276:2: ( T_VIRGULA paramlist |)
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==T_VIRGULA) ) {
@@ -474,7 +474,7 @@ public class HelloParser extends Parser {
 
 			switch (alt4) {
 				case 1 :
-					// Hello.g:276:4: T_VIRGULA paramlist
+					// LCC.g:276:4: T_VIRGULA paramlist
 					{
 					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlist_linha699); if (state.failed) return;
 					pushFollow(FOLLOW_paramlist_in_paramlist_linha701);
@@ -484,7 +484,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:278:2: 
+					// LCC.g:278:2: 
 					{
 					}
 					break;
@@ -504,17 +504,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "statelist"
-	// Hello.g:280:1: statelist : statement ( statelist )? ;
+	// LCC.g:280:1: statelist : statement ( statelist )? ;
 	public final void statelist() throws RecognitionException {
 		try {
-			// Hello.g:280:11: ( statement ( statelist )? )
-			// Hello.g:280:13: statement ( statelist )?
+			// LCC.g:280:11: ( statement ( statelist )? )
+			// LCC.g:280:13: statement ( statelist )?
 			{
 			pushFollow(FOLLOW_statement_in_statelist718);
 			statement();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:280:23: ( statelist )?
+			// LCC.g:280:23: ( statelist )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0==EOL||LA5_0==ID||(LA5_0 >= TIPOS && LA5_0 <= T_ABRECHAVE)||LA5_0==T_BREAK||(LA5_0 >= T_FOR && LA5_0 <= T_IF)||(LA5_0 >= T_READ && LA5_0 <= T_RETURN)||LA5_0==T_WRITE) ) {
@@ -522,7 +522,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt5) {
 				case 1 :
-					// Hello.g:280:24: statelist
+					// LCC.g:280:24: statelist
 					{
 					pushFollow(FOLLOW_statelist_in_statelist721);
 					statelist();
@@ -549,10 +549,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "statement"
-	// Hello.g:283:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL );
+	// LCC.g:283:1: statement : ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL );
 	public final void statement() throws RecognitionException {
 		try {
-			// Hello.g:283:10: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
+			// LCC.g:283:10: ( vardecl EOL | atribstat EOL | printstat EOL | readstat EOL | returnstat EOL | ifstat | forstat | T_ABRECHAVE statelist T_FECHACHAVE | T_BREAK EOL | EOL )
 			int alt6=10;
 			switch ( input.LA(1) ) {
 			case TIPOS:
@@ -613,7 +613,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// Hello.g:284:3: vardecl EOL
+					// LCC.g:284:3: vardecl EOL
 					{
 					pushFollow(FOLLOW_vardecl_in_statement734);
 					vardecl();
@@ -623,7 +623,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:285:3: atribstat EOL
+					// LCC.g:285:3: atribstat EOL
 					{
 					pushFollow(FOLLOW_atribstat_in_statement742);
 					atribstat();
@@ -633,7 +633,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Hello.g:286:3: printstat EOL
+					// LCC.g:286:3: printstat EOL
 					{
 					pushFollow(FOLLOW_printstat_in_statement750);
 					printstat();
@@ -643,7 +643,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 4 :
-					// Hello.g:287:3: readstat EOL
+					// LCC.g:287:3: readstat EOL
 					{
 					pushFollow(FOLLOW_readstat_in_statement759);
 					readstat();
@@ -653,7 +653,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 5 :
-					// Hello.g:288:3: returnstat EOL
+					// LCC.g:288:3: returnstat EOL
 					{
 					pushFollow(FOLLOW_returnstat_in_statement766);
 					returnstat();
@@ -663,7 +663,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 6 :
-					// Hello.g:289:3: ifstat
+					// LCC.g:289:3: ifstat
 					{
 					pushFollow(FOLLOW_ifstat_in_statement774);
 					ifstat();
@@ -672,7 +672,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 7 :
-					// Hello.g:290:3: forstat
+					// LCC.g:290:3: forstat
 					{
 					pushFollow(FOLLOW_forstat_in_statement780);
 					forstat();
@@ -681,7 +681,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 8 :
-					// Hello.g:291:3: T_ABRECHAVE statelist T_FECHACHAVE
+					// LCC.g:291:3: T_ABRECHAVE statelist T_FECHACHAVE
 					{
 					match(input,T_ABRECHAVE,FOLLOW_T_ABRECHAVE_in_statement786); if (state.failed) return;
 					pushFollow(FOLLOW_statelist_in_statement788);
@@ -692,14 +692,14 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 9 :
-					// Hello.g:292:3: T_BREAK EOL
+					// LCC.g:292:3: T_BREAK EOL
 					{
 					match(input,T_BREAK,FOLLOW_T_BREAK_in_statement796); if (state.failed) return;
 					match(input,EOL,FOLLOW_EOL_in_statement798); if (state.failed) return;
 					}
 					break;
 				case 10 :
-					// Hello.g:293:3: EOL
+					// LCC.g:293:3: EOL
 					{
 					match(input,EOL,FOLLOW_EOL_in_statement804); if (state.failed) return;
 					}
@@ -720,17 +720,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "vardecl"
-	// Hello.g:296:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
+	// LCC.g:296:1: vardecl : TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* ;
 	public final void vardecl() throws RecognitionException {
 		try {
-			// Hello.g:297:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
-			// Hello.g:298:3: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			// LCC.g:297:2: ( TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )* )
+			// LCC.g:298:3: TIPOS ID ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			{
 			if ( state.backtracking==0 ) {setUltTipo(input.LT(1).getText());}
 			match(input,TIPOS,FOLLOW_TIPOS_in_vardecl821); if (state.failed) return;
 			if ( state.backtracking==0 ) {adicionaToken(input.LT(1));}
 			match(input,ID,FOLLOW_ID_in_vardecl828); if (state.failed) return;
-			// Hello.g:299:36: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
+			// LCC.g:299:36: ( T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -741,10 +741,10 @@ public class HelloParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// Hello.g:299:37: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
+					// LCC.g:299:37: T_ABRECOLCHETE ( ID | NUMERO ) T_FECHACOLCHETE
 					{
 					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_vardecl831); if (state.failed) return;
-					// Hello.g:299:52: ( ID | NUMERO )
+					// LCC.g:299:52: ( ID | NUMERO )
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( (LA7_0==ID) ) {
@@ -763,14 +763,14 @@ public class HelloParser extends Parser {
 
 					switch (alt7) {
 						case 1 :
-							// Hello.g:299:54: ID
+							// LCC.g:299:54: ID
 							{
 							if ( state.backtracking==0 ) {verificaToken(input.LT(1));}
 							match(input,ID,FOLLOW_ID_in_vardecl837); if (state.failed) return;
 							}
 							break;
 						case 2 :
-							// Hello.g:299:89: NUMERO
+							// LCC.g:299:89: NUMERO
 							{
 							match(input,NUMERO,FOLLOW_NUMERO_in_vardecl841); if (state.failed) return;
 							}
@@ -803,15 +803,15 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "lvalue"
-	// Hello.g:302:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
+	// LCC.g:302:1: lvalue : ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* ;
 	public final void lvalue() throws RecognitionException {
 		try {
-			// Hello.g:303:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
-			// Hello.g:303:4: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			// LCC.g:303:2: ( ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )* )
+			// LCC.g:303:4: ID ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			{
 			if ( state.backtracking==0 ) {verificaToken(input.LT(1));}
 			match(input,ID,FOLLOW_ID_in_lvalue860); if (state.failed) return;
-			// Hello.g:304:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
+			// LCC.g:304:3: ( T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE )*
 			loop9:
 			while (true) {
 				int alt9=2;
@@ -822,11 +822,11 @@ public class HelloParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// Hello.g:304:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
+					// LCC.g:304:5: T_ABRECOLCHETE ( numexpression ) T_FECHACOLCHETE
 					{
 					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_lvalue866); if (state.failed) return;
-					// Hello.g:304:20: ( numexpression )
-					// Hello.g:304:22: numexpression
+					// LCC.g:304:20: ( numexpression )
+					// LCC.g:304:22: numexpression
 					{
 					pushFollow(FOLLOW_numexpression_in_lvalue870);
 					numexpression();
@@ -859,18 +859,18 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "atribstat"
-	// Hello.g:307:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
+	// LCC.g:307:1: atribstat : lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) ;
 	public final void atribstat() throws RecognitionException {
 		try {
-			// Hello.g:308:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
-			// Hello.g:309:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
+			// LCC.g:308:2: ( lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO ) )
+			// LCC.g:309:2: lvalue T_ATRIBUICAO ( expression | allocexpression | funccall | TEXTO )
 			{
 			pushFollow(FOLLOW_lvalue_in_atribstat889);
 			lvalue();
 			state._fsp--;
 			if (state.failed) return;
 			match(input,T_ATRIBUICAO,FOLLOW_T_ATRIBUICAO_in_atribstat893); if (state.failed) return;
-			// Hello.g:311:2: ( expression | allocexpression | funccall | TEXTO )
+			// LCC.g:311:2: ( expression | allocexpression | funccall | TEXTO )
 			int alt10=4;
 			switch ( input.LA(1) ) {
 			case ID:
@@ -906,7 +906,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// Hello.g:311:4: expression
+					// LCC.g:311:4: expression
 					{
 					pushFollow(FOLLOW_expression_in_atribstat899);
 					expression();
@@ -915,7 +915,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:311:17: allocexpression
+					// LCC.g:311:17: allocexpression
 					{
 					pushFollow(FOLLOW_allocexpression_in_atribstat903);
 					allocexpression();
@@ -924,7 +924,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Hello.g:311:35: funccall
+					// LCC.g:311:35: funccall
 					{
 					pushFollow(FOLLOW_funccall_in_atribstat907);
 					funccall();
@@ -933,7 +933,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 4 :
-					// Hello.g:311:46: TEXTO
+					// LCC.g:311:46: TEXTO
 					{
 					match(input,TEXTO,FOLLOW_TEXTO_in_atribstat911); if (state.failed) return;
 					}
@@ -957,15 +957,15 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "allocexpression"
-	// Hello.g:314:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
+	// LCC.g:314:1: allocexpression : T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ ;
 	public final void allocexpression() throws RecognitionException {
 		try {
-			// Hello.g:314:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
-			// Hello.g:314:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			// LCC.g:314:17: ( T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+ )
+			// LCC.g:314:19: T_NEW TIPOS ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			{
 			match(input,T_NEW,FOLLOW_T_NEW_in_allocexpression923); if (state.failed) return;
 			match(input,TIPOS,FOLLOW_TIPOS_in_allocexpression925); if (state.failed) return;
-			// Hello.g:314:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
+			// LCC.g:314:31: ( T_ABRECOLCHETE numexpression T_FECHACOLCHETE )+
 			int cnt11=0;
 			loop11:
 			while (true) {
@@ -977,7 +977,7 @@ public class HelloParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// Hello.g:314:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
+					// LCC.g:314:32: T_ABRECOLCHETE numexpression T_FECHACOLCHETE
 					{
 					match(input,T_ABRECOLCHETE,FOLLOW_T_ABRECOLCHETE_in_allocexpression928); if (state.failed) return;
 					pushFollow(FOLLOW_numexpression_in_allocexpression930);
@@ -1013,11 +1013,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "funccall"
-	// Hello.g:317:1: funccall : FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES ;
+	// LCC.g:317:1: funccall : FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES ;
 	public final void funccall() throws RecognitionException {
 		try {
-			// Hello.g:318:2: ( FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES )
-			// Hello.g:318:4: FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES
+			// LCC.g:318:2: ( FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES )
+			// LCC.g:318:4: FUNCAO T_ABREPARENTESES paramlistcall T_FECHAPARENTESES
 			{
 			match(input,FUNCAO,FOLLOW_FUNCAO_in_funccall945); if (state.failed) return;
 			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_funccall956); if (state.failed) return;
@@ -1042,10 +1042,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlistcall"
-	// Hello.g:324:1: paramlistcall : ( TEXTO paramlistcall_linha | expression paramlistcall_linha |);
+	// LCC.g:324:1: paramlistcall : ( TEXTO paramlistcall_linha | expression paramlistcall_linha |);
 	public final void paramlistcall() throws RecognitionException {
 		try {
-			// Hello.g:325:2: ( TEXTO paramlistcall_linha | expression paramlistcall_linha |)
+			// LCC.g:325:2: ( TEXTO paramlistcall_linha | expression paramlistcall_linha |)
 			int alt12=3;
 			switch ( input.LA(1) ) {
 			case TEXTO:
@@ -1077,7 +1077,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// Hello.g:325:4: TEXTO paramlistcall_linha
+					// LCC.g:325:4: TEXTO paramlistcall_linha
 					{
 					match(input,TEXTO,FOLLOW_TEXTO_in_paramlistcall996); if (state.failed) return;
 					pushFollow(FOLLOW_paramlistcall_linha_in_paramlistcall998);
@@ -1087,7 +1087,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:326:4: expression paramlistcall_linha
+					// LCC.g:326:4: expression paramlistcall_linha
 					{
 					pushFollow(FOLLOW_expression_in_paramlistcall1004);
 					expression();
@@ -1100,7 +1100,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Hello.g:328:2: 
+					// LCC.g:328:2: 
 					{
 					}
 					break;
@@ -1120,10 +1120,10 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "paramlistcall_linha"
-	// Hello.g:330:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
+	// LCC.g:330:1: paramlistcall_linha : ( T_VIRGULA paramlistcall |);
 	public final void paramlistcall_linha() throws RecognitionException {
 		try {
-			// Hello.g:331:2: ( T_VIRGULA paramlistcall |)
+			// LCC.g:331:2: ( T_VIRGULA paramlistcall |)
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0==T_VIRGULA) ) {
@@ -1142,7 +1142,7 @@ public class HelloParser extends Parser {
 
 			switch (alt13) {
 				case 1 :
-					// Hello.g:332:2: T_VIRGULA paramlistcall
+					// LCC.g:332:2: T_VIRGULA paramlistcall
 					{
 					match(input,T_VIRGULA,FOLLOW_T_VIRGULA_in_paramlistcall_linha1024); if (state.failed) return;
 					pushFollow(FOLLOW_paramlistcall_in_paramlistcall_linha1026);
@@ -1152,7 +1152,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:334:2: 
+					// LCC.g:334:2: 
 					{
 					}
 					break;
@@ -1172,14 +1172,14 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "printstat"
-	// Hello.g:336:1: printstat : T_WRITE ( TEXTO | expression ) ;
+	// LCC.g:336:1: printstat : T_WRITE ( TEXTO | expression ) ;
 	public final void printstat() throws RecognitionException {
 		try {
-			// Hello.g:337:2: ( T_WRITE ( TEXTO | expression ) )
-			// Hello.g:337:4: T_WRITE ( TEXTO | expression )
+			// LCC.g:337:2: ( T_WRITE ( TEXTO | expression ) )
+			// LCC.g:337:4: T_WRITE ( TEXTO | expression )
 			{
 			match(input,T_WRITE,FOLLOW_T_WRITE_in_printstat1042); if (state.failed) return;
-			// Hello.g:337:12: ( TEXTO | expression )
+			// LCC.g:337:12: ( TEXTO | expression )
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==TEXTO) ) {
@@ -1198,13 +1198,13 @@ public class HelloParser extends Parser {
 
 			switch (alt14) {
 				case 1 :
-					// Hello.g:337:14: TEXTO
+					// LCC.g:337:14: TEXTO
 					{
 					match(input,TEXTO,FOLLOW_TEXTO_in_printstat1046); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:337:22: expression
+					// LCC.g:337:22: expression
 					{
 					pushFollow(FOLLOW_expression_in_printstat1050);
 					expression();
@@ -1231,11 +1231,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "readstat"
-	// Hello.g:340:1: readstat : T_READ lvalue ;
+	// LCC.g:340:1: readstat : T_READ lvalue ;
 	public final void readstat() throws RecognitionException {
 		try {
-			// Hello.g:341:2: ( T_READ lvalue )
-			// Hello.g:341:4: T_READ lvalue
+			// LCC.g:341:2: ( T_READ lvalue )
+			// LCC.g:341:4: T_READ lvalue
 			{
 			match(input,T_READ,FOLLOW_T_READ_in_readstat1064); if (state.failed) return;
 			pushFollow(FOLLOW_lvalue_in_readstat1066);
@@ -1258,14 +1258,14 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "returnstat"
-	// Hello.g:344:1: returnstat : T_RETURN ( TEXTO | expression )? ;
+	// LCC.g:344:1: returnstat : T_RETURN ( TEXTO | expression )? ;
 	public final void returnstat() throws RecognitionException {
 		try {
-			// Hello.g:345:2: ( T_RETURN ( TEXTO | expression )? )
-			// Hello.g:345:4: T_RETURN ( TEXTO | expression )?
+			// LCC.g:345:2: ( T_RETURN ( TEXTO | expression )? )
+			// LCC.g:345:4: T_RETURN ( TEXTO | expression )?
 			{
 			match(input,T_RETURN,FOLLOW_T_RETURN_in_returnstat1078); if (state.failed) return;
-			// Hello.g:345:13: ( TEXTO | expression )?
+			// LCC.g:345:13: ( TEXTO | expression )?
 			int alt15=3;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==TEXTO) ) {
@@ -1276,13 +1276,13 @@ public class HelloParser extends Parser {
 			}
 			switch (alt15) {
 				case 1 :
-					// Hello.g:345:15: TEXTO
+					// LCC.g:345:15: TEXTO
 					{
 					match(input,TEXTO,FOLLOW_TEXTO_in_returnstat1082); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:345:23: expression
+					// LCC.g:345:23: expression
 					{
 					pushFollow(FOLLOW_expression_in_returnstat1086);
 					expression();
@@ -1309,11 +1309,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "ifstat"
-	// Hello.g:348:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
+	// LCC.g:348:1: ifstat : T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha ;
 	public final void ifstat() throws RecognitionException {
 		try {
-			// Hello.g:349:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
-			// Hello.g:349:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
+			// LCC.g:349:2: ( T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha )
+			// LCC.g:349:4: T_IF T_ABREPARENTESES expression T_FECHAPARENTESES statement ifstat_linha
 			{
 			match(input,T_IF,FOLLOW_T_IF_in_ifstat1102); if (state.failed) return;
 			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_ifstat1104); if (state.failed) return;
@@ -1346,15 +1346,15 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "ifstat_linha"
-	// Hello.g:352:1: ifstat_linha : ( T_ELSE statement |);
+	// LCC.g:352:1: ifstat_linha : ( T_ELSE statement |);
 	public final void ifstat_linha() throws RecognitionException {
 		try {
-			// Hello.g:353:2: ( T_ELSE statement |)
+			// LCC.g:353:2: ( T_ELSE statement |)
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0==T_ELSE) ) {
 				int LA16_1 = input.LA(2);
-				if ( (synpred28_Hello()) ) {
+				if ( (synpred28_LCC()) ) {
 					alt16=1;
 				}
 				else if ( (true) ) {
@@ -1375,7 +1375,7 @@ public class HelloParser extends Parser {
 
 			switch (alt16) {
 				case 1 :
-					// Hello.g:353:4: T_ELSE statement
+					// LCC.g:353:4: T_ELSE statement
 					{
 					match(input,T_ELSE,FOLLOW_T_ELSE_in_ifstat_linha1123); if (state.failed) return;
 					pushFollow(FOLLOW_statement_in_ifstat_linha1126);
@@ -1385,7 +1385,7 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 2 :
-					// Hello.g:355:2: 
+					// LCC.g:355:2: 
 					{
 					}
 					break;
@@ -1405,11 +1405,11 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "forstat"
-	// Hello.g:357:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement ;
+	// LCC.g:357:1: forstat : T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement ;
 	public final void forstat() throws RecognitionException {
 		try {
-			// Hello.g:357:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement )
-			// Hello.g:357:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement
+			// LCC.g:357:9: ( T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement )
+			// LCC.g:357:11: T_FOR T_ABREPARENTESES atribstat EOL expression EOL atribstat T_FECHAPARENTESES statement
 			{
 			match(input,T_FOR,FOLLOW_T_FOR_in_forstat1142); if (state.failed) return;
 			match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_forstat1144); if (state.failed) return;
@@ -1448,17 +1448,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// Hello.g:361:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
+	// LCC.g:361:1: expression : numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? ;
 	public final void expression() throws RecognitionException {
 		try {
-			// Hello.g:361:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
-			// Hello.g:361:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			// LCC.g:361:12: ( numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )? )
+			// LCC.g:361:14: numexpression ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
 			{
 			pushFollow(FOLLOW_numexpression_in_expression1177);
 			numexpression();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:361:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
+			// LCC.g:361:28: ( ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==T_DIFERENTE||(LA17_0 >= T_IGUAL && LA17_0 <= T_MENOROUIGUAL)) ) {
@@ -1466,7 +1466,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// Hello.g:361:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
+					// LCC.g:361:30: ( T_MAIOR | T_MENOR | T_MAIOROUIGUAL | T_MENOROUIGUAL | T_IGUAL | T_DIFERENTE ) numexpression
 					{
 					if ( input.LA(1)==T_DIFERENTE||(input.LA(1) >= T_IGUAL && input.LA(1) <= T_MENOROUIGUAL) ) {
 						input.consume();
@@ -1503,17 +1503,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "numexpression"
-	// Hello.g:364:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
+	// LCC.g:364:1: numexpression : term ( ( T_SOMA | T_SUBTRACAO ) term )* ;
 	public final void numexpression() throws RecognitionException {
 		try {
-			// Hello.g:364:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
-			// Hello.g:364:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
+			// LCC.g:364:15: ( term ( ( T_SOMA | T_SUBTRACAO ) term )* )
+			// LCC.g:364:17: term ( ( T_SOMA | T_SUBTRACAO ) term )*
 			{
 			pushFollow(FOLLOW_term_in_numexpression1219);
 			term();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:364:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
+			// LCC.g:364:22: ( ( T_SOMA | T_SUBTRACAO ) term )*
 			loop18:
 			while (true) {
 				int alt18=2;
@@ -1524,7 +1524,7 @@ public class HelloParser extends Parser {
 
 				switch (alt18) {
 				case 1 :
-					// Hello.g:364:23: ( T_SOMA | T_SUBTRACAO ) term
+					// LCC.g:364:23: ( T_SOMA | T_SUBTRACAO ) term
 					{
 					if ( (input.LA(1) >= T_SOMA && input.LA(1) <= T_SUBTRACAO) ) {
 						input.consume();
@@ -1564,17 +1564,17 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "term"
-	// Hello.g:367:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
+	// LCC.g:367:1: term : unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* ;
 	public final void term() throws RecognitionException {
 		try {
-			// Hello.g:367:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
-			// Hello.g:368:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			// LCC.g:367:6: ( unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )* )
+			// LCC.g:368:2: unaryexpr ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
 			{
 			pushFollow(FOLLOW_unaryexpr_in_term1245);
 			unaryexpr();
 			state._fsp--;
 			if (state.failed) return;
-			// Hello.g:368:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
+			// LCC.g:368:12: ( ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr )*
 			loop19:
 			while (true) {
 				int alt19=2;
@@ -1585,7 +1585,7 @@ public class HelloParser extends Parser {
 
 				switch (alt19) {
 				case 1 :
-					// Hello.g:368:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
+					// LCC.g:368:14: ( T_MULTIPLICACAO | T_DIVISAO ) unaryexpr
 					{
 					if ( input.LA(1)==T_DIVISAO||input.LA(1)==T_MULTIPLICACAO ) {
 						input.consume();
@@ -1625,13 +1625,13 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "unaryexpr"
-	// Hello.g:371:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
+	// LCC.g:371:1: unaryexpr : ( T_SOMA | T_SUBTRACAO )? factor ;
 	public final void unaryexpr() throws RecognitionException {
 		try {
-			// Hello.g:371:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
-			// Hello.g:371:14: ( T_SOMA | T_SUBTRACAO )? factor
+			// LCC.g:371:11: ( ( T_SOMA | T_SUBTRACAO )? factor )
+			// LCC.g:371:14: ( T_SOMA | T_SUBTRACAO )? factor
 			{
-			// Hello.g:371:14: ( T_SOMA | T_SUBTRACAO )?
+			// LCC.g:371:14: ( T_SOMA | T_SUBTRACAO )?
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( ((LA20_0 >= T_SOMA && LA20_0 <= T_SUBTRACAO)) ) {
@@ -1639,7 +1639,7 @@ public class HelloParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// Hello.g:
+					// LCC.g:
 					{
 					if ( (input.LA(1) >= T_SOMA && input.LA(1) <= T_SUBTRACAO) ) {
 						input.consume();
@@ -1676,13 +1676,13 @@ public class HelloParser extends Parser {
 
 
 	// $ANTLR start "factor"
-	// Hello.g:374:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
+	// LCC.g:374:1: factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) ;
 	public final void factor() throws RecognitionException {
 		try {
-			// Hello.g:374:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
-			// Hello.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			// LCC.g:374:8: ( ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES ) )
+			// LCC.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 			{
-			// Hello.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
+			// LCC.g:374:10: ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 			int alt21=4;
 			switch ( input.LA(1) ) {
 			case NUMERO:
@@ -1713,13 +1713,13 @@ public class HelloParser extends Parser {
 			}
 			switch (alt21) {
 				case 1 :
-					// Hello.g:374:12: NUMERO
+					// LCC.g:374:12: NUMERO
 					{
 					match(input,NUMERO,FOLLOW_NUMERO_in_factor1294); if (state.failed) return;
 					}
 					break;
 				case 2 :
-					// Hello.g:374:21: lvalue
+					// LCC.g:374:21: lvalue
 					{
 					pushFollow(FOLLOW_lvalue_in_factor1298);
 					lvalue();
@@ -1728,13 +1728,13 @@ public class HelloParser extends Parser {
 					}
 					break;
 				case 3 :
-					// Hello.g:374:30: T_NULL
+					// LCC.g:374:30: T_NULL
 					{
 					match(input,T_NULL,FOLLOW_T_NULL_in_factor1302); if (state.failed) return;
 					}
 					break;
 				case 4 :
-					// Hello.g:374:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
+					// LCC.g:374:39: T_ABREPARENTESES numexpression T_FECHAPARENTESES
 					{
 					match(input,T_ABREPARENTESES,FOLLOW_T_ABREPARENTESES_in_factor1306); if (state.failed) return;
 					pushFollow(FOLLOW_numexpression_in_factor1308);
@@ -1760,28 +1760,28 @@ public class HelloParser extends Parser {
 	}
 	// $ANTLR end "factor"
 
-	// $ANTLR start synpred28_Hello
-	public final void synpred28_Hello_fragment() throws RecognitionException {
-		// Hello.g:353:4: ( T_ELSE statement )
-		// Hello.g:353:4: T_ELSE statement
+	// $ANTLR start synpred28_LCC
+	public final void synpred28_LCC_fragment() throws RecognitionException {
+		// LCC.g:353:4: ( T_ELSE statement )
+		// LCC.g:353:4: T_ELSE statement
 		{
-		match(input,T_ELSE,FOLLOW_T_ELSE_in_synpred28_Hello1123); if (state.failed) return;
-		pushFollow(FOLLOW_statement_in_synpred28_Hello1126);
+		match(input,T_ELSE,FOLLOW_T_ELSE_in_synpred28_LCC1123); if (state.failed) return;
+		pushFollow(FOLLOW_statement_in_synpred28_LCC1126);
 		statement();
 		state._fsp--;
 		if (state.failed) return;
 		}
 
 	}
-	// $ANTLR end synpred28_Hello
+	// $ANTLR end synpred28_LCC
 
 	// Delegated rules
 
-	public final boolean synpred28_Hello() {
+	public final boolean synpred28_LCC() {
 		state.backtracking++;
 		int start = input.mark();
 		try {
-			synpred28_Hello_fragment(); // can never throw exception
+			synpred28_LCC_fragment(); // can never throw exception
 		} catch (RecognitionException re) {
 			System.err.println("impossible: "+re);
 		}
@@ -1904,6 +1904,6 @@ public class HelloParser extends Parser {
 	public static final BitSet FOLLOW_T_ABREPARENTESES_in_factor1306 = new BitSet(new long[]{0x0000003200004300L});
 	public static final BitSet FOLLOW_numexpression_in_factor1308 = new BitSet(new long[]{0x0000000000800000L});
 	public static final BitSet FOLLOW_T_FECHAPARENTESES_in_factor1310 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_T_ELSE_in_synpred28_Hello1123 = new BitSet(new long[]{0x0000008C03011920L});
-	public static final BitSet FOLLOW_statement_in_synpred28_Hello1126 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_T_ELSE_in_synpred28_LCC1123 = new BitSet(new long[]{0x0000008C03011920L});
+	public static final BitSet FOLLOW_statement_in_synpred28_LCC1126 = new BitSet(new long[]{0x0000000000000002L});
 }
