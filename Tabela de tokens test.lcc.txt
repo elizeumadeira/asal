@@ -1,0 +1,264 @@
+LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR           | 
+1               | T_ABRECHAVE     | --              | --              | {               | 
+2               | T_ABRECHAVE     | --              | --              | {               | 
+3               | TIPOS           | --              | --              | int             | 
+3               | ID              | int             |                 | A               | 
+3               | EOL             | --              | --              | ;               | 
+4               | TIPOS           | --              | --              | int             | 
+4               | ID              | int             |                 | B               | 
+4               | EOL             | --              | --              | ;               | 
+5               | TIPOS           | --              | --              | int             | 
+5               | ID              | int             |                 | TESTE           | 
+5               | EOL             | --              | --              | ;               | 
+6               | ID              | int             |                 | TESTE           | 
+6               | T_ATRIBUICAO    | --              | --              | =               | 
+6               | ID              | int             |                 | A               | 
+6               | T_SOMA          | --              | --              | +               | 
+6               | ID              | int             |                 | B               | 
+6               | EOL             | --              | --              | ;               | 
+7               | ID              | int             |                 | TESTE           | 
+7               | T_ATRIBUICAO    | --              | --              | =               | 
+7               | T_NEW           | --              | --              | new             | 
+7               | TIPOS           | --              | --              | int             | 
+7               | T_ABRECOLCHETE  | --              | --              | [               | 
+7               | NUMERO          | --              | --              | 10              | 
+7               | T_FECHACOLCHETE | --              | --              | ]               | 
+7               | EOL             | --              | --              | ;               | 
+9               | T_FOR           | --              | --              | for             | 
+9               | T_ABREPARENTESE | --              | --              | (               | 
+9               | ID              | int             |                 | A               | 
+9               | T_ATRIBUICAO    | --              | --              | =               | 
+9               | NUMERO          | --              | --              | 1               | 
+9               | EOL             | --              | --              | ;               | 
+9               | ID              | int             |                 | A               | 
+9               | T_MENOR         | --              | --              | <               | 
+9               | ID              | int             |                 | B               | 
+9               | EOL             | --              | --              | ;               | 
+9               | ID              | int             |                 | A               | 
+9               | T_ATRIBUICAO    | --              | --              | =               | 
+9               | ID              | int             |                 | A               | 
+9               | T_SOMA          | --              | --              | +               | 
+9               | NUMERO          | --              | --              | 1               | 
+9               | T_FECHAPARENTES | --              | --              | )               | 
+9               | T_ABRECHAVE     | --              | --              | {               | 
+10              | T_IF            | --              | --              | if              | 
+10              | T_ABREPARENTESE | --              | --              | (               | 
+10              | ID              | int             |                 | A               | 
+10              | T_IGUAL         | --              | --              | ==              | 
+10              | ID              | int             |                 | B               | 
+10              | T_FECHAPARENTES | --              | --              | )               | 
+10              | T_ABRECHAVE     | --              | --              | {               | 
+11              | T_BREAK         | --              | --              | break           | 
+11              | EOL             | --              | --              | ;               | 
+12              | T_FECHACHAVE    | --              | --              | }               | 
+13              | T_FECHACHAVE    | --              | --              | }               | 
+15              | T_IF            | --              | --              | if              | 
+15              | T_ABREPARENTESE | --              | --              | (               | 
+15              | ID              | int             |                 | A               | 
+15              | T_FECHAPARENTES | --              | --              | )               | 
+15              | T_ABRECHAVE     | --              | --              | {               | 
+16              | EOL             | --              | --              | ;               | 
+17              | T_FECHACHAVE    | --              | --              | }               | 
+17              | T_ELSE          | --              | --              | else            | 
+17              | T_IF            | --              | --              | if              | 
+17              | T_ABREPARENTESE | --              | --              | (               | 
+17              | ID              | int             |                 | B               | 
+17              | T_IGUAL         | --              | --              | ==              | 
+17              | ID              | int             |                 | A               | 
+17              | T_FECHAPARENTES | --              | --              | )               | 
+17              | T_ABRECHAVE     | --              | --              | {               | 
+18              | EOL             | --              | --              | ;               | 
+19              | T_FECHACHAVE    | --              | --              | }               | 
+19              | T_ELSE          | --              | --              | else            | 
+19              | T_IF            | --              | --              | if              | 
+19              | T_ABREPARENTESE | --              | --              | (               | 
+19              | ID              | int             |                 | B               | 
+19              | T_MENOROUIGUAL  | --              | --              | <=              | 
+19              | ID              | int             |                 | A               | 
+19              | T_FECHAPARENTES | --              | --              | )               | 
+19              | T_ABRECHAVE     | --              | --              | {               | 
+20              | EOL             | --              | --              | ;               | 
+21              | T_FECHACHAVE    | --              | --              | }               | 
+21              | T_ELSE          | --              | --              | else            | 
+21              | T_ABRECHAVE     | --              | --              | {               | 
+22              | EOL             | --              | --              | ;               | 
+23              | T_FECHACHAVE    | --              | --              | }               | 
+25              | T_IF            | --              | --              | if              | 
+25              | T_ABREPARENTESE | --              | --              | (               | 
+25              | ID              | int             |                 | A               | 
+25              | T_FECHAPARENTES | --              | --              | )               | 
+25              | T_ABRECHAVE     | --              | --              | {               | 
+26              | T_IF            | --              | --              | if              | 
+26              | T_ABREPARENTESE | --              | --              | (               | 
+26              | ID              | int             |                 | A               | 
+26              | T_IGUAL         | --              | --              | ==              | 
+26              | ID              | int             |                 | B               | 
+26              | T_FECHAPARENTES | --              | --              | )               | 
+26              | T_ABRECHAVE     | --              | --              | {               | 
+27              | T_IF            | --              | --              | if              | 
+27              | T_ABREPARENTESE | --              | --              | (               | 
+27              | NUMERO          | --              | --              | 1               | 
+27              | T_FECHAPARENTES | --              | --              | )               | 
+27              | T_ABRECHAVE     | --              | --              | {               | 
+28              | EOL             | --              | --              | ;               | 
+29              | T_FECHACHAVE    | --              | --              | }               | 
+30              | T_FECHACHAVE    | --              | --              | }               | 
+31              | T_FECHACHAVE    | --              | --              | }               | 
+33              | T_IF            | --              | --              | if              | 
+33              | T_ABREPARENTESE | --              | --              | (               | 
+33              | ID              | int             |                 | A               | 
+33              | T_FECHAPARENTES | --              | --              | )               | 
+33              | EOL             | --              | --              | ;               | 
+35              | TIPOS           | --              | --              | int             | 
+35              | ID              | int             |                 | AMENOSUM        | 
+35              | EOL             | --              | --              | ;               | 
+36              | ID              | int             |                 | AMENOSUM        | 
+36              | T_ATRIBUICAO    | --              | --              | =               | 
+36              | ID              | int             |                 | A               | 
+36              | T_SUBTRACAO     | --              | --              | -               | 
+36              | NUMERO          | --              | --              | 1               | 
+36              | EOL             | --              | --              | ;               | 
+38              | TIPOS           | --              | --              | int             | 
+38              | ID              | int             |                 | C               | 
+38              | T_ABRECOLCHETE  | --              | --              | [               | 
+38              | ID              | int             |                 | A               | 
+38              | T_FECHACOLCHETE | --              | --              | ]               | 
+38              | EOL             | --              | --              | ;               | 
+39              | ID              | int             |                 | C               | 
+39              | T_ABRECOLCHETE  | --              | --              | [               | 
+39              | ID              | int             |                 | AMENOSUM        | 
+39              | T_FECHACOLCHETE | --              | --              | ]               | 
+39              | T_ATRIBUICAO    | --              | --              | =               | 
+39              | FUNCAO          | --              | --              | funcao1         | 
+39              | T_ABREPARENTESE | --              | --              | (               | 
+39              | ID              | int             | funcao1         | A               | 
+39              | T_VIRGULA       | --              | --              | ,               | 
+39              | ID              | int             | funcao1         | B               | 
+39              | T_FECHAPARENTES | --              | --              | )               | 
+39              | EOL             | --              | --              | ;               | 
+41              | ID              | int             | funcao1         | C               | 
+41              | T_ABRECOLCHETE  | --              | --              | [               | 
+41              | ID              | int             | funcao1         | A               | 
+41              | T_FECHACOLCHETE | --              | --              | ]               | 
+41              | T_ABRECOLCHETE  | --              | --              | [               | 
+41              | ID              | int             | funcao1         | B               | 
+41              | T_FECHACOLCHETE | --              | --              | ]               | 
+41              | T_ATRIBUICAO    | --              | --              | =               | 
+41              | NUMERO          | --              | --              | 10              | 
+41              | EOL             | --              | --              | ;               | 
+42              | ID              | int             | funcao1         | C               | 
+42              | T_ABRECOLCHETE  | --              | --              | [               | 
+42              | ID              | int             | funcao1         | A               | 
+42              | T_FECHACOLCHETE | --              | --              | ]               | 
+42              | T_ABRECOLCHETE  | --              | --              | [               | 
+42              | NUMERO          | --              | --              | 10              | 
+42              | T_FECHACOLCHETE | --              | --              | ]               | 
+42              | T_ATRIBUICAO    | --              | --              | =               | 
+42              | NUMERO          | --              | --              | 10              | 
+42              | EOL             | --              | --              | ;               | 
+43              | ID              | int             | funcao1         | C               | 
+43              | T_ABRECOLCHETE  | --              | --              | [               | 
+43              | NUMERO          | --              | --              | 10              | 
+43              | T_FECHACOLCHETE | --              | --              | ]               | 
+43              | T_ABRECOLCHETE  | --              | --              | [               | 
+43              | ID              | int             | funcao1         | B               | 
+43              | T_FECHACOLCHETE | --              | --              | ]               | 
+43              | T_ATRIBUICAO    | --              | --              | =               | 
+43              | NUMERO          | --              | --              | 10              | 
+43              | EOL             | --              | --              | ;               | 
+46              | TIPOS           | --              | --              | string          | 
+46              | ID              | string          | funcao1         | D               | 
+46              | EOL             | --              | --              | ;               | 
+47              | ID              | string          | funcao1         | D               | 
+47              | T_ATRIBUICAO    | --              | --              | =               | 
+47              | TEXTO           | --              | --              | "texto"         | 
+47              | EOL             | --              | --              | ;               | 
+48              | ID              | string          | funcao1         | D               | 
+48              | T_ATRIBUICAO    | --              | --              | =               | 
+48              | TEXTO           | --              | --              | ""              | 
+48              | EOL             | --              | --              | ;               | 
+50              | TIPOS           | --              | --              | int             | 
+50              | ID              | int             | funcao1         | F               | 
+50              | EOL             | --              | --              | ;               | 
+51              | TIPOS           | --              | --              | int             | 
+51              | ID              | int             | funcao1         | H               | 
+51              | EOL             | --              | --              | ;               | 
+52              | ID              | int             | funcao1         | H               | 
+52              | T_ATRIBUICAO    | --              | --              | =               | 
+52              | NUMERO          | --              | --              | 5               | 
+52              | EOL             | --              | --              | ;               | 
+54              | ID              | int             | funcao1         | F               | 
+54              | T_ATRIBUICAO    | --              | --              | =               | 
+54              | NUMERO          | --              | --              | 1               | 
+54              | EOL             | --              | --              | ;               | 
+55              | TIPOS           | --              | --              | int             | 
+55              | ID              | int             | funcao1         | G               | 
+55              | EOL             | --              | --              | ;               | 
+56              | T_FOR           | --              | --              | for             | 
+56              | T_ABREPARENTESE | --              | --              | (               | 
+56              | ID              | int             | funcao1         | G               | 
+56              | T_ATRIBUICAO    | --              | --              | =               | 
+56              | NUMERO          | --              | --              | 1               | 
+56              | EOL             | --              | --              | ;               | 
+56              | ID              | int             | funcao1         | G               | 
+56              | T_MENOROUIGUAL  | --              | --              | <=              | 
+56              | NUMERO          | --              | --              | 5               | 
+56              | EOL             | --              | --              | ;               | 
+56              | ID              | int             | funcao1         | G               | 
+56              | T_ATRIBUICAO    | --              | --              | =               | 
+56              | ID              | int             | funcao1         | G               | 
+56              | T_SOMA          | --              | --              | +               | 
+56              | NUMERO          | --              | --              | 1               | 
+56              | T_FECHAPARENTES | --              | --              | )               | 
+56              | T_ABRECHAVE     | --              | --              | {               | 
+57              | ID              | int             | funcao1         | F               | 
+57              | T_ATRIBUICAO    | --              | --              | =               | 
+57              | ID              | int             | funcao1         | F               | 
+57              | T_MULTIPLICACAO | --              | --              | *               | 
+57              | ID              | int             | funcao1         | G               | 
+57              | EOL             | --              | --              | ;               | 
+58              | T_FECHACHAVE    | --              | --              | }               | 
+59              | T_FECHACHAVE    | --              | --              | }               | 
+61              | T_FOR           | --              | --              | for             | 
+61              | T_ABREPARENTESE | --              | --              | (               | 
+61              | ID              | int             | funcao1         | G               | 
+61              | T_ATRIBUICAO    | --              | --              | =               | 
+61              | NUMERO          | --              | --              | 1               | 
+61              | EOL             | --              | --              | ;               | 
+61              | ID              | int             | funcao1         | G               | 
+61              | T_MENOROUIGUAL  | --              | --              | <=              | 
+61              | NUMERO          | --              | --              | 5               | 
+61              | EOL             | --              | --              | ;               | 
+61              | ID              | int             | funcao1         | G               | 
+61              | T_ATRIBUICAO    | --              | --              | =               | 
+61              | ID              | int             | funcao1         | G               | 
+61              | T_SOMA          | --              | --              | +               | 
+61              | NUMERO          | --              | --              | 1               | 
+61              | T_FECHAPARENTES | --              | --              | )               | 
+61              | T_ABRECHAVE     | --              | --              | {               | 
+62              | ID              | int             | funcao1         | F               | 
+62              | T_ATRIBUICAO    | --              | --              | =               | 
+62              | ID              | int             | funcao1         | F               | 
+62              | T_SOMA          | --              | --              | +               | 
+62              | NUMERO          | --              | --              | 1               | 
+62              | EOL             | --              | --              | ;               | 
+63              | ID              | int             | funcao1         | F               | 
+63              | T_ATRIBUICAO    | --              | --              | =               | 
+63              | ID              | int             | funcao1         | F               | 
+63              | T_SOMA          | --              | --              | +               | 
+63              | NUMERO          | --              | --              | 1               | 
+63              | EOL             | --              | --              | ;               | 
+64              | ID              | int             | funcao1         | F               | 
+64              | T_ATRIBUICAO    | --              | --              | =               | 
+64              | ID              | int             | funcao1         | F               | 
+64              | T_SOMA          | --              | --              | +               | 
+64              | NUMERO          | --              | --              | 1               | 
+64              | EOL             | --              | --              | ;               | 
+65              | ID              | int             | funcao1         | F               | 
+65              | T_ATRIBUICAO    | --              | --              | =               | 
+65              | ID              | int             | funcao1         | F               | 
+65              | T_SOMA          | --              | --              | +               | 
+65              | NUMERO          | --              | --              | 1               | 
+65              | EOL             | --              | --              | ;               | 
+66              | T_FECHACHAVE    | --              | --              | }               | 
+67              | T_FECHACHAVE    | --              | --              | }               | 

@@ -92,6 +92,15 @@ tokens {
 
 	T_NULL = 'null'
 		;
+
+	T_INT = 'int'
+		;
+
+	T_FLOAT = 'float'
+		;
+
+	T_STRING = 'string'
+		;
 } 
 
 @header {
@@ -222,7 +231,12 @@ tokens {
 					ultFuncao = token.getText();
 				} 
 
-				if (parser.tokenNames[token.getType()].equals("TIPOS")) {
+				// if (parser.tokenNames[token.getType()].equals("TIPOS")) {
+				if (
+					token.getText().equals("int") ||
+					token.getText().equals("string") ||
+					token.getText().equals("float")
+				) {
 					ultTipo = token.getText();
 				} 
 
@@ -269,7 +283,7 @@ funcdef
 
 
 paramlist 
-	: ( TIPOS {adicionaToken(input.LT(1));} ID paramlist_linha )?
+	: ( (T_INT  | T_FLOAT | T_STRING) {adicionaToken(input.LT(1));} ID paramlist_linha )?
 	;
 
 paramlist_linha
@@ -295,7 +309,7 @@ statement:
 
 vardecl	
 	: 
-		{setUltTipo(input.LT(1).getText());} TIPOS 
+		{setUltTipo(input.LT(1).getText());} ( T_INT  | T_FLOAT | T_STRING ) 
 		{adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
@@ -311,7 +325,7 @@ atribstat
 	( expression | allocexpression | funccall | TEXTO )
 	;
 
-allocexpression : T_NEW TIPOS (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
+allocexpression : T_NEW ( T_INT  | T_FLOAT | T_STRING ) (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 	;
 
 funccall
@@ -374,10 +388,6 @@ unaryexpr :  ( T_SOMA | T_SUBTRACAO )? factor
 factor : ( NUMERO | lvalue | T_NULL | T_ABREPARENTESES numexpression T_FECHAPARENTESES )
 	;
 
-TIPOS 
-	:	('int' | 'float' | 'string')
-	;
-
 ID    
 	:	'A' .. 'Z' ('A' .. 'Z' | '0'..'9')*
        	;
@@ -401,101 +411,4 @@ ESPACO_BRANCO
 COMENTARIO
     : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;} 
     ;
-/*
-program	:
-	(statement| funclist)
-	;
 
-funclist
-	: funcdef funclist | funcdef
-	;
-	
-funcdef	
-	:'def' 'ident' '(' paramlist ')' '{' statelist ')'
-	;
-	
-paramlist
-	: ('int' | 'float' | 'string') ('ident' ','  paramlist | ('int' | 'float' | 'string'))+
-	;
-
-statement
-	:(vardecl ':' |
-	atribstat ':' |
-	printstat ':' |	
-	readstat ':'|
-	returnstat ':' |
-	ifstat |
-	forstat |
-	'{' statelist '} ' |
-	'break' ';' |
-	';')
-	;
-
-vardecl	
-	: ('int' | 'float' | 'string') 'ident' ('[int_constant]')*
-	;
-	
-atribstat
-	:	lvalue '=' (expression | allocexpression | funccall)
-	;
-	
-funccall
-	:'ident' '(' paramlistcall ')'	
-	;
-
-paramlistcall
-	: 'ident' (',' paramlistcall | 'ident')?
-	;
-	
-printstat
-	: 'print' expression
-	;
-
-readstat
-	: lvalue	
-	;
-	
-returnstat
-	: 'return'
-	;
-	
-ifstat	
-	: 'if' '(' expression ')' statement ('else' statement)?
-	;
-	
-forstat	
-	: 'for' '(' atribstat ';' expression ';' atribstat ')' statement
-	;
-	
-statelist
-	: statement (statelist)?
-	;
-	
-allocexpression
-	: 'new' ('int' | 'float' | 'string') ('[' numexpression ']')+
-	;
-	
-expression
-	: numexpression ( ( '<' | '>' | '<=' | '>=' | '==' | '!=') numexpression)?
-	;
-	
-numexpression
-	: term ( ('+' | '-' ) term)*
-	;
-	
-term
-	: unaryexpr ( ('*' | '/' | '%') unaryexpr)*
-	;
-	
-unaryexpr
-	: ('+' | '-')?	factor
-	;
-	
-factor
-	: ('int_constant' | 'float_constant' | 'string_constant' | 'null' | lvalue | '(' numexpression ')')
-	;
-
-lvalue	
-	: 'ident' ('[' numexpression ']')*
-	;
-*/

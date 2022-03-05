@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 LCC.g 2022-03-04 19:32:42
+// $ANTLR 3.5.2 LCC.g 2022-03-04 20:52:57
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -15,35 +15,37 @@ public class LCCLexer extends Lexer {
 	public static final int ID=8;
 	public static final int NUMERO=9;
 	public static final int TEXTO=10;
-	public static final int TIPOS=11;
-	public static final int T_ABRECHAVE=12;
-	public static final int T_ABRECOLCHETE=13;
-	public static final int T_ABREPARENTESES=14;
-	public static final int T_ATRIBUICAO=15;
-	public static final int T_BREAK=16;
-	public static final int T_DEF=17;
-	public static final int T_DIFERENTE=18;
-	public static final int T_DIVISAO=19;
-	public static final int T_ELSE=20;
-	public static final int T_FECHACHAVE=21;
-	public static final int T_FECHACOLCHETE=22;
-	public static final int T_FECHAPARENTESES=23;
+	public static final int T_ABRECHAVE=11;
+	public static final int T_ABRECOLCHETE=12;
+	public static final int T_ABREPARENTESES=13;
+	public static final int T_ATRIBUICAO=14;
+	public static final int T_BREAK=15;
+	public static final int T_DEF=16;
+	public static final int T_DIFERENTE=17;
+	public static final int T_DIVISAO=18;
+	public static final int T_ELSE=19;
+	public static final int T_FECHACHAVE=20;
+	public static final int T_FECHACOLCHETE=21;
+	public static final int T_FECHAPARENTESES=22;
+	public static final int T_FLOAT=23;
 	public static final int T_FOR=24;
 	public static final int T_IF=25;
 	public static final int T_IGUAL=26;
-	public static final int T_MAIOR=27;
-	public static final int T_MAIOROUIGUAL=28;
-	public static final int T_MENOR=29;
-	public static final int T_MENOROUIGUAL=30;
-	public static final int T_MULTIPLICACAO=31;
-	public static final int T_NEW=32;
-	public static final int T_NULL=33;
-	public static final int T_READ=34;
-	public static final int T_RETURN=35;
-	public static final int T_SOMA=36;
-	public static final int T_SUBTRACAO=37;
-	public static final int T_VIRGULA=38;
-	public static final int T_WRITE=39;
+	public static final int T_INT=27;
+	public static final int T_MAIOR=28;
+	public static final int T_MAIOROUIGUAL=29;
+	public static final int T_MENOR=30;
+	public static final int T_MENOROUIGUAL=31;
+	public static final int T_MULTIPLICACAO=32;
+	public static final int T_NEW=33;
+	public static final int T_NULL=34;
+	public static final int T_READ=35;
+	public static final int T_RETURN=36;
+	public static final int T_SOMA=37;
+	public static final int T_STRING=38;
+	public static final int T_SUBTRACAO=39;
+	public static final int T_VIRGULA=40;
+	public static final int T_WRITE=41;
 
 	// delegates
 	// delegators
@@ -324,13 +326,34 @@ public class LCCLexer extends Lexer {
 	}
 	// $ANTLR end "T_FECHAPARENTESES"
 
+	// $ANTLR start "T_FLOAT"
+	public final void mT_FLOAT() throws RecognitionException {
+		try {
+			int _type = T_FLOAT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// LCC.g:15:9: ( 'float' )
+			// LCC.g:15:11: 'float'
+			{
+			match("float"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T_FLOAT"
+
 	// $ANTLR start "T_FOR"
 	public final void mT_FOR() throws RecognitionException {
 		try {
 			int _type = T_FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:15:7: ( 'for' )
-			// LCC.g:15:9: 'for'
+			// LCC.g:16:7: ( 'for' )
+			// LCC.g:16:9: 'for'
 			{
 			match("for"); 
 
@@ -350,8 +373,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:16:6: ( 'if' )
-			// LCC.g:16:8: 'if'
+			// LCC.g:17:6: ( 'if' )
+			// LCC.g:17:8: 'if'
 			{
 			match("if"); 
 
@@ -371,8 +394,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_IGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:17:9: ( '==' )
-			// LCC.g:17:11: '=='
+			// LCC.g:18:9: ( '==' )
+			// LCC.g:18:11: '=='
 			{
 			match("=="); 
 
@@ -387,13 +410,34 @@ public class LCCLexer extends Lexer {
 	}
 	// $ANTLR end "T_IGUAL"
 
+	// $ANTLR start "T_INT"
+	public final void mT_INT() throws RecognitionException {
+		try {
+			int _type = T_INT;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// LCC.g:19:7: ( 'int' )
+			// LCC.g:19:9: 'int'
+			{
+			match("int"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T_INT"
+
 	// $ANTLR start "T_MAIOR"
 	public final void mT_MAIOR() throws RecognitionException {
 		try {
 			int _type = T_MAIOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:18:9: ( '>' )
-			// LCC.g:18:11: '>'
+			// LCC.g:20:9: ( '>' )
+			// LCC.g:20:11: '>'
 			{
 			match('>'); 
 			}
@@ -412,8 +456,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_MAIOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:19:16: ( '>=' )
-			// LCC.g:19:18: '>='
+			// LCC.g:21:16: ( '>=' )
+			// LCC.g:21:18: '>='
 			{
 			match(">="); 
 
@@ -433,8 +477,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_MENOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:20:9: ( '<' )
-			// LCC.g:20:11: '<'
+			// LCC.g:22:9: ( '<' )
+			// LCC.g:22:11: '<'
 			{
 			match('<'); 
 			}
@@ -453,8 +497,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_MENOROUIGUAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:21:16: ( '<=' )
-			// LCC.g:21:18: '<='
+			// LCC.g:23:16: ( '<=' )
+			// LCC.g:23:18: '<='
 			{
 			match("<="); 
 
@@ -474,8 +518,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_MULTIPLICACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:22:17: ( '*' )
-			// LCC.g:22:19: '*'
+			// LCC.g:24:17: ( '*' )
+			// LCC.g:24:19: '*'
 			{
 			match('*'); 
 			}
@@ -494,8 +538,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_NEW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:23:7: ( 'new' )
-			// LCC.g:23:9: 'new'
+			// LCC.g:25:7: ( 'new' )
+			// LCC.g:25:9: 'new'
 			{
 			match("new"); 
 
@@ -515,8 +559,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_NULL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:24:8: ( 'null' )
-			// LCC.g:24:10: 'null'
+			// LCC.g:26:8: ( 'null' )
+			// LCC.g:26:10: 'null'
 			{
 			match("null"); 
 
@@ -536,8 +580,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_READ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:25:8: ( 'read' )
-			// LCC.g:25:10: 'read'
+			// LCC.g:27:8: ( 'read' )
+			// LCC.g:27:10: 'read'
 			{
 			match("read"); 
 
@@ -557,8 +601,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:26:10: ( 'return' )
-			// LCC.g:26:12: 'return'
+			// LCC.g:28:10: ( 'return' )
+			// LCC.g:28:12: 'return'
 			{
 			match("return"); 
 
@@ -578,8 +622,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_SOMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:27:8: ( '+' )
-			// LCC.g:27:10: '+'
+			// LCC.g:29:8: ( '+' )
+			// LCC.g:29:10: '+'
 			{
 			match('+'); 
 			}
@@ -593,13 +637,34 @@ public class LCCLexer extends Lexer {
 	}
 	// $ANTLR end "T_SOMA"
 
+	// $ANTLR start "T_STRING"
+	public final void mT_STRING() throws RecognitionException {
+		try {
+			int _type = T_STRING;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// LCC.g:30:10: ( 'string' )
+			// LCC.g:30:12: 'string'
+			{
+			match("string"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T_STRING"
+
 	// $ANTLR start "T_SUBTRACAO"
 	public final void mT_SUBTRACAO() throws RecognitionException {
 		try {
 			int _type = T_SUBTRACAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:28:13: ( '-' )
-			// LCC.g:28:15: '-'
+			// LCC.g:31:13: ( '-' )
+			// LCC.g:31:15: '-'
 			{
 			match('-'); 
 			}
@@ -618,8 +683,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_VIRGULA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:29:11: ( ',' )
-			// LCC.g:29:13: ','
+			// LCC.g:32:11: ( ',' )
+			// LCC.g:32:13: ','
 			{
 			match(','); 
 			}
@@ -638,8 +703,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = T_WRITE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:30:9: ( 'print' )
-			// LCC.g:30:11: 'print'
+			// LCC.g:33:9: ( 'print' )
+			// LCC.g:33:11: 'print'
 			{
 			match("print"); 
 
@@ -654,92 +719,25 @@ public class LCCLexer extends Lexer {
 	}
 	// $ANTLR end "T_WRITE"
 
-	// $ANTLR start "TIPOS"
-	public final void mTIPOS() throws RecognitionException {
-		try {
-			int _type = TIPOS;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:378:2: ( ( 'int' | 'float' | 'string' ) )
-			// LCC.g:378:4: ( 'int' | 'float' | 'string' )
-			{
-			// LCC.g:378:4: ( 'int' | 'float' | 'string' )
-			int alt1=3;
-			switch ( input.LA(1) ) {
-			case 'i':
-				{
-				alt1=1;
-				}
-				break;
-			case 'f':
-				{
-				alt1=2;
-				}
-				break;
-			case 's':
-				{
-				alt1=3;
-				}
-				break;
-			default:
-				NoViableAltException nvae =
-					new NoViableAltException("", 1, 0, input);
-				throw nvae;
-			}
-			switch (alt1) {
-				case 1 :
-					// LCC.g:378:5: 'int'
-					{
-					match("int"); 
-
-					}
-					break;
-				case 2 :
-					// LCC.g:378:13: 'float'
-					{
-					match("float"); 
-
-					}
-					break;
-				case 3 :
-					// LCC.g:378:23: 'string'
-					{
-					match("string"); 
-
-					}
-					break;
-
-			}
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "TIPOS"
-
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:382:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
-			// LCC.g:382:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
+			// LCC.g:396:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
+			// LCC.g:396:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// LCC.g:382:15: ( 'A' .. 'Z' | '0' .. '9' )*
-			loop2:
+			// LCC.g:396:15: ( 'A' .. 'Z' | '0' .. '9' )*
+			loop1:
 			while (true) {
-				int alt2=2;
-				int LA2_0 = input.LA(1);
-				if ( ((LA2_0 >= '0' && LA2_0 <= '9')||(LA2_0 >= 'A' && LA2_0 <= 'Z')) ) {
-					alt2=1;
+				int alt1=2;
+				int LA1_0 = input.LA(1);
+				if ( ((LA1_0 >= '0' && LA1_0 <= '9')||(LA1_0 >= 'A' && LA1_0 <= 'Z')) ) {
+					alt1=1;
 				}
 
-				switch (alt2) {
+				switch (alt1) {
 				case 1 :
 					// LCC.g:
 					{
@@ -755,7 +753,7 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					break loop2;
+					break loop1;
 				}
 			}
 
@@ -775,8 +773,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = FUNCAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:386:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
-			// LCC.g:386:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// LCC.g:400:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
+			// LCC.g:400:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -786,17 +784,17 @@ public class LCCLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// LCC.g:386:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
-			int cnt3=0;
-			loop3:
+			// LCC.g:400:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			int cnt2=0;
+			loop2:
 			while (true) {
-				int alt3=2;
-				int LA3_0 = input.LA(1);
-				if ( ((LA3_0 >= '0' && LA3_0 <= '9')||LA3_0=='_'||(LA3_0 >= 'a' && LA3_0 <= 'z')) ) {
-					alt3=1;
+				int alt2=2;
+				int LA2_0 = input.LA(1);
+				if ( ((LA2_0 >= '0' && LA2_0 <= '9')||LA2_0=='_'||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
+					alt2=1;
 				}
 
-				switch (alt3) {
+				switch (alt2) {
 				case 1 :
 					// LCC.g:
 					{
@@ -812,11 +810,11 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					if ( cnt3 >= 1 ) break loop3;
-					EarlyExitException eee = new EarlyExitException(3, input);
+					if ( cnt2 >= 1 ) break loop2;
+					EarlyExitException eee = new EarlyExitException(2, input);
 					throw eee;
 				}
-				cnt3++;
+				cnt2++;
 			}
 
 			}
@@ -835,20 +833,20 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = TEXTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:390:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
-			// LCC.g:390:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
+			// LCC.g:404:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
+			// LCC.g:404:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
 			{
 			match('\"'); 
-			// LCC.g:390:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
-			loop4:
+			// LCC.g:404:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
+			loop3:
 			while (true) {
-				int alt4=2;
-				int LA4_0 = input.LA(1);
-				if ( ((LA4_0 >= ' ' && LA4_0 <= '!')||LA4_0=='-'||(LA4_0 >= '0' && LA4_0 <= '9')||(LA4_0 >= 'A' && LA4_0 <= 'Z')||LA4_0=='_'||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
-					alt4=1;
+				int alt3=2;
+				int LA3_0 = input.LA(1);
+				if ( ((LA3_0 >= ' ' && LA3_0 <= '!')||LA3_0=='-'||(LA3_0 >= '0' && LA3_0 <= '9')||(LA3_0 >= 'A' && LA3_0 <= 'Z')||LA3_0=='_'||(LA3_0 >= 'a' && LA3_0 <= 'z')) ) {
+					alt3=1;
 				}
 
-				switch (alt4) {
+				switch (alt3) {
 				case 1 :
 					// LCC.g:
 					{
@@ -864,7 +862,7 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					break loop4;
+					break loop3;
 				}
 			}
 
@@ -885,20 +883,20 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = NUMERO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:394:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// LCC.g:394:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// LCC.g:408:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// LCC.g:408:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// LCC.g:394:4: ( '0' .. '9' )+
-			int cnt5=0;
-			loop5:
+			// LCC.g:408:4: ( '0' .. '9' )+
+			int cnt4=0;
+			loop4:
 			while (true) {
-				int alt5=2;
-				int LA5_0 = input.LA(1);
-				if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
-					alt5=1;
+				int alt4=2;
+				int LA4_0 = input.LA(1);
+				if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
+					alt4=1;
 				}
 
-				switch (alt5) {
+				switch (alt4) {
 				case 1 :
 					// LCC.g:
 					{
@@ -914,35 +912,35 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					if ( cnt5 >= 1 ) break loop5;
-					EarlyExitException eee = new EarlyExitException(5, input);
+					if ( cnt4 >= 1 ) break loop4;
+					EarlyExitException eee = new EarlyExitException(4, input);
 					throw eee;
 				}
-				cnt5++;
+				cnt4++;
 			}
 
-			// LCC.g:394:18: ( '.' ( '0' .. '9' )+ )?
-			int alt7=2;
-			int LA7_0 = input.LA(1);
-			if ( (LA7_0=='.') ) {
-				alt7=1;
+			// LCC.g:408:18: ( '.' ( '0' .. '9' )+ )?
+			int alt6=2;
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0=='.') ) {
+				alt6=1;
 			}
-			switch (alt7) {
+			switch (alt6) {
 				case 1 :
-					// LCC.g:394:20: '.' ( '0' .. '9' )+
+					// LCC.g:408:20: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// LCC.g:394:24: ( '0' .. '9' )+
-					int cnt6=0;
-					loop6:
+					// LCC.g:408:24: ( '0' .. '9' )+
+					int cnt5=0;
+					loop5:
 					while (true) {
-						int alt6=2;
-						int LA6_0 = input.LA(1);
-						if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
-							alt6=1;
+						int alt5=2;
+						int LA5_0 = input.LA(1);
+						if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
+							alt5=1;
 						}
 
-						switch (alt6) {
+						switch (alt5) {
 						case 1 :
 							// LCC.g:
 							{
@@ -958,11 +956,11 @@ public class LCCLexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt6 >= 1 ) break loop6;
-							EarlyExitException eee = new EarlyExitException(6, input);
+							if ( cnt5 >= 1 ) break loop5;
+							EarlyExitException eee = new EarlyExitException(5, input);
 							throw eee;
 						}
-						cnt6++;
+						cnt5++;
 					}
 
 					}
@@ -986,20 +984,20 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = ESPACO_BRANCO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:398:2: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// LCC.g:398:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// LCC.g:412:2: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// LCC.g:412:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// LCC.g:398:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
-			int cnt8=0;
-			loop8:
+			// LCC.g:412:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			int cnt7=0;
+			loop7:
 			while (true) {
-				int alt8=2;
-				int LA8_0 = input.LA(1);
-				if ( ((LA8_0 >= '\t' && LA8_0 <= '\n')||LA8_0=='\r'||LA8_0==' ') ) {
-					alt8=1;
+				int alt7=2;
+				int LA7_0 = input.LA(1);
+				if ( ((LA7_0 >= '\t' && LA7_0 <= '\n')||LA7_0=='\r'||LA7_0==' ') ) {
+					alt7=1;
 				}
 
-				switch (alt8) {
+				switch (alt7) {
 				case 1 :
 					// LCC.g:
 					{
@@ -1015,11 +1013,11 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					if ( cnt8 >= 1 ) break loop8;
-					EarlyExitException eee = new EarlyExitException(8, input);
+					if ( cnt7 >= 1 ) break loop7;
+					EarlyExitException eee = new EarlyExitException(7, input);
 					throw eee;
 				}
-				cnt8++;
+				cnt7++;
 			}
 
 			_channel = HIDDEN;
@@ -1039,21 +1037,21 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = COMENTARIO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:402:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// LCC.g:402:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// LCC.g:416:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// LCC.g:416:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// LCC.g:402:12: (~ ( '\\n' | '\\r' ) )*
-			loop9:
+			// LCC.g:416:12: (~ ( '\\n' | '\\r' ) )*
+			loop8:
 			while (true) {
-				int alt9=2;
-				int LA9_0 = input.LA(1);
-				if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\t')||(LA9_0 >= '\u000B' && LA9_0 <= '\f')||(LA9_0 >= '\u000E' && LA9_0 <= '\uFFFF')) ) {
-					alt9=1;
+				int alt8=2;
+				int LA8_0 = input.LA(1);
+				if ( ((LA8_0 >= '\u0000' && LA8_0 <= '\t')||(LA8_0 >= '\u000B' && LA8_0 <= '\f')||(LA8_0 >= '\u000E' && LA8_0 <= '\uFFFF')) ) {
+					alt8=1;
 				}
 
-				switch (alt9) {
+				switch (alt8) {
 				case 1 :
 					// LCC.g:
 					{
@@ -1069,19 +1067,19 @@ public class LCCLexer extends Lexer {
 					break;
 
 				default :
-					break loop9;
+					break loop8;
 				}
 			}
 
-			// LCC.g:402:26: ( '\\r' )?
-			int alt10=2;
-			int LA10_0 = input.LA(1);
-			if ( (LA10_0=='\r') ) {
-				alt10=1;
+			// LCC.g:416:26: ( '\\r' )?
+			int alt9=2;
+			int LA9_0 = input.LA(1);
+			if ( (LA9_0=='\r') ) {
+				alt9=1;
 			}
-			switch (alt10) {
+			switch (alt9) {
 				case 1 :
-					// LCC.g:402:26: '\\r'
+					// LCC.g:416:26: '\\r'
 					{
 					match('\r'); 
 					}
@@ -1104,10 +1102,10 @@ public class LCCLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// LCC.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_DEF | T_DIFERENTE | T_DIVISAO | T_ELSE | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_IGUAL | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_NEW | T_NULL | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | T_WRITE | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO )
-		int alt11=36;
-		alt11 = dfa11.predict(input);
-		switch (alt11) {
+		// LCC.g:1:8: ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_DEF | T_DIFERENTE | T_DIVISAO | T_ELSE | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FLOAT | T_FOR | T_IF | T_IGUAL | T_INT | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_NEW | T_NULL | T_READ | T_RETURN | T_SOMA | T_STRING | T_SUBTRACAO | T_VIRGULA | T_WRITE | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO )
+		int alt10=38;
+		alt10 = dfa10.predict(input);
+		switch (alt10) {
 			case 1 :
 				// LCC.g:1:10: EOL
 				{
@@ -1200,161 +1198,175 @@ public class LCCLexer extends Lexer {
 				}
 				break;
 			case 14 :
-				// LCC.g:1:161: T_FOR
+				// LCC.g:1:161: T_FLOAT
+				{
+				mT_FLOAT(); 
+
+				}
+				break;
+			case 15 :
+				// LCC.g:1:169: T_FOR
 				{
 				mT_FOR(); 
 
 				}
 				break;
-			case 15 :
-				// LCC.g:1:167: T_IF
+			case 16 :
+				// LCC.g:1:175: T_IF
 				{
 				mT_IF(); 
 
 				}
 				break;
-			case 16 :
-				// LCC.g:1:172: T_IGUAL
+			case 17 :
+				// LCC.g:1:180: T_IGUAL
 				{
 				mT_IGUAL(); 
 
 				}
 				break;
-			case 17 :
-				// LCC.g:1:180: T_MAIOR
+			case 18 :
+				// LCC.g:1:188: T_INT
+				{
+				mT_INT(); 
+
+				}
+				break;
+			case 19 :
+				// LCC.g:1:194: T_MAIOR
 				{
 				mT_MAIOR(); 
 
 				}
 				break;
-			case 18 :
-				// LCC.g:1:188: T_MAIOROUIGUAL
+			case 20 :
+				// LCC.g:1:202: T_MAIOROUIGUAL
 				{
 				mT_MAIOROUIGUAL(); 
 
 				}
 				break;
-			case 19 :
-				// LCC.g:1:203: T_MENOR
+			case 21 :
+				// LCC.g:1:217: T_MENOR
 				{
 				mT_MENOR(); 
 
 				}
 				break;
-			case 20 :
-				// LCC.g:1:211: T_MENOROUIGUAL
+			case 22 :
+				// LCC.g:1:225: T_MENOROUIGUAL
 				{
 				mT_MENOROUIGUAL(); 
 
 				}
 				break;
-			case 21 :
-				// LCC.g:1:226: T_MULTIPLICACAO
+			case 23 :
+				// LCC.g:1:240: T_MULTIPLICACAO
 				{
 				mT_MULTIPLICACAO(); 
 
 				}
 				break;
-			case 22 :
-				// LCC.g:1:242: T_NEW
+			case 24 :
+				// LCC.g:1:256: T_NEW
 				{
 				mT_NEW(); 
 
 				}
 				break;
-			case 23 :
-				// LCC.g:1:248: T_NULL
+			case 25 :
+				// LCC.g:1:262: T_NULL
 				{
 				mT_NULL(); 
 
 				}
 				break;
-			case 24 :
-				// LCC.g:1:255: T_READ
+			case 26 :
+				// LCC.g:1:269: T_READ
 				{
 				mT_READ(); 
 
 				}
 				break;
-			case 25 :
-				// LCC.g:1:262: T_RETURN
+			case 27 :
+				// LCC.g:1:276: T_RETURN
 				{
 				mT_RETURN(); 
 
 				}
 				break;
-			case 26 :
-				// LCC.g:1:271: T_SOMA
+			case 28 :
+				// LCC.g:1:285: T_SOMA
 				{
 				mT_SOMA(); 
 
 				}
 				break;
-			case 27 :
-				// LCC.g:1:278: T_SUBTRACAO
+			case 29 :
+				// LCC.g:1:292: T_STRING
+				{
+				mT_STRING(); 
+
+				}
+				break;
+			case 30 :
+				// LCC.g:1:301: T_SUBTRACAO
 				{
 				mT_SUBTRACAO(); 
 
 				}
 				break;
-			case 28 :
-				// LCC.g:1:290: T_VIRGULA
+			case 31 :
+				// LCC.g:1:313: T_VIRGULA
 				{
 				mT_VIRGULA(); 
 
 				}
 				break;
-			case 29 :
-				// LCC.g:1:300: T_WRITE
+			case 32 :
+				// LCC.g:1:323: T_WRITE
 				{
 				mT_WRITE(); 
 
 				}
 				break;
-			case 30 :
-				// LCC.g:1:308: TIPOS
-				{
-				mTIPOS(); 
-
-				}
-				break;
-			case 31 :
-				// LCC.g:1:314: ID
+			case 33 :
+				// LCC.g:1:331: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 32 :
-				// LCC.g:1:317: FUNCAO
+			case 34 :
+				// LCC.g:1:334: FUNCAO
 				{
 				mFUNCAO(); 
 
 				}
 				break;
-			case 33 :
-				// LCC.g:1:324: TEXTO
+			case 35 :
+				// LCC.g:1:341: TEXTO
 				{
 				mTEXTO(); 
 
 				}
 				break;
-			case 34 :
-				// LCC.g:1:330: NUMERO
+			case 36 :
+				// LCC.g:1:347: NUMERO
 				{
 				mNUMERO(); 
 
 				}
 				break;
-			case 35 :
-				// LCC.g:1:337: ESPACO_BRANCO
+			case 37 :
+				// LCC.g:1:354: ESPACO_BRANCO
 				{
 				mESPACO_BRANCO(); 
 
 				}
 				break;
-			case 36 :
-				// LCC.g:1:351: COMENTARIO
+			case 38 :
+				// LCC.g:1:368: COMENTARIO
 				{
 				mCOMENTARIO(); 
 
@@ -1365,41 +1377,41 @@ public class LCCLexer extends Lexer {
 	}
 
 
-	protected DFA11 dfa11 = new DFA11(this);
-	static final String DFA11_eotS =
+	protected DFA10 dfa10 = new DFA10(this);
+	static final String DFA10_eotS =
 		"\5\uffff\1\40\3\uffff\1\44\6\uffff\1\53\1\55\17\uffff\2\33\2\uffff\3\33"+
-		"\1\70\1\33\4\uffff\6\33\1\101\1\33\1\103\1\33\1\uffff\1\105\1\106\6\33"+
-		"\1\uffff\1\115\1\uffff\1\33\2\uffff\1\117\1\120\3\33\1\124\1\uffff\1\105"+
-		"\2\uffff\1\33\1\126\1\33\1\uffff\1\130\1\uffff\1\105\1\uffff";
-	static final String DFA11_eofS =
-		"\131\uffff";
-	static final String DFA11_minS =
+		"\1\70\1\33\4\uffff\6\33\1\101\2\33\1\104\1\uffff\1\105\1\106\6\33\1\uffff"+
+		"\1\115\1\33\3\uffff\1\117\1\120\3\33\1\124\1\uffff\1\125\2\uffff\2\33"+
+		"\1\130\2\uffff\1\131\1\132\3\uffff";
+	static final String DFA10_eofS =
+		"\133\uffff";
+	static final String DFA10_minS =
 		"\1\11\4\uffff\1\75\2\60\1\uffff\1\57\1\60\3\uffff\2\60\2\75\1\uffff\2"+
-		"\60\3\uffff\2\60\7\uffff\1\145\1\146\2\uffff\1\163\1\162\1\157\1\60\1"+
-		"\164\4\uffff\1\167\1\154\1\141\1\151\1\162\1\141\1\60\1\145\1\60\1\141"+
-		"\1\uffff\2\60\1\154\1\144\1\165\1\156\1\151\1\153\1\uffff\1\60\1\uffff"+
-		"\1\164\2\uffff\2\60\1\162\1\164\1\156\1\60\1\uffff\1\60\2\uffff\1\156"+
-		"\1\60\1\147\1\uffff\1\60\1\uffff\1\60\1\uffff";
-	static final String DFA11_maxS =
+		"\60\1\uffff\1\60\2\uffff\1\60\7\uffff\1\145\1\146\2\uffff\1\163\1\157"+
+		"\1\162\1\60\1\164\4\uffff\1\167\1\154\1\141\1\162\1\151\1\141\1\60\1\145"+
+		"\1\141\1\60\1\uffff\2\60\1\154\1\144\1\165\1\151\1\156\1\153\1\uffff\1"+
+		"\60\1\164\3\uffff\2\60\1\162\1\156\1\164\1\60\1\uffff\1\60\2\uffff\1\156"+
+		"\1\147\1\60\2\uffff\2\60\3\uffff";
+	static final String DFA10_maxS =
 		"\1\175\4\uffff\1\75\2\172\1\uffff\1\57\1\172\3\uffff\2\172\2\75\1\uffff"+
-		"\2\172\3\uffff\2\172\7\uffff\1\145\1\146\2\uffff\1\163\1\162\1\157\1\172"+
-		"\1\164\4\uffff\1\167\1\154\1\164\1\151\1\162\1\141\1\172\1\145\1\172\1"+
-		"\141\1\uffff\2\172\1\154\1\144\1\165\1\156\1\151\1\153\1\uffff\1\172\1"+
-		"\uffff\1\164\2\uffff\2\172\1\162\1\164\1\156\1\172\1\uffff\1\172\2\uffff"+
-		"\1\156\1\172\1\147\1\uffff\1\172\1\uffff\1\172\1\uffff";
-	static final String DFA11_acceptS =
+		"\2\172\1\uffff\1\172\2\uffff\1\172\7\uffff\1\145\1\146\2\uffff\1\163\1"+
+		"\157\1\162\1\172\1\164\4\uffff\1\167\1\154\1\164\1\162\1\151\1\141\1\172"+
+		"\1\145\1\141\1\172\1\uffff\2\172\1\154\1\144\1\165\1\151\1\156\1\153\1"+
+		"\uffff\1\172\1\164\3\uffff\2\172\1\162\1\156\1\164\1\172\1\uffff\1\172"+
+		"\2\uffff\1\156\1\147\1\172\2\uffff\2\172\3\uffff";
+	static final String DFA10_acceptS =
 		"\1\uffff\1\1\1\2\1\3\1\4\3\uffff\1\10\2\uffff\1\13\1\14\1\15\4\uffff\1"+
-		"\25\2\uffff\1\32\1\33\1\34\2\uffff\1\37\1\40\1\41\1\42\1\43\1\20\1\5\2"+
-		"\uffff\1\44\1\11\5\uffff\1\22\1\21\1\24\1\23\12\uffff\1\17\10\uffff\1"+
-		"\7\1\uffff\1\16\1\uffff\1\36\1\26\6\uffff\1\12\1\uffff\1\27\1\30\3\uffff"+
-		"\1\6\1\uffff\1\35\1\uffff\1\31";
-	static final String DFA11_specialS =
-		"\131\uffff}>";
-	static final String[] DFA11_transitionS = {
+		"\27\2\uffff\1\34\1\uffff\1\36\1\37\1\uffff\1\41\1\42\1\43\1\44\1\45\1"+
+		"\21\1\5\2\uffff\1\46\1\11\5\uffff\1\24\1\23\1\26\1\25\12\uffff\1\20\10"+
+		"\uffff\1\7\2\uffff\1\17\1\22\1\30\6\uffff\1\12\1\uffff\1\31\1\32\3\uffff"+
+		"\1\6\1\16\2\uffff\1\40\1\33\1\35";
+	static final String DFA10_specialS =
+		"\133\uffff}>";
+	static final String[] DFA10_transitionS = {
 			"\2\36\2\uffff\1\36\22\uffff\1\36\1\10\1\34\5\uffff\1\4\1\15\1\22\1\25"+
-			"\1\27\1\26\1\uffff\1\11\12\35\1\uffff\1\1\1\21\1\5\1\20\2\uffff\32\32"+
+			"\1\30\1\27\1\uffff\1\11\12\35\1\uffff\1\1\1\21\1\5\1\20\2\uffff\32\32"+
 			"\1\3\1\uffff\1\14\3\uffff\1\33\1\6\1\33\1\7\1\12\1\16\2\33\1\17\4\33"+
-			"\1\23\1\33\1\30\1\33\1\24\1\31\7\33\1\2\1\uffff\1\13",
+			"\1\23\1\33\1\31\1\33\1\24\1\26\7\33\1\2\1\uffff\1\13",
 			"",
 			"",
 			"",
@@ -1413,7 +1425,7 @@ public class LCCLexer extends Lexer {
 			"",
 			"",
 			"",
-			"\12\33\45\uffff\1\33\1\uffff\13\33\1\47\2\33\1\46\13\33",
+			"\12\33\45\uffff\1\33\1\uffff\13\33\1\46\2\33\1\47\13\33",
 			"\12\33\45\uffff\1\33\1\uffff\5\33\1\50\7\33\1\51\14\33",
 			"\1\52",
 			"\1\54",
@@ -1421,10 +1433,10 @@ public class LCCLexer extends Lexer {
 			"\12\33\45\uffff\1\33\1\uffff\4\33\1\56\17\33\1\57\5\33",
 			"\12\33\45\uffff\1\33\1\uffff\4\33\1\60\25\33",
 			"",
+			"\12\33\45\uffff\1\33\1\uffff\23\33\1\61\6\33",
 			"",
 			"",
-			"\12\33\45\uffff\1\33\1\uffff\21\33\1\61\10\33",
-			"\12\33\45\uffff\1\33\1\uffff\23\33\1\62\6\33",
+			"\12\33\45\uffff\1\33\1\uffff\21\33\1\62\10\33",
 			"",
 			"",
 			"",
@@ -1453,8 +1465,8 @@ public class LCCLexer extends Lexer {
 			"\1\100",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
 			"\1\102",
+			"\1\103",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
-			"\1\104",
 			"",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
@@ -1466,8 +1478,8 @@ public class LCCLexer extends Lexer {
 			"\1\114",
 			"",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
-			"",
 			"\1\116",
+			"",
 			"",
 			"",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
@@ -1480,48 +1492,50 @@ public class LCCLexer extends Lexer {
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
 			"",
 			"",
-			"\1\125",
-			"\12\33\45\uffff\1\33\1\uffff\32\33",
+			"\1\126",
 			"\1\127",
-			"",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
 			"",
+			"",
 			"\12\33\45\uffff\1\33\1\uffff\32\33",
+			"\12\33\45\uffff\1\33\1\uffff\32\33",
+			"",
+			"",
 			""
 	};
 
-	static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
-	static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
-	static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
-	static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
-	static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
-	static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
-	static final short[][] DFA11_transition;
+	static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
+	static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
+	static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
+	static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
+	static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
+	static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
+	static final short[][] DFA10_transition;
 
 	static {
-		int numStates = DFA11_transitionS.length;
-		DFA11_transition = new short[numStates][];
+		int numStates = DFA10_transitionS.length;
+		DFA10_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
+			DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
 		}
 	}
 
-	protected class DFA11 extends DFA {
+	protected class DFA10 extends DFA {
 
-		public DFA11(BaseRecognizer recognizer) {
+		public DFA10(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 11;
-			this.eot = DFA11_eot;
-			this.eof = DFA11_eof;
-			this.min = DFA11_min;
-			this.max = DFA11_max;
-			this.accept = DFA11_accept;
-			this.special = DFA11_special;
-			this.transition = DFA11_transition;
+			this.decisionNumber = 10;
+			this.eot = DFA10_eot;
+			this.eof = DFA10_eof;
+			this.min = DFA10_min;
+			this.max = DFA10_max;
+			this.accept = DFA10_accept;
+			this.special = DFA10_special;
+			this.transition = DFA10_transition;
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_DEF | T_DIFERENTE | T_DIVISAO | T_ELSE | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FOR | T_IF | T_IGUAL | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_NEW | T_NULL | T_READ | T_RETURN | T_SOMA | T_SUBTRACAO | T_VIRGULA | T_WRITE | TIPOS | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO );";
+			return "1:1: Tokens : ( EOL | T_ABRECHAVE | T_ABRECOLCHETE | T_ABREPARENTESES | T_ATRIBUICAO | T_BREAK | T_DEF | T_DIFERENTE | T_DIVISAO | T_ELSE | T_FECHACHAVE | T_FECHACOLCHETE | T_FECHAPARENTESES | T_FLOAT | T_FOR | T_IF | T_IGUAL | T_INT | T_MAIOR | T_MAIOROUIGUAL | T_MENOR | T_MENOROUIGUAL | T_MULTIPLICACAO | T_NEW | T_NULL | T_READ | T_RETURN | T_SOMA | T_STRING | T_SUBTRACAO | T_VIRGULA | T_WRITE | ID | FUNCAO | TEXTO | NUMERO | ESPACO_BRANCO | COMENTARIO );";
 		}
 	}
 
