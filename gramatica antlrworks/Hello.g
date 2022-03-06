@@ -6,102 +6,9 @@ options {
 } 
 
 tokens {
-	EOL = ';'
-		;
-		
-	T_DEF = 'def'
-		;
 	
-	T_VIRGULA = ','
-		        ;
-		
-	T_ABREPARENTESES = '('
-		        ;
-		
-	T_FECHAPARENTESES = ')'
-		        ;
-		
-	T_ABRECHAVE = '{'
-		        ;
-		
-	T_FECHACHAVE =  '}'
-		        ;
-		
-	T_ABRECOLCHETE = '['
-		        ;
-		
-	T_FECHACOLCHETE =  ']'
-		        ;
-
-	T_ATRIBUICAO = '='
-		        ;
-		
-	T_IGUAL = '=='
-		        ;
-		
-	T_DIFERENTE = '!='
-		        ;
-
-	T_MAIOROUIGUAL  = '>=' 
-		        ;
-		
-	T_MENOROUIGUAL = '<='
-		        ;
-		
-	T_MAIOR = '>'
-		        ;
-		
-	T_MENOR = '<'
-		        ;
-		
-	T_SOMA = '+'
-		        ;
-		
-	T_SUBTRACAO = '-'
-		        ;
-		
-	T_MULTIPLICACAO = '*'
-		        ;
-		
-	T_DIVISAO = '/'
-		  ;
-		  
-	T_WRITE = 'print'
-		;
-		
-	T_READ = 'read'
-		;
-		
-	T_RETURN = 'return'
-		;
-	
-	T_IF = 'if'
-		;
-		
-	T_ELSE = 'else'
-		;
-
-	T_FOR = 'for'
-		;
-
-	T_NEW = 'new'
-		;
-	
-	T_BREAK = 'break'
-		;
-
-	T_NULL = 'null'
-		;
-	
-	T_INT =  'int'
-		;
-
-	T_FLOAT = 'float'
-		;
-
-	T_STRING =  'string'
-		;
 } 
+
 
 program	:
 	( statement | funclist )
@@ -124,11 +31,11 @@ funcdef
 
 
 paramlist 
-	: ( ( T_INT | T_FLOAT | T_STRING )  {adicionaToken(input.LT(1));} ID paramlist_linha )?
+	: (T_INT  | T_FLOAT | T_STRING) ID paramlist_linha 
+	|
 	;
 
-paramlist_linha
-	: T_VIRGULA paramlist 
+paramlist_linha	: T_VIRGULA paramlist 
 	| /* epsilon */ 
 	;
 
@@ -150,7 +57,7 @@ statement:
 
 vardecl	
 	: 
-		{setUltTipo(input.LT(1).getText());} ( T_INT | T_FLOAT | T_STRING ) 
+		{setUltTipo(input.LT(1).getText());} ( T_INT  | T_FLOAT | T_STRING ) 
 		{adicionaToken(input.LT(1));} ID (T_ABRECOLCHETE ( {verificaToken(input.LT(1));} ID | NUMERO ) T_FECHACOLCHETE)*
 	;
 
@@ -166,7 +73,7 @@ atribstat
 	( expression | allocexpression | funccall | TEXTO )
 	;
 
-allocexpression : T_NEW ( T_INT | T_FLOAT | T_STRING ) (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
+allocexpression : T_NEW ( T_INT  | T_FLOAT | T_STRING ) (T_ABRECOLCHETE numexpression T_FECHACOLCHETE)+
 	;
 
 funccall
@@ -253,3 +160,98 @@ COMENTARIO
     : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;} 
     ;
 
+EOL : ';'
+	;
+	
+T_DEF : 'def'
+	;
+
+T_VIRGULA : ','
+			;
+	
+T_ABREPARENTESES : '('
+			;
+	
+T_FECHAPARENTESES : ')'
+			;
+	
+T_ABRECHAVE : '{'
+			;
+	
+T_FECHACHAVE :  '}'
+			;
+	
+T_ABRECOLCHETE : '['
+			;
+	
+T_FECHACOLCHETE :  ']'
+			;
+
+T_ATRIBUICAO : '='
+			;
+	
+T_IGUAL : '=='
+			;
+	
+T_DIFERENTE : '!='
+			;
+
+T_MAIOROUIGUAL  : '>=' 
+			;
+	
+T_MENOROUIGUAL : '<='
+			;
+	
+T_MAIOR : '>'
+			;
+	
+T_MENOR : '<'
+			;
+	
+T_SOMA : '+'
+			;
+	
+T_SUBTRACAO : '-'
+			;
+	
+T_MULTIPLICACAO : '*'
+			;
+	
+T_DIVISAO : '/'
+	  ;
+	  
+T_WRITE : 'print'
+	;
+	
+T_READ : 'read'
+	;
+	
+T_RETURN : 'return'
+	;
+
+T_IF : 'if'
+	;
+	
+T_ELSE : 'else'
+	;
+
+T_FOR : 'for'
+	;
+
+T_NEW : 'new'
+	;
+
+T_BREAK : 'break'
+	;
+
+T_NULL : 'null'
+	;
+
+T_INT : 'int'
+	;
+
+T_FLOAT : 'float'
+	;
+
+T_STRING : 'string'
+	;
