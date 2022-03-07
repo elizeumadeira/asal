@@ -1,5 +1,11 @@
 grammar LCC;
 
+/*
+Alunos:
+	Lucas Tavares de Souza (16101113)
+	Elizeu Santos Madeira (20200610)
+*/
+
 options {
     backtrack=true;
     k=1;
