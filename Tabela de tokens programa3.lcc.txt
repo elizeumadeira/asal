@@ -2,10 +2,10 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 1               | T_DEF           | --              | --              | def             | 
 1               | FUNCAO          | --              | --              | power           | 
 1               | T_ABREPARENTESE | --              | --              | (               | 
-1               | TIPOS           | --              | --              | int             | 
+1               | T_INT           | --              | --              | int             | 
 1               | ID              | int             | power           | BASE            | 
 1               | T_VIRGULA       | --              | --              | ,               | 
-1               | TIPOS           | --              | --              | int             | 
+1               | T_INT           | --              | --              | int             | 
 1               | ID              | int             | power           | A               | 
 1               | T_FECHAPARENTES | --              | --              | )               | 
 1               | T_ABRECHAVE     | --              | --              | {               | 
@@ -16,7 +16,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 2               | NUMERO          | --              | --              | 0               | 
 2               | T_FECHAPARENTES | --              | --              | )               | 
 2               | T_ABRECHAVE     | --              | --              | {               | 
-3               | TIPOS           | --              | --              | int             | 
+3               | T_INT           | --              | --              | int             | 
 3               | ID              | int             | power           | P               | 
 3               | EOL             | --              | --              | ;               | 
 4               | ID              | int             | power           | P               | 
@@ -49,13 +49,13 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 10              | T_ABREPARENTESE | --              | --              | (               | 
 10              | T_FECHAPARENTES | --              | --              | )               | 
 10              | T_ABRECHAVE     | --              | --              | {               | 
-11              | TIPOS           | --              | --              | int             | 
+11              | T_INT           | --              | --              | int             | 
 11              | ID              | int             | main            | BASE            | 
 11              | EOL             | --              | --              | ;               | 
-12              | TIPOS           | --              | --              | int             | 
+12              | T_INT           | --              | --              | int             | 
 12              | ID              | int             | main            | A               | 
 12              | EOL             | --              | --              | ;               | 
-13              | TIPOS           | --              | --              | int             | 
+13              | T_INT           | --              | --              | int             | 
 13              | ID              | int             | main            | RESULT          | 
 13              | EOL             | --              | --              | ;               | 
 15              | T_WRITE         | --              | --              | print           | 
@@ -94,7 +94,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 28              | T_ABREPARENTESE | --              | --              | (               | 
 28              | T_FECHAPARENTES | --              | --              | )               | 
 28              | T_ABRECHAVE     | --              | --              | {               | 
-29              | TIPOS           | --              | --              | int             | 
+29              | T_INT           | --              | --              | int             | 
 29              | ID              | int             | largest_element | N               | 
 29              | EOL             | --              | --              | ;               | 
 30              | T_WRITE         | --              | --              | print           | 
@@ -103,13 +103,13 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 31              | T_READ          | --              | --              | read            | 
 31              | ID              | int             | largest_element | N               | 
 31              | EOL             | --              | --              | ;               | 
-33              | TIPOS           | --              | --              | int             | 
+33              | T_INT           | --              | --              | int             | 
 33              | ID              | int             | largest_element | ARR             | 
 33              | T_ABRECOLCHETE  | --              | --              | [               | 
 33              | ID              | int             | largest_element | N               | 
 33              | T_FECHACOLCHETE | --              | --              | ]               | 
 33              | EOL             | --              | --              | ;               | 
-35              | TIPOS           | --              | --              | int             | 
+35              | T_INT           | --              | --              | int             | 
 35              | ID              | int             | largest_element | I               | 
 35              | EOL             | --              | --              | ;               | 
 36              | T_FOR           | --              | --              | for             | 
@@ -139,7 +139,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 38              | T_FECHACOLCHETE | --              | --              | ]               | 
 38              | EOL             | --              | --              | ;               | 
 39              | T_FECHACHAVE    | --              | --              | }               | 
-42              | TIPOS           | --              | --              | int             | 
+42              | T_INT           | --              | --              | int             | 
 42              | ID              | int             | largest_element | O               | 
 42              | EOL             | --              | --              | ;               | 
 43              | T_FOR           | --              | --              | for             | 
@@ -202,13 +202,13 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 55              | T_ABREPARENTESE | --              | --              | (               | 
 55              | T_FECHAPARENTES | --              | --              | )               | 
 55              | T_ABRECHAVE     | --              | --              | {               | 
-56              | TIPOS           | --              | --              | int             | 
+56              | T_INT           | --              | --              | int             | 
 56              | ID              | int             | adding_two_matr | R               | 
 56              | EOL             | --              | --              | ;               | 
-57              | TIPOS           | --              | --              | int             | 
+57              | T_INT           | --              | --              | int             | 
 57              | ID              | int             | adding_two_matr | C               | 
 57              | EOL             | --              | --              | ;               | 
-59              | TIPOS           | --              | --              | int             | 
+59              | T_INT           | --              | --              | int             | 
 59              | ID              | int             | adding_two_matr | J               | 
 59              | EOL             | --              | --              | ;               | 
 61              | T_WRITE         | --              | --              | print           | 
@@ -223,7 +223,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 64              | T_READ          | --              | --              | read            | 
 64              | ID              | int             | adding_two_matr | C               | 
 64              | EOL             | --              | --              | ;               | 
-66              | TIPOS           | --              | --              | int             | 
+66              | T_INT           | --              | --              | int             | 
 66              | ID              | int             | adding_two_matr | A               | 
 66              | T_ABRECOLCHETE  | --              | --              | [               | 
 66              | ID              | int             | adding_two_matr | R               | 
@@ -232,7 +232,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 66              | ID              | int             | adding_two_matr | C               | 
 66              | T_FECHACOLCHETE | --              | --              | ]               | 
 66              | EOL             | --              | --              | ;               | 
-67              | TIPOS           | --              | --              | int             | 
+67              | T_INT           | --              | --              | int             | 
 67              | ID              | int             | adding_two_matr | B               | 
 67              | T_ABRECOLCHETE  | --              | --              | [               | 
 67              | ID              | int             | adding_two_matr | R               | 
@@ -241,7 +241,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 67              | ID              | int             | adding_two_matr | C               | 
 67              | T_FECHACOLCHETE | --              | --              | ]               | 
 67              | EOL             | --              | --              | ;               | 
-68              | TIPOS           | --              | --              | int             | 
+68              | T_INT           | --              | --              | int             | 
 68              | ID              | int             | adding_two_matr | SUM             | 
 68              | T_ABRECOLCHETE  | --              | --              | [               | 
 68              | ID              | int             | adding_two_matr | R               | 
@@ -253,7 +253,7 @@ LINHA           | TOKEN           | TIPO            | FUNCAO          | VALOR   
 70              | T_WRITE         | --              | --              | print           | 
 70              | TEXTO           | --              | --              | "Enter elements | 
 70              | EOL             | --              | --              | ;               | 
-71              | TIPOS           | --              | --              | int             | 
+71              | T_INT           | --              | --              | int             | 
 71              | ID              | int             | adding_two_matr | I               | 
 71              | EOL             | --              | --              | ;               | 
 72              | T_FOR           | --              | --              | for             | 
