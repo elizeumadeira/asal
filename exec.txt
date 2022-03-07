@@ -1,6 +1,17 @@
 # rodar estes comandos
 java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool LCC.g && javac -cp ./antlr-3.5.2-complete.jar;. *.java
 
+# windows
 java -cp ./antlr-3.5.2-complete.jar;. LCCParser programa.lcc
 java -cp ./antlr-3.5.2-complete.jar;. LCCParser programa2.lcc
 java -cp ./antlr-3.5.2-complete.jar;. LCCParser programa3.lcc
+
+
+
+#ubuntu
+java -cp antlr-3.5.2-complete.jar org.antlr.Tool LCC.g && javac -cp antlr-3.5.2-complete.jar *.java
+
+# ubuntu
+java -cp antlr-3.5.2-complete.jar:. LCCParser programa.lcc
+java -cp antlr-3.5.2-complete.jar:. LCCParser programa2.lcc
+java -cp antlr-3.5.2-complete.jar:. LCCParser programa3.lcc
