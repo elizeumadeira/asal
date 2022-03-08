@@ -196,6 +196,7 @@ para:
 
 
 Da mesma forma “funclist”:
+
 ![as_3_5](img/as_3_5.PNG?raw=true)
 
 para:
@@ -206,14 +207,15 @@ para:
 
 **Questão 4: Faça LCC-2021-2 ser uma gramática em LL(1). É permitido adicionar novos terminais na gramática, se achar necessário. Depois disso, mostre que LCC-2021-2 está em LL(1) (você pode usar o Teorema ou a tabela de reconhecimento sintático vistos em videoaula).**
 
-A tabela de parseamento para garantir que a linguagem se encontra em LL(1) esta presente na planilha **"first-follow.ods"**.
+A gramática é uma gramática LL(1). Originalmente obtivemos alguns problemas com mais produções que dava para o mesmo valor terminal (no caso, não estava em LL(1)), mas após algumas mudanças conseguimos ajustar. Basicamente, quando opcionalmente podíamos chamar, por exemplo “ID | TEXTO | EXPRESSION” dava problema, pois EXPRESSION gera ID (fazendo a gramática não estar em LL(1)). A tabela de reconhecimento sintático está junto do projeto em uma planilha chamada “first-follow.ods”
 
 ## Mudanças na linguagem
 
 Mudanças na linguagem
 Algumas mudanças na linguagem solicitada pelo professor foram necessárias, muitas delas para ser possível implementar os exemplos de programas corretamente. A linguagem foi “aumentada” visto que a sugestão inicial definida no enunciado do trabalho é bastante limitada. As mudanças solicitada/sugeridas nos enunciados das questões de AS e AL foram comentadas e explicadas nas respostas do relatório. Abaixo estão apenas as mudanças implementadas fora do escopo das questões do trabalho.
 Entre as mudanças estão:
-- As regras foram escritas com letras minúsculas e as os tokens em letras maiúsculas para ficarem na convenção da ferramenta usada (antlrworks);
+- Existe um ident foi separado entre ID e FUNCAO, pois pelo exemplo 1, a regra parece estar variaveis em maiusculo e funções em minusculos. Portanto separamos para podermos criar duas regras para ID e FUNCAO;
+- As regras foram escritas com letras minúsculas e as os tokens em letras maiúsculas para ficarem na convenção da ferramenta usada (antlr);
 - As variáveis possuem escopo de função (mas não de bloco). A ferramenta até implementa um escopo de bloco, mas eu inseri apenas o de função para poder repetir nomes de variáveis em funções diferentes e facilitar a nomenclatura das variáveis nos exemplos;
 - "returnstat" agora aceita opcionalmente textos ou expressões;
 - "atribstat" agora aceita textos como valor de atribuição, pois string é um tipo possível na nossa linguagem;
