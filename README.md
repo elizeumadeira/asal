@@ -17,6 +17,45 @@ Os arquivos com as respostas das questões do relatório são os seguintes:
 
 Arquivo LCC.g
 
+**Questão 2: Construção dos diagramas de transição para cada token**
+![EOL](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/EOL.jpg)
+![ESPACO_BRANCO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/ESPACO_BRANCO.jpg)
+![FUNCAO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/FUNCAO.jpg)
+![ID](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/ID.jpg)
+![NUMERO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/NUMERO.jpg)
+![T_ABRECHAVE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_ABRECHAVE.jpg)
+![T_FECHACHAVE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_FECHACHAVE.jpg)
+![T_ABRECOLCHETE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_ABRECOLCHETE.jpg)
+![T_FECHACOLCHETE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_FECHACOLCHETE.jpg)
+![T_ABREPARENTESES](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_ABREPARENTESES.jpg)
+![T_FECHAPARENTESES](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_FECHAPARENTESES.jpg)
+![T_ATRIBUICAO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_ATRIBUICAO.jpg)
+![T_BREAK](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_BREAK.jpg)
+![T_DEF](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_DEF.jpg)
+![T_DIFERENTE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_DIFERENTE.jpg)
+![T_ELSE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_ELSE.jpg)
+![T_DIVISAO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_DIVISAO.jpg)
+![T_FLOAT](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_FLOAT.jpg)
+![T_FOR](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_FOR.jpg)
+![T_IF](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_IF.jpg)
+![T_IGUAL](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_IGUAL.jpg)
+![T_INT](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_INT.jpg)
+![T_MAIOR](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_MAIOR.jpg)
+![T_MAIOROUIGUAL](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_MAIOROUIGUAL.jpg)
+![T_MENOR](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_MENOR.jpg)
+![T_MENOROUIGUAL](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_MENOROUIGUAL.jpg)
+![T_MULTIPLICACAO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_MULTIPLICACAO.jpg)
+![T_SUBTRACAO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_SUBTRACAO.jpg)
+![T_NEW](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_NEW.jpg)
+![T_NULL](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_NULL.jpg)
+![T_READ](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_READ.jpg)
+![T_RETURN](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_RETURN.jpg)
+![T_SOMA](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_SOMA.jpg)
+![T_STRING](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_STRING.jpg)
+![T_WRITE](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/T_WRITE.jpg)
+![TEXTO](https://github.com/elizeumadeira/asal/blob/main/gramatica%20antlrworks/rules/TEXTO.jpg)
+
+
 **Questão 3: Descrição de uma tabela de símbolos (a tabela deverá guardar tokens identificadores seguido por pelo menos um atributo do token guardado na tabela);**
 
 Ao testar o programa, o sistema gerará um arquivo txt com o conteúdo da tabela de tokens. O nome do arquivo é "Tabela de tokens " + <nome do programa> + ".txt". Estamos enviando a tabela de tokens dos programas de teste exigidos no trabalho, sendo eles "**Tabela de tokens programa.lcc.txt**", "**Tabela de tokens programa2.lcc.txt**", "**Tabela de tokens programa3.lcc.txt**" e "**Tabela de tokens test.lcc.txt**"

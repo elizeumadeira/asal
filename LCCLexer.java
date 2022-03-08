@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 LCC.g 2022-03-06 18:42:49
+// $ANTLR 3.5.2 LCC.g 2022-03-08 18:52:46
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -724,11 +724,11 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:392:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
-			// LCC.g:392:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
+			// LCC.g:398:2: ( 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )* )
+			// LCC.g:398:4: 'A' .. 'Z' ( 'A' .. 'Z' | '0' .. '9' )*
 			{
 			matchRange('A','Z'); 
-			// LCC.g:392:15: ( 'A' .. 'Z' | '0' .. '9' )*
+			// LCC.g:398:15: ( 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -773,8 +773,8 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = FUNCAO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:396:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
-			// LCC.g:396:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// LCC.g:402:2: ( ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+ )
+			// LCC.g:402:4: ( 'a' .. 'z' ) ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -784,7 +784,7 @@ public class LCCLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// LCC.g:396:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
+			// LCC.g:402:17: ( 'a' .. 'z' | '0' .. '9' | '_' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -833,11 +833,11 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = TEXTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:400:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
-			// LCC.g:400:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
+			// LCC.g:406:2: ( '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"' )
+			// LCC.g:406:4: '\"' ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )* '\"'
 			{
 			match('\"'); 
-			// LCC.g:400:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
+			// LCC.g:406:8: ( 'A' .. 'Z' | 'a' .. 'z' | '0' .. '9' | ' ' | '!' | '_' | '-' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -883,10 +883,10 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = NUMERO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:404:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
-			// LCC.g:404:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// LCC.g:410:2: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// LCC.g:410:4: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			// LCC.g:404:4: ( '0' .. '9' )+
+			// LCC.g:410:4: ( '0' .. '9' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -919,7 +919,7 @@ public class LCCLexer extends Lexer {
 				cnt4++;
 			}
 
-			// LCC.g:404:18: ( '.' ( '0' .. '9' )+ )?
+			// LCC.g:410:18: ( '.' ( '0' .. '9' )+ )?
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='.') ) {
@@ -927,10 +927,10 @@ public class LCCLexer extends Lexer {
 			}
 			switch (alt6) {
 				case 1 :
-					// LCC.g:404:20: '.' ( '0' .. '9' )+
+					// LCC.g:410:20: '.' ( '0' .. '9' )+
 					{
 					match('.'); 
-					// LCC.g:404:24: ( '0' .. '9' )+
+					// LCC.g:410:24: ( '0' .. '9' )+
 					int cnt5=0;
 					loop5:
 					while (true) {
@@ -984,10 +984,10 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = ESPACO_BRANCO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:408:2: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// LCC.g:408:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// LCC.g:414:2: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// LCC.g:414:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// LCC.g:408:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// LCC.g:414:5: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt7=0;
 			loop7:
 			while (true) {
@@ -1037,12 +1037,12 @@ public class LCCLexer extends Lexer {
 		try {
 			int _type = COMENTARIO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// LCC.g:412:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// LCC.g:412:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// LCC.g:418:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// LCC.g:418:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// LCC.g:412:12: (~ ( '\\n' | '\\r' ) )*
+			// LCC.g:418:12: (~ ( '\\n' | '\\r' ) )*
 			loop8:
 			while (true) {
 				int alt8=2;
@@ -1071,7 +1071,7 @@ public class LCCLexer extends Lexer {
 				}
 			}
 
-			// LCC.g:412:26: ( '\\r' )?
+			// LCC.g:418:26: ( '\\r' )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\r') ) {
@@ -1079,7 +1079,7 @@ public class LCCLexer extends Lexer {
 			}
 			switch (alt9) {
 				case 1 :
-					// LCC.g:412:26: '\\r'
+					// LCC.g:418:26: '\\r'
 					{
 					match('\r'); 
 					}
