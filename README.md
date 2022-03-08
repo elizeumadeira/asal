@@ -216,8 +216,7 @@ Algumas mudanças na linguagem solicitada pelo professor foram necessárias, mui
 Entre as mudanças estão:
 - Existe um ident foi separado entre ID e FUNCAO, pois pelo exemplo 1, a regra parece estar variaveis em maiusculo e funções em minusculos. Portanto separamos para podermos criar duas regras para ID e FUNCAO;
 - As regras foram escritas com letras minúsculas e as os tokens em letras maiúsculas para ficarem na convenção da ferramenta usada (antlr);
-- As variáveis possuem escopo de função (mas não de bloco). A ferramenta até implementa um escopo de bloco, mas eu inseri apenas o de função para poder repetir nomes de variáveis em funções diferentes e facilitar a nomenclatura das variáveis nos exemplos;
-- "returnstat" agora aceita opcionalmente textos ou expressões;
+- As variáveis possuem escopo de função (mas não de bloco). A ferramenta até implementa um escopo de bloco nativo, mas eu inseri apenas o de função para poder repetir nomes de variáveis em funções diferentes e facilitar a nomenclatura das variáveis nos exemplos;
 - "atribstat" agora aceita textos como valor de atribuição, pois string é um tipo possível na nossa linguagem;
-- "paramlistcall" agora aceita textos e expressões como parâmetro de envio;
-- "printstat" agora permite a escrita de textos ou expressões;
+- "paramlistcall" agora aceita textos e expressões como parâmetro de envio. Nenhum motivo prático, apenas para ficar mais parecido com uma linguagem real;
+- "printstat" e "returnstat" agora permite a escrita de textos ou expressões. Nenhum motivo prático, apenas para ficar mais parecido com uma linguagem real.
