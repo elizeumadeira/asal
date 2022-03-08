@@ -158,6 +158,52 @@ Com as classes exportadas, basta criar compilar usando comandos do java. É poss
 
 A versão convencional da gramática encontra-se no arquivo **gramatica_convencional.txt** na raiz do projeto.
 
+**Questão 2: A sua LCC-2021-2 possui recursão à esquerda? Justifique detalhadamente sua resposta. Se ela tiver recursão à esquerda, então remova tal recursão.**
+
+A nossa LCC-2021-2 não possui recursão à esquerda, pois todas as regras jamais aparecem à esquerda de suas produções. Ou seja, sempre que há uma produção recursiva, primeiro vem um valor terminal ou não-terminal antes da recursão como é o caso da produção “statelist”.
+
+![as_2_1](https://github.com/elizeumadeira/asal/blob/main/img/as_2_1.jpg)
+
+Considerando a gramática em sua forma convencional (como pode ser visto no arquivo “gramatica_convencional.txt”) as produções foram quebradas em diversas produções auxiliares, portanto nem recursão direta há mais.
+
+A LLC-2021-2 original também não possui recursão à esquerda. As recursões que possuem, são à direita, como nos exemplos abaixo:
+
+![as_2_2](https://github.com/elizeumadeira/asal/blob/main/img/as_2_2.jpg)
+
+Onde o ‘A’ está à direita de ‘alpha’ (a), portanto com recursão à direita.
+
+**Questão 3: A sua LCC-2021-2 está fatorada à esquerda? Justifique detalhadamente sua resposta. Se ela não estiver fatorada à esquerda, então fatore.**
+
+A linguagem estava fatorada à esquerda na regra “paramlist” pois o início das produções coincidem ( (T_INT | T_STRING | T_FLOAT) ID) e o subsequente é opcional (T_VIRGULA paramlist):
+
+![as_3_1](https://github.com/elizeumadeira/asal/blob/main/img/as_3_1.jpg)
+
+Para arrumar a fatoração, criou-se a regra “paramlist_linha”
+
+![as_3_2](https://github.com/elizeumadeira/asal/blob/main/img/as_3_2.jpg)
+
+Desta forma sempre que o interpretador produzir “TIPOS ID” ele não precisará voltar na árvore de parseamento quando o programa não possuir “T_VIRGULA paramlist” e produzir somente a primeira parte pois agora a segunda parte da produção é uma produção separada (paramlist_linha) e pode dar continuidade ou não à lista de parametros.
+
+
+Da mesma forma “paramlistcall”:
+
+![as_3_3](https://github.com/elizeumadeira/asal/blob/main/img/as_3_3.jpg)
+
+para:
+
+![as_3_4](https://github.com/elizeumadeira/asal/blob/main/img/as_3_4.jpg)
+
+
+
+Da mesma forma “funclist”:
+![as_3_5](https://github.com/elizeumadeira/asal/blob/main/img/as_3_5.jpg)
+
+para:
+
+![as_3_6](https://github.com/elizeumadeira/asal/blob/main/img/as_3_6.jpg)
+
+
+
 **Questão 4: Faça LCC-2021-2 ser uma gramática em LL(1). É permitido adicionar novos terminais na gramática, se achar necessário. Depois disso, mostre que LCC-2021-2 está em LL(1) (você pode usar o Teorema ou a tabela de reconhecimento sintático vistos em videoaula).**
 
 A tabela de parseamento para garantir que a linguagem se encontra em LL(1) esta presente na planilha **"first-follow.ods"**.
