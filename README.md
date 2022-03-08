@@ -209,6 +209,10 @@ para:
 
 A gramática é uma gramática LL(1). Originalmente obtivemos alguns problemas com mais produções que dava para o mesmo valor terminal (no caso, não estava em LL(1)), mas após algumas mudanças conseguimos ajustar. Basicamente, quando opcionalmente podíamos chamar, por exemplo “ID | TEXTO | EXPRESSION” dava problema, pois EXPRESSION gera ID (fazendo a gramática não estar em LL(1)). A tabela de reconhecimento sintático está junto do projeto em uma planilha chamada “first-follow.ods”
 
+**Questão 6: se usou ferramenta, uma descrição da entrada exigida pela ferramenta e da saída dada por ela.**
+
+Mesma resposta de AL. 6
+
 ## Mudanças na linguagem
 
 Mudanças na linguagem
