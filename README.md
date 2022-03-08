@@ -162,13 +162,13 @@ A versão convencional da gramática encontra-se no arquivo **gramatica_convenci
 
 A nossa LCC-2021-2 não possui recursão à esquerda, pois todas as regras jamais aparecem à esquerda de suas produções. Ou seja, sempre que há uma produção recursiva, primeiro vem um valor terminal ou não-terminal antes da recursão como é o caso da produção “statelist”.
 
-![as_2_1](https://github.com/elizeumadeira/asal/main/img/as_2_1.PNG)
+![as_2_1](img/as_2_1.PNG?raw=true)
 
 Considerando a gramática em sua forma convencional (como pode ser visto no arquivo “gramatica_convencional.txt”) as produções foram quebradas em diversas produções auxiliares, portanto nem recursão direta há mais.
 
 A LLC-2021-2 original também não possui recursão à esquerda. As recursões que possuem, são à direita, como nos exemplos abaixo:
 
-![as_2_2](https://github.com/elizeumadeira/asal/main/img/as_2_2.PNG)
+![as_2_2](img/as_2_2.PNG?raw=true)
 
 Onde o ‘A’ está à direita de ‘alpha’ (a), portanto com recursão à direita.
 
@@ -176,31 +176,31 @@ Onde o ‘A’ está à direita de ‘alpha’ (a), portanto com recursão à di
 
 A linguagem estava fatorada à esquerda na regra “paramlist” pois o início das produções coincidem ( (T_INT | T_STRING | T_FLOAT) ID) e o subsequente é opcional (T_VIRGULA paramlist):
 
-![as_3_1](https://github.com/elizeumadeira/asal/main/img/as_3_1.PNG)
+![as_3_1](img/as_3_1.PNG?raw=true)
 
 Para arrumar a fatoração, criou-se a regra “paramlist_linha”
 
-![as_3_2](https://github.com/elizeumadeira/asal/main/img/as_3_2.PNG)
+![as_3_2](img/as_3_2.PNG?raw=true)
 
 Desta forma sempre que o interpretador produzir “TIPOS ID” ele não precisará voltar na árvore de parseamento quando o programa não possuir “T_VIRGULA paramlist” e produzir somente a primeira parte pois agora a segunda parte da produção é uma produção separada (paramlist_linha) e pode dar continuidade ou não à lista de parametros.
 
 
 Da mesma forma “paramlistcall”:
 
-![as_3_3](https://github.com/elizeumadeira/asal/main/img/as_3_3.PNG)
+![as_3_3](img/as_3_3.PNG?raw=true)
 
 para:
 
-![as_3_4](https://github.com/elizeumadeira/asal/main/img/as_3_4.PNG)
+![as_3_4](img/as_3_4.PNG?raw=true)
 
 
 
 Da mesma forma “funclist”:
-![as_3_5](https://github.com/elizeumadeira/asal/main/img/as_3_5.PNG)
+![as_3_5](img/as_3_5.PNG?raw=true)
 
 para:
 
-![as_3_6](https://github.com/elizeumadeira/asal/main/img/as_3_6.PNG)
+![as_3_6](img/as_3_6.PNG?raw=true)
 
 
 
