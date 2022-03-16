@@ -1,14 +1,22 @@
 # ALAS
 
-Todos os códigos, dados de entrada e ferramentas usadas nesse trabalho, bem como exemplo de todas as saídas estão na raiz do sistema. As classes java existentes foram compiladas usando sistema operacional Windows e podem não funcionar em outros sistemas operacionais.
+Todos os códigos, dados de entrada e ferramentas usadas nesse trabalho, bem como exemplo de todas as saídas estão na raiz do sistema. As classes java existentes foram compiladas usando sistema operacional Windows e Ubuntu (ambos os sistemas respeitando as a versão Java exigida no trabalho).
 
-Para recompilar as classes basta rodar o comando abaixo
+No Linux, para compilar e rodar todos os exemplos, basta rodar o arquivo Makefile
+
+    make
+
+No windows para recompilar as classes basta rodar o comando abaixo
 
     java -cp ./antlr-3.5.2-complete.jar;. org.antlr.Tool LCC.g && javac -cp ./antlr-3.5.2-complete.jar;. *.java
 
 Para rodar um programa na gramática, basta executar na linha de comando na raiz do trabalho
 
     java -cp ./antlr-3.5.2-complete.jar;. LCCParser programa.lcc
+
+
+O sistema irá exportar os arquivos .java e .class e rodar os .class com as entradas de exemplo (programa.lcc, programa2.lcc e programa3.lcc) e ainda expotará as tabelas de tokens para todos os programas de entrada
+
 
 Os arquivos com as respostas das questões do relatório são os seguintes: 
 
@@ -18,6 +26,8 @@ Os arquivos com as respostas das questões do relatório são os seguintes:
 Arquivo LCC.g
 
 **Questão 2: Construção dos diagramas de transição para cada token**
+
+
 ![EOL](https://github.com/elizeumadeira/asal/blob/main/gramatica_antlrworks/rules/EOL.jpg)
 
 ![ESPACO_BRANCO](https://github.com/elizeumadeira/asal/blob/main/gramatica_antlrworks/rules/ESPACO_BRANCO.jpg)
@@ -93,7 +103,7 @@ Arquivo LCC.g
 
 **Questão 3: Descrição de uma tabela de símbolos (a tabela deverá guardar tokens identificadores seguido por pelo menos um atributo do token guardado na tabela);**
 
-Ao testar o programa, o sistema gerará um arquivo txt com o conteúdo da tabela de tokens. O nome do arquivo é "Tabela de tokens " + <nome do programa> + ".txt". Estamos enviando a tabela de tokens dos programas de teste exigidos no trabalho, sendo eles "**Tabela de tokens programa.lcc.txt**", "**Tabela de tokens programa2.lcc.txt**", "**Tabela de tokens programa3.lcc.txt**" e "**Tabela de tokens test.lcc.txt**"
+Ao testar o programa, o sistema gerará um arquivo txt com o conteúdo da tabela de tokens. O nome do arquivo é "Tabela de tokens " + \<nome do programa\> + ".txt". Estamos enviando a tabela de tokens dos programas de teste exigidos no trabalho, sendo eles "**Tabela de tokens programa.lcc.txt**", "**Tabela de tokens programa2.lcc.txt**", "**Tabela de tokens programa3.lcc.txt**" e "**Tabela de tokens test.lcc.txt**"
 
 **Questão 5: Se usou ferramenta, uma descrição detalhada da entrada exigida pela ferramenta e da saída dada por ela. É necessário haver exemplos pequenos da entrada e da saída gerada pela ferramenta com essa entrada.**
 
@@ -151,6 +161,7 @@ SimpleCalcLexer: exporta as regras léxicas da gramática;
 SimpleCalcParser: exporta as regras sintáticas da gramática;
 Com as classes exportadas, basta criar compilar usando comandos do java. É possível adicionar outras classes java para auxiliar com as regras léxicas/sintáticas ou quaisquer outras atividades que envolvam o projeto
 
+Um exemplo funcional dessa classe foi adicionado na pasta "exemplo_antlr" com um Makefile próprio
 
 ## AS
 
@@ -211,7 +222,7 @@ A gramática é uma gramática LL(1). Originalmente obtivemos alguns problemas c
 
 **Questão 6: se usou ferramenta, uma descrição da entrada exigida pela ferramenta e da saída dada por ela.**
 
-Mesma resposta de AL. 6
+Mesma resposta de AL. 6. Ambas as partes Léxica e Sintática estão reunidas no mesmo arquivo .g
 
 ## Mudanças na linguagem
 
